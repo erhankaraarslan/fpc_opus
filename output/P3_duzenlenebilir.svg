@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="46.6mm" height="273.4mm" viewBox="0 0 46.6 273.4" version="1.1">
+<title>P3 - Uzun LED devresi (20 LED, 11 pin 1.0 mm)</title>
+<g id="Takviye" inkscape:groupmode="layer" inkscape:label="Takviye (arka yuz, ZIF)">
+<rect id="Takviye_1" fill="#C9B37E" x="17.4" y="260.226" width="11.8" height="8.174"/>
+</g>
+<g id="Gumus" inkscape:groupmode="layer" inkscape:label="Gumus iletken">
+<g id="Gumus_Hatlar">
+<polyline id="R1_ortak" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="7.175,134.743 7.175,30.622 38.71,30.622 38.71,40.082 36.62,42.172 36.62,45.322"/>
+<polyline id="L1_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="9.919,30.821 9.919,32.751"/>
+<polyline id="R1_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.575,30.821 36.575,32.56"/>
+<polyline id="X_hat_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="7.563,43.531 26.614,43.531 26.614,79.017 24.335,79.017 24.335,81.5499"/>
+<polyline id="X_hat_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,84.5557 24.335,94.6196"/>
+<polyline id="X_hat_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,97.6042 24.335,102.0184"/>
+<polyline id="X_hat_p4" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,104.9288 24.335,107.0746"/>
+<polyline id="X_hat_p5" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,111.1616 24.335,112.8575"/>
+<polyline id="X_hat_p6" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,115.9422 24.335,119.1783"/>
+<polyline id="X_hat_p7" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,122.1537 24.335,125.84 24.3,126.264"/>
+<polyline id="L1_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="9.961,36.779 9.961,43.584"/>
+<polyline id="L2_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="9.959,43.584 9.959,45.322"/>
+<polyline id="X_L3_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="12.728,43.584 12.728,49.6016"/>
+<polyline id="X_L3_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="12.728,52.512 12.728,62.859 9.982,62.859 9.982,61.985"/>
+<polyline id="X_R3R4_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.601,69.06 31.6931,69.06"/>
+<polyline id="X_R3R4_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="34.1616,69.06 36.607,69.06"/>
+<polyline id="R3_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.673,61.985 36.673,69.024"/>
+<polyline id="R4_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.631,69.024 36.631,70.741"/>
+<polyline id="L2_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="9.944,49.35 9.944,50.69 15.197,50.69 15.197,83.143"/>
+<polyline id="Y_hat_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.01,74.663 10.01,83.105 31.6911,83.105"/>
+<polyline id="Y_hat_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="34.151,83.105 36.65,83.105"/>
+<polyline id="R4_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.696,74.769 36.696,83.143"/>
+<polyline id="Poz7_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,84.5557 25.348,94.6196"/>
+<polyline id="Poz7_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,97.6042 25.348,107.0746"/>
+<polyline id="Poz7_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,111.1616 25.348,112.8575"/>
+<polyline id="Poz7_p4" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,115.9422 25.348,119.1783"/>
+<polyline id="Poz7_p5" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,122.1537 25.348,125.84 25.3,126.264"/>
+<polyline id="V465" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.329,103.508 12.728,103.508 12.728,131.351"/>
+<polyline id="Na_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="8.189,56.94 8.189,122.74 11.5671,122.74"/>
+<polyline id="Na_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="14.0481,122.74 18.873,122.74 20.387,124.252 20.3,126.264"/>
+<polyline id="L3_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="8.178,56.94 9.959,56.94 9.959,57.957"/>
+<polyline id="L4_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="8.178,69.304 9.938,69.304 9.938,70.635"/>
+<polyline id="L5_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="8.178,88.983 10.01,88.983 10.01,89.99"/>
+<polyline id="L6_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="8.178,101.156 9.995,101.156 9.995,102.668"/>
+<polyline id="L7_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="8.178,114.37 10.008,114.37 10.008,115.409"/>
+<polyline id="Nb_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="38.5,56.601 38.5,111.684 36.923,114.37 22.34,114.37 22.34,119.1783"/>
+<polyline id="Nb_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.34,122.1537 22.34,125.84 22.3,126.264"/>
+<polyline id="R3_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="38.473,56.658 36.607,56.658 36.607,57.957"/>
+<polyline id="R5_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="38.473,88.85 36.773,88.85 36.773,89.927"/>
+<polyline id="R6_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="38.473,101.629 36.662,101.629 36.662,102.562"/>
+<polyline id="R7_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.65,114.392 36.65,115.324"/>
+<polyline id="R1_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.586,36.588 33.003,43.52 32.918,43.796 32.918,87.044 26.346,87.044 26.346,94.6196"/>
+<polyline id="R1_alt_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.346,97.6042 26.346,107.0746"/>
+<polyline id="R1_alt_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.346,111.1616 26.346,112.8575"/>
+<polyline id="R1_alt_p4" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.346,115.9422 26.346,119.1783"/>
+<polyline id="R1_alt_p5" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.346,122.1537 26.346,125.84 26.3,126.264"/>
+<polyline id="C1_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.235,52.424 24.235,53.626 25.3757,53.626"/>
+<polyline id="C1_alt_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.8016,53.626 32.918,53.626"/>
+<polyline id="R2_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.734,49.35 36.734,50.48 38.165,52.882 39.465,54.182 39.465,87.442 38.88,88.027 38.7832,88.027"/>
+<polyline id="R2_alt_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="37.3038,88.027 27.36,88.027 27.36,94.6196"/>
+<polyline id="R2_alt_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,97.6042 27.36,107.0746"/>
+<polyline id="R2_alt_p4" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,111.1616 27.36,112.8575"/>
+<polyline id="R2_alt_p5" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,115.9422 27.36,119.1783"/>
+<polyline id="R2_alt_p6" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,122.1537 27.36,125.84 27.3,126.264"/>
+<polyline id="R6_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.66,106.59 36.66,108.434 28.6146,108.434"/>
+<polyline id="Z_C1_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.137,48.396 24.137,45.962 21.275,45.962 21.275,67.116 22.7,71.78 22.7,74.112 22.318,74.96 22.318,81.5499"/>
+<polyline id="Z_C1_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,84.5557 22.318,94.6196"/>
+<polyline id="Z_C1_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,97.6042 22.318,102.0184"/>
+<polyline id="Z_C1_p4" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,104.9288 22.318,110.152"/>
+<polyline id="Z_hat_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="16.849,61.915 25.3894,61.915"/>
+<polyline id="Z_hat_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.8334,61.915 30.417,61.915"/>
+<polyline id="B1_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="17.794,61.985 17.794,63.787"/>
+<polyline id="B2_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.252,61.985 24.252,63.83"/>
+<polyline id="B3_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="30.417,61.985 30.582,61.985 30.582,63.851"/>
+<polyline id="B2_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.269,67.858 23.887,68.6 23.887,75.384 23.357,76.02 23.357,81.5499"/>
+<polyline id="B2_alt_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,84.5557 23.357,94.6196"/>
+<polyline id="B2_alt_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,97.6042 23.357,102.0184"/>
+<polyline id="B2_alt_p4" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,104.9288 23.357,107.0746"/>
+<polyline id="B2_alt_p5" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,111.1616 23.357,112.8575"/>
+<polyline id="B2_alt_p6" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,115.9422 23.357,119.1783"/>
+<polyline id="B2_alt_p7" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,122.1537 23.357,125.84 23.3,126.264"/>
+<polyline id="L6_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.118,106.696 10.118,108.602 11.5207,108.602"/>
+<polyline id="L6_alt_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="13.997,108.602 22.318,108.602"/>
+<polyline id="Q_R8_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.671,128.066 37.031,127.43 39.66,118.95 39.66,110.279 39.1012,109.8784"/>
+<polyline id="Q_R8_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="37.3342,109.732 21.513,109.732 21.364,109.664 21.364,119.1783"/>
+<polyline id="Q_R8_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="21.364,122.1537 21.364,125.84 21.3,126.264"/>
+<polyline id="L5R5_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.065,94.018 10.065,96.308 36.777,96.308 36.777,93.955"/>
+<polyline id="B1_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="17.76,67.815 17.76,68.816 15.174,68.816"/>
+<polyline id="B3_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="30.65,67.879 30.65,69.024"/>
+<polyline id="L7R7_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.022,119.437 10.022,120.752 11.5671,120.752"/>
+<polyline id="L7R7_alt_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="14.0481,120.752 36.65,120.752 36.65,119.352"/>
+<polyline id="Poz10_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="28.39,122.1537 28.39,125.84 28.3,126.264"/>
+<polyline id="R8_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.671,132.093 36.671,133.938 34.487,133.938 34.487,120.752"/>
+<polyline id="L8_ust_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.039,128.129 10.039,123.836 11.5671,123.836"/>
+<polyline id="L8_ust_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="14.0481,123.836 18.269,123.836 19.287,124.864 19.3,126.264"/>
+<polyline id="R1_sol_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="7.139,134.743 12.863,134.743 12.863,131.351 14.05,131.351 14.05,124.949 17.888,124.949 18.29,125.352 18.3,126.264"/>
+<polyline id="L8_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="9.98,132.157 9.98,133.221 12.863,133.221"/>
+<polyline id="Kontak_01" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="18.3,126.264 18.3,268.4"/>
+<polyline id="Kontak_02" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="19.3,126.264 19.3,268.4"/>
+<polyline id="Kontak_03" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="20.3,126.264 20.3,268.4"/>
+<polyline id="Kontak_04" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="21.3,126.264 21.3,268.4"/>
+<polyline id="Kontak_05" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.3,126.264 22.3,268.4"/>
+<polyline id="Kontak_06" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.3,126.264 23.3,268.4"/>
+<polyline id="Kontak_07" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.3,126.264 24.3,268.4"/>
+<polyline id="Kontak_08" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.3,126.264 25.3,268.4"/>
+<polyline id="Kontak_09" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.3,126.264 26.3,268.4"/>
+<polyline id="Kontak_10" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.3,126.264 27.3,268.4"/>
+<polyline id="Kontak_11" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="28.3,126.264 28.3,268.4"/>
+</g>
+<g id="Gumus_Isaretler">
+<polyline id="LED_L1_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.704,37.003 11.504,37.003"/>
+<polyline id="LED_L1_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="11.104,36.603 11.104,37.403"/>
+<polyline id="LED_L2_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.725,49.583 11.525,49.583"/>
+<polyline id="LED_L2_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="11.125,49.183 11.125,49.983"/>
+<polyline id="LED_L3_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.712,62.225 11.512,62.225"/>
+<polyline id="LED_L3_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="11.112,61.825 11.112,62.625"/>
+<polyline id="LED_L4_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.678,74.905 11.478,74.905"/>
+<polyline id="LED_L4_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="11.078,74.505 11.078,75.305"/>
+<polyline id="LED_L5_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.818,94.258 11.618,94.258"/>
+<polyline id="LED_L5_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="11.218,93.858 11.218,94.658"/>
+<polyline id="LED_L6_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.748,106.931 11.548,106.931"/>
+<polyline id="LED_L6_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="11.148,106.531 11.148,107.331"/>
+<polyline id="LED_L7_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.761,119.664 11.561,119.664"/>
+<polyline id="LED_L7_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="11.161,119.264 11.161,120.064"/>
+<polyline id="LED_L8_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.731,132.392 11.531,132.392"/>
+<polyline id="LED_L8_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="11.131,131.992 11.131,132.792"/>
+<polyline id="LED_R1_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.122,36.866 35.922,36.866"/>
+<polyline id="LED_R1_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.522,36.466 35.522,37.266"/>
+<polyline id="LED_R2_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.164,49.617 35.964,49.617"/>
+<polyline id="LED_R2_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.564,49.217 35.564,50.017"/>
+<polyline id="LED_R3_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.147,62.269 35.947,62.269"/>
+<polyline id="LED_R3_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.547,61.869 35.547,62.669"/>
+<polyline id="LED_R4_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.181,75.051 35.981,75.051"/>
+<polyline id="LED_R4_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.581,74.651 35.581,75.451"/>
+<polyline id="LED_R5_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.315,94.22 36.115,94.22"/>
+<polyline id="LED_R5_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.715,93.82 35.715,94.62"/>
+<polyline id="LED_R6_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.217,106.872 36.017,106.872"/>
+<polyline id="LED_R6_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.617,106.472 35.617,107.272"/>
+<polyline id="LED_R7_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.198,119.617 35.998,119.617"/>
+<polyline id="LED_R7_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.598,119.217 35.598,120.017"/>
+<polyline id="LED_R8_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.202,132.363 36.002,132.363"/>
+<polyline id="LED_R8_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="35.602,131.963 35.602,132.763"/>
+<polyline id="LED_C1_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.688,52.392 23.488,52.392"/>
+<polyline id="LED_C1_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.088,51.992 23.088,52.792"/>
+<polyline id="LED_B1_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="16.284,67.792 17.084,67.792"/>
+<polyline id="LED_B1_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="16.684,67.392 16.684,68.192"/>
+<polyline id="LED_B2_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.781,67.839 23.581,67.839"/>
+<polyline id="LED_B2_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.181,67.439 23.181,68.239"/>
+<polyline id="LED_B3_arti_y" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="29.16,67.864 29.96,67.864"/>
+<polyline id="LED_B3_arti_d" fill="none" stroke="#7F7F7F" stroke-width="0.15" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="29.56,67.464 29.56,68.264"/>
+</g>
+<g id="LED_L1_ped_ust">
+<rect id="LED_L1_ped_ust_1" fill="#7F7F7F" x="9.134" y="32.731" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L1_ped_alt">
+<rect id="LED_L1_ped_alt_1" fill="#7F7F7F" x="9.134" y="35.181" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L2_ped_ust">
+<rect id="LED_L2_ped_ust_1" fill="#7F7F7F" x="9.155" y="45.311" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L2_ped_alt">
+<rect id="LED_L2_ped_alt_1" fill="#7F7F7F" x="9.155" y="47.761" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L3_ped_ust">
+<rect id="LED_L3_ped_ust_1" fill="#7F7F7F" x="9.142" y="57.953" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L3_ped_alt">
+<rect id="LED_L3_ped_alt_1" fill="#7F7F7F" x="9.142" y="60.403" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L4_ped_ust">
+<rect id="LED_L4_ped_ust_1" fill="#7F7F7F" x="9.108" y="70.632" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L4_ped_alt">
+<rect id="LED_L4_ped_alt_1" fill="#7F7F7F" x="9.108" y="73.082" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L5_ped_ust">
+<rect id="LED_L5_ped_ust_1" fill="#7F7F7F" x="9.248" y="89.986" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L5_ped_alt">
+<rect id="LED_L5_ped_alt_1" fill="#7F7F7F" x="9.248" y="92.436" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L6_ped_ust">
+<rect id="LED_L6_ped_ust_1" fill="#7F7F7F" x="9.178" y="102.659" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L6_ped_alt">
+<rect id="LED_L6_ped_alt_1" fill="#7F7F7F" x="9.178" y="105.109" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L7_ped_ust">
+<rect id="LED_L7_ped_ust_1" fill="#7F7F7F" x="9.191" y="115.392" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L7_ped_alt">
+<rect id="LED_L7_ped_alt_1" fill="#7F7F7F" x="9.191" y="117.842" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L8_ped_ust">
+<rect id="LED_L8_ped_ust_1" fill="#7F7F7F" x="9.161" y="128.12" width="1.65" height="1.6"/>
+</g>
+<g id="LED_L8_ped_alt">
+<rect id="LED_L8_ped_alt_1" fill="#7F7F7F" x="9.161" y="130.57" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R1_ped_ust">
+<rect id="LED_R1_ped_ust_1" fill="#7F7F7F" x="35.757" y="32.551" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R1_ped_alt">
+<rect id="LED_R1_ped_alt_1" fill="#7F7F7F" x="35.757" y="35.001" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R2_ped_ust">
+<rect id="LED_R2_ped_ust_1" fill="#7F7F7F" x="35.799" y="45.303" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R2_ped_alt">
+<rect id="LED_R2_ped_alt_1" fill="#7F7F7F" x="35.799" y="47.753" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R3_ped_ust">
+<rect id="LED_R3_ped_ust_1" fill="#7F7F7F" x="35.782" y="57.955" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R3_ped_alt">
+<rect id="LED_R3_ped_alt_1" fill="#7F7F7F" x="35.782" y="60.405" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R4_ped_ust">
+<rect id="LED_R4_ped_ust_1" fill="#7F7F7F" x="35.816" y="70.736" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R4_ped_alt">
+<rect id="LED_R4_ped_alt_1" fill="#7F7F7F" x="35.816" y="73.186" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R5_ped_ust">
+<rect id="LED_R5_ped_ust_1" fill="#7F7F7F" x="35.95" y="89.905" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R5_ped_alt">
+<rect id="LED_R5_ped_alt_1" fill="#7F7F7F" x="35.95" y="92.355" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R6_ped_ust">
+<rect id="LED_R6_ped_ust_1" fill="#7F7F7F" x="35.852" y="102.557" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R6_ped_alt">
+<rect id="LED_R6_ped_alt_1" fill="#7F7F7F" x="35.852" y="105.007" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R7_ped_ust">
+<rect id="LED_R7_ped_ust_1" fill="#7F7F7F" x="35.833" y="115.303" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R7_ped_alt">
+<rect id="LED_R7_ped_alt_1" fill="#7F7F7F" x="35.833" y="117.753" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R8_ped_ust">
+<rect id="LED_R8_ped_ust_1" fill="#7F7F7F" x="35.837" y="128.048" width="1.65" height="1.6"/>
+</g>
+<g id="LED_R8_ped_alt">
+<rect id="LED_R8_ped_alt_1" fill="#7F7F7F" x="35.837" y="130.498" width="1.65" height="1.6"/>
+</g>
+<g id="LED_C1_ped_ust">
+<rect id="LED_C1_ped_ust_1" fill="#7F7F7F" x="23.344" y="48.375" width="1.65" height="1.6"/>
+</g>
+<g id="LED_C1_ped_alt">
+<rect id="LED_C1_ped_alt_1" fill="#7F7F7F" x="23.344" y="50.825" width="1.65" height="1.6"/>
+</g>
+<g id="LED_B1_ped_ust">
+<rect id="LED_B1_ped_ust_1" fill="#7F7F7F" x="16.94" y="63.774" width="1.65" height="1.6"/>
+</g>
+<g id="LED_B1_ped_alt">
+<rect id="LED_B1_ped_alt_1" fill="#7F7F7F" x="16.94" y="66.224" width="1.65" height="1.6"/>
+</g>
+<g id="LED_B2_ped_ust">
+<rect id="LED_B2_ped_ust_1" fill="#7F7F7F" x="23.437" y="63.821" width="1.65" height="1.6"/>
+</g>
+<g id="LED_B2_ped_alt">
+<rect id="LED_B2_ped_alt_1" fill="#7F7F7F" x="23.437" y="66.271" width="1.65" height="1.6"/>
+</g>
+<g id="LED_B3_ped_ust">
+<rect id="LED_B3_ped_ust_1" fill="#7F7F7F" x="29.817" y="63.846" width="1.65" height="1.6"/>
+</g>
+<g id="LED_B3_ped_alt">
+<rect id="LED_B3_ped_alt_1" fill="#7F7F7F" x="29.817" y="66.296" width="1.65" height="1.6"/>
+</g>
+</g>
+<g id="Dielektrik" inkscape:groupmode="layer" inkscape:label="Dielektrik (yalitkan)">
+<g id="Dielektrik_Seritler">
+<path id="Dielektrik_Alan_1" fill="#2BB5A0" fill-opacity="0.55" d="M29.857,126.052 L16.866,126.052 L16.866,127.6423 L16.9768,127.6799 L17.1,127.7407 L17.2142,127.817 L17.3175,127.9075 L17.408,128.0108 L17.4843,128.125 L17.5451,128.2482 L17.5892,128.3782 L17.616,128.5129 L17.625,128.65 L17.625,143.2 L17.4,164.4 L17.4,260.692 L29.2,260.692 L29.2,164.4 L28.975,143.2 L28.975,128.65 L28.984,128.5129 L29.0108,128.3782 L29.0549,128.2482 L29.1157,128.125 L29.192,128.0108 L29.2825,127.9075 L29.3858,127.817 L29.5,127.7407 L29.6232,127.6799 L29.7532,127.6358 L29.857,127.6151 Z"/>
+<rect id="Dielektrik_Yama_01" fill="#2BB5A0" fill-opacity="0.55" x="20.102" y="119.1283" width="8.5658" height="3.0754"/>
+<rect id="Dielektrik_Yama_02" fill="#2BB5A0" fill-opacity="0.55" x="11.5171" y="119.0767" width="2.581" height="6.3282"/>
+<rect id="Dielektrik_Yama_03" fill="#2BB5A0" fill-opacity="0.55" x="22.064" y="112.8075" width="6.5782" height="3.1847"/>
+<path id="Dielektrik_Yama_04" fill="#2BB5A0" fill-opacity="0.55" d="M39.8084,108.1935 L39.2996,108.0316 L38.8544,108.1588 L37.2842,108.1588 L37.2842,111.2328 L38.4622,111.2063 L39.3208,111.1798 L39.3208,110.3212 L39.1512,110.1516 L39.1512,109.4732 L39.8084,109.752 Z"/>
+<rect id="Dielektrik_Yama_05" fill="#2BB5A0" fill-opacity="0.55" x="20.4105" y="107.0246" width="8.2541" height="4.187"/>
+<rect id="Dielektrik_Yama_06" fill="#2BB5A0" fill-opacity="0.55" x="11.4707" y="106.9928" width="2.5763" height="3.1164"/>
+<rect id="Dielektrik_Yama_07" fill="#2BB5A0" fill-opacity="0.55" x="21.0532" y="101.9684" width="3.9365" height="3.0104"/>
+<rect id="Dielektrik_Yama_08" fill="#2BB5A0" fill-opacity="0.55" x="21.0358" y="94.5696" width="7.5684" height="3.0846"/>
+<path id="Dielektrik_Yama_09" fill="#2BB5A0" fill-opacity="0.55" d="M37.3675,86.4395 L37.1796,87.1285 L37.1796,87.5737 L37.2538,87.6479 L37.2538,88.6843 L37.3916,88.7609 L38.653,88.7609 L38.8438,88.9517 L38.8438,89.4605 L39.6388,89.4605 L39.8402,88.7444 L39.8402,87.6161 L39.6918,87.6161 L39.0028,88.3051 L38.8332,88.3051 L38.8332,87.5843 L39.2148,87.2027 L39.2148,86.4607 L39.101,86.3469 L38.8417,86.4395 Z"/>
+<rect id="Dielektrik_Yama_10" fill="#2BB5A0" fill-opacity="0.55" x="21.0214" y="81.4999" width="4.5512" height="3.1058"/>
+<rect id="Dielektrik_Yama_11" fill="#2BB5A0" fill-opacity="0.55" x="31.6411" y="81.4764" width="2.5599" height="3.0869"/>
+<path id="Dielektrik_Yama_12" fill="#2BB5A0" fill-opacity="0.55" d="M22.0004,73.4333 L21.9633,74.2071 L21.9262,75.1081 L22.117,75.1081 L22.4244,74.8007 L22.6152,74.8007 L22.6152,76.4861 L24.5126,76.4861 L24.5126,74.9597 L24.3854,74.9597 L24.0356,75.3095 L23.8978,75.3095 L23.8978,73.4333 Z"/>
+<rect id="Dielektrik_Yama_13" fill="#2BB5A0" fill-opacity="0.55" x="31.6431" y="67.7093" width="2.5685" height="2.9998"/>
+<rect id="Dielektrik_Yama_14" fill="#2BB5A0" fill-opacity="0.55" x="25.3394" y="60.512" width="2.544" height="3.0634"/>
+<rect id="Dielektrik_Yama_15" fill="#2BB5A0" fill-opacity="0.55" x="25.3257" y="52.0214" width="2.526" height="2.9998"/>
+<rect id="Dielektrik_Yama_16" fill="#2BB5A0" fill-opacity="0.55" x="11.4853" y="49.5516" width="2.544" height="3.0104"/>
+</g>
+</g>
+<g id="Gumus_Kopru" inkscape:groupmode="layer" inkscape:label="Gumus kopru (2. baski, dielektrik ustu)">
+<polyline id="Kopru_03_X_hat" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,80.9271 24.335,85.1785"/>
+<polyline id="Kopru_04_X_hat" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,93.9969 24.335,98.227"/>
+<polyline id="Kopru_05_X_hat" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,101.3956 24.335,105.5516"/>
+<polyline id="Kopru_06_X_hat" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,106.4518 24.335,111.7844"/>
+<polyline id="Kopru_07_X_hat" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,112.2352 24.335,116.5649"/>
+<polyline id="Kopru_08_X_hat" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.335,118.5548 24.335,122.7765"/>
+<polyline id="Kopru_09_X_L3" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="12.728,48.9788 12.728,53.1348"/>
+<polyline id="Kopru_10_X_R3R4" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="31.0694,69.06 34.7844,69.06"/>
+<polyline id="Kopru_13_Y_hat" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="31.0694,83.105 34.7738,83.105"/>
+<polyline id="Kopru_14_Poz7" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,83.143 25.348,85.1785"/>
+<polyline id="Kopru_15_Poz7" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,93.9968 25.348,98.227"/>
+<polyline id="Kopru_16_Poz7" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,106.4518 25.348,111.7844"/>
+<polyline id="Kopru_17_Poz7" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,112.2351 25.348,116.565"/>
+<polyline id="Kopru_18_Poz7" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,118.5548 25.348,122.7765"/>
+<polyline id="Kopru_22_Na" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.9443,122.74 14.6699,122.74"/>
+<polyline id="Kopru_26_Nb" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.34,118.5548 22.34,122.7765"/>
+<polyline id="Kopru_29_R1_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.346,93.9969 26.346,98.227"/>
+<polyline id="Kopru_30_R1_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.346,106.4518 26.346,111.7844"/>
+<polyline id="Kopru_31_R1_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.346,112.2351 26.346,116.5649"/>
+<polyline id="Kopru_32_R1_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.346,118.5548 26.346,122.7765"/>
+<polyline id="Kopru_33_C1_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.7539,53.626 28.4244,53.626"/>
+<polyline id="Kopru_34_R2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="39.2797,87.6273 38.88,88.027 36.681,88.027"/>
+<polyline id="Kopru_35_R2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,93.9969 27.36,98.227"/>
+<polyline id="Kopru_36_R2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,106.4518 27.36,111.7844"/>
+<polyline id="Kopru_37_R2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,112.2351 27.36,116.5649"/>
+<polyline id="Kopru_38_R2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,118.5548 27.36,122.7765"/>
+<polyline id="Kopru_39_R6_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="29.2364,108.434 27.343,108.434"/>
+<polyline id="Kopru_41_Z_C1" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,80.9271 22.318,85.1785"/>
+<polyline id="Kopru_42_Z_C1" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,93.9969 22.318,98.227"/>
+<polyline id="Kopru_43_Z_C1" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,101.3956 22.318,105.5516"/>
+<polyline id="Kopru_45_Z_hat" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.7667,61.915 28.4562,61.915"/>
+<polyline id="Kopru_47_B2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,80.9271 23.357,85.1785"/>
+<polyline id="Kopru_48_B2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,93.9969 23.357,98.227"/>
+<polyline id="Kopru_49_B2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,101.3956 23.357,105.5516"/>
+<polyline id="Kopru_50_B2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,106.4518 23.357,111.7844"/>
+<polyline id="Kopru_51_B2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,112.2351 23.357,116.5649"/>
+<polyline id="Kopru_52_B2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,118.5548 23.357,122.7765"/>
+<polyline id="Kopru_53_L6_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.8977,108.602 14.619,108.602"/>
+<polyline id="Kopru_55_Q_R8" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="39.5929,110.2309 38.897,109.732 36.7107,109.732"/>
+<polyline id="Kopru_57_Q_R8" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="21.364,118.5548 21.364,122.7765"/>
+<polyline id="Kopru_59_L7R7_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.9443,120.752 14.6699,120.752"/>
+<polyline id="Kopru_61_Poz10" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="28.39,120.752 28.39,122.7765"/>
+<polyline id="Kopru_62_L8_ust" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.9443,123.836 14.6699,123.836"/>
+</g>
+<g id="LED" inkscape:groupmode="layer" inkscape:label="LED (montaj)">
+<rect id="LED_L1" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="9.709" y="34.256" width="0.5" height="1"/>
+<rect id="LED_L2" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="9.73" y="46.836" width="0.5" height="1"/>
+<rect id="LED_L3" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="9.717" y="59.478" width="0.5" height="1"/>
+<rect id="LED_L4" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="9.683" y="72.157" width="0.5" height="1"/>
+<rect id="LED_L5" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="9.823" y="91.511" width="0.5" height="1"/>
+<rect id="LED_L6" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="9.753" y="104.184" width="0.5" height="1"/>
+<rect id="LED_L7" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="9.766" y="116.917" width="0.5" height="1"/>
+<rect id="LED_L8" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="9.736" y="129.645" width="0.5" height="1"/>
+<rect id="LED_R1" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="36.332" y="34.076" width="0.5" height="1"/>
+<rect id="LED_R2" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="36.374" y="46.828" width="0.5" height="1"/>
+<rect id="LED_R3" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="36.357" y="59.48" width="0.5" height="1"/>
+<rect id="LED_R4" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="36.391" y="72.261" width="0.5" height="1"/>
+<rect id="LED_R5" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="36.525" y="91.43" width="0.5" height="1"/>
+<rect id="LED_R6" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="36.427" y="104.082" width="0.5" height="1"/>
+<rect id="LED_R7" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="36.408" y="116.828" width="0.5" height="1"/>
+<rect id="LED_R8" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="36.412" y="129.573" width="0.5" height="1"/>
+<rect id="LED_C1" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="23.919" y="49.9" width="0.5" height="1"/>
+<rect id="LED_B1" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="17.515" y="65.299" width="0.5" height="1"/>
+<rect id="LED_B2" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="24.012" y="65.346" width="0.5" height="1"/>
+<rect id="LED_B3" fill="#F2F2F2" fill-opacity="0.85" stroke="#000000" stroke-width="0.03" x="30.392" y="65.371" width="0.5" height="1"/>
+</g>
+<g id="Etiket" inkscape:groupmode="layer" inkscape:label="Etiket (yapistirma)">
+<rect id="Etiket_1" fill="none" stroke="#7A5C00" stroke-width="0.1" stroke-dasharray="0.6,0.4" x="18.418" y="136.969" width="9.921" height="20.776" rx="0.8" ry="0.8"/>
+</g>
+<g id="Kontrol" inkscape:groupmode="layer" inkscape:label="Kontrol (taramadan kesin okunamayan)">
+<polyline id="Kontrol_Taramadaki_kesik_ust_kenar" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="5.083,4.958 6.037,4.936 7.309,5.085 7.945,5.594 8.581,6.336 9.217,7.035 9.853,8.307 10.489,9.367 11.125,9.812 11.761,10.3 12.397,10.554 13.033,11.084 13.669,11.445 14.305,11.72 14.941,11.996 15.577,12.25 16.213,12.441 16.849,12.696 17.485,13.098 18.121,13.565 18.757,13.946 19.393,14.307 20.029,14.773 20.665,15.24 21.301,15.473 21.937,15.515 22.573,15.748 23.527,16.406 24.163,16.808 24.799,17.148 25.435,17.402 26.071,17.805 26.707,18.78 27.343,18.992 27.979,19.458 28.615,19.925 29.251,20.37 29.887,20.879 30.523,21.345 31.159,21.833 31.795,22.214 32.431,22.554 33.067,22.935 33.703,23.253 34.339,23.635 34.975,23.932 35.929,23.995 36.565,24.716 37.201,26.158 37.837,27.26 38.473,28.405 39.109,28.892 39.745,29.147 40.381,29.507 41.017,29.825 41.653,30.397"/>
+<polyline id="Kontrol_X_hat" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="7.563,43.531 26.614,43.531 26.614,79.017 24.335,79.017 24.335,125.84 24.3,126.264"/>
+<polyline id="Kontrol_V465" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="25.329,103.508 12.728,103.508 12.728,131.351"/>
+<polyline id="Kontrol_Na" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="8.189,56.94 8.189,122.74 18.873,122.74 20.387,124.252 20.3,126.264"/>
+<polyline id="Kontrol_Z_C1" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="24.137,48.396 24.137,45.962 21.275,45.962 21.275,67.116 22.7,71.78 22.7,74.112 22.318,74.96 22.318,110.152"/>
+<polyline id="Kontrol_B2_alt" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="24.269,67.858 23.887,68.6 23.887,75.384 23.357,76.02 23.357,125.84 23.3,126.264"/>
+<polyline id="Kontrol_Q_R8" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="36.671,128.066 37.031,127.43 39.66,118.95 39.66,110.279 38.897,109.732 21.513,109.732 21.364,109.664 21.364,125.84 21.3,126.264"/>
+<polyline id="Kontrol_L5R5_alt" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="10.065,94.018 10.065,96.308 36.777,96.308 36.777,93.955"/>
+<polyline id="Kontrol_R8_alt" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="36.671,132.093 36.671,133.938 34.487,133.938 34.487,120.752"/>
+<polyline id="Kontrol_L8_ust" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="10.039,128.129 10.039,123.836 18.269,123.836 19.287,124.864 19.3,126.264"/>
+<polyline id="Kontrol_R1_sol_alt" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="7.139,134.743 12.863,134.743 12.863,131.351 14.05,131.351 14.05,124.949 17.888,124.949 18.29,125.352 18.3,126.264"/>
+<polyline id="Kontrol_L8_alt" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="9.98,132.157 9.98,133.221 12.863,133.221"/>
+</g>
+<g id="Kesim" inkscape:groupmode="layer" inkscape:label="Kesim (dis kontur + pencereler)">
+<path id="Kesim_Dis_Kontur" fill="none" stroke="#E3001B" stroke-width="0.1" d="M5.3,5 L41.3,5 A0.3,0.3 0 0 1 41.6,5.3 L41.6,143.25 A0.3,0.3 0 0 1 41.3,143.55 L31.075,143.55 L31.075,128.65 A1.05,1.05 0 0 0 28.975,128.65 L28.975,143.2 L29.2,164.4 L29.2,268.4 L17.4,268.4 L17.4,164.4 L17.625,143.2 L17.625,128.65 A1.05,1.05 0 0 0 15.525,128.65 L15.525,143.55 L5.3,143.55 A0.3,0.3 0 0 1 5,143.25 L5,5.3 A0.3,0.3 0 0 1 5.3,5 Z"/>
+<g id="Kesim_Oval_Pencereler">
+</g>
+</g>
+</svg>

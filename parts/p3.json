@@ -1,0 +1,70 @@
+{
+  "baslik": "P3 - Uzun LED devresi (20 LED, 11 pin 1.0 mm)",
+  "tip": "led",
+  "pdf": "docs/K.pdf",
+  "sayfa": 0,
+  "kirpim_px": [
+    4530,
+    220,
+    6620,
+    13010
+  ],
+  "aci_derece": 0.68,
+  "olcek_px_mm": 47.17,
+  "tasarim_modulu": "p3_design",
+  "rota_modulu": "p3_routes",
+  "dogrulama_roi_y": [
+    1350,
+    5900
+  ],
+  "rapor_kirpimlari": {
+    "bas_ust": [
+      150,
+      1350,
+      1820,
+      3250,
+      0.36
+    ],
+    "bas_alt": [
+      150,
+      3200,
+      1820,
+      5100,
+      0.36
+    ],
+    "bas_yelpaze": [
+      150,
+      5000,
+      1820,
+      6400,
+      0.36
+    ],
+    "yama_sirasi_4480": [
+      800,
+      4380,
+      1290,
+      4600,
+      1.0
+    ],
+    "b_sirasi": [
+      560,
+      2800,
+      1480,
+      3600,
+      0.6
+    ],
+    "konnektor_ucu": [
+      640,
+      12100,
+      1300,
+      12650,
+      0.7
+    ]
+  },
+  "rota_maskesi": [
+    "m_dark.npy"
+  ],
+  "dogrulama_maskesi": [
+    "m_band.npy"
+  ]
+}

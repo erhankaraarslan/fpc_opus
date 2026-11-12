@@ -1,0 +1,35 @@
+{
+  "_aciklama": "parts/<ad>_analiz.json olarak kopyalayın ve ANALİZ SIRASINDA doldurun. Metinlerde basit HTML (<b>, <code>, &lt;) kullanılabilir. Dolu örnekler: tus_analiz_ornegi.json, led_analiz_ornegi.json",
+  "ozet_notu": "Parçanın setteki rolü, yapısı, en önemli sonuç ve (varsa) dikkat edilmesi gereken tek cümle.",
+  "surec": [
+    {"baslik": "Adım adı", "aciklama": "Ne yapıldı, hangi sayı bulundu, neden.", "gorseller": ["dosya_adi.png"]}
+  ],
+  "bulgular": [
+    "Yapı / ağlar / eksen kaymaları / set ilişkisi gibi kullanıcının bilmesi gereken bulgular."
+  ],
+  "karar_noktalari": [
+    {
+      "baslik": "Kısa soru biçiminde karar",
+      "karar_veren": "analiz | kullanıcı",
+      "soru": "İsteğe bağlı: neyin belirsiz olduğu",
+      "secenekler": ["Seçenek A", "Seçenek B"],
+      "secilen": "Seçilen ve sayısal sonucu",
+      "gerekce": "Hangi ölçüm/kanıt bu kararı destekliyor",
+      "risk": "Yanlışsa etkisi (isteğe bağlı)",
+      "kanit": ["dosya_adi.png"]
+    }
+  ],
+  "kullanici_yonlendirme": [
+    {"baslik": "Kullanıcının yapabileceği iyileştirme", "aciklama": "Ne, nasıl, hangi belirsizliği kapatır."}
+  ],
+  "gorseller": {
+    "dosya_adi.png": {
+      "kategori": "Kaynak | Ön işleme | Maskeler | Ölçüm | Topoloji | Karar kanıtı | Doğrulama | Çıktı kontrolü",
+      "sira": 1,
+      "baslik": "Kısa başlık",
+      "aciklama": "Görselde ne görülüyor, neye bakılmalı.",
+      "olcum": "İsteğe bağlı: bu görselden elde edilen sayı",
+      "karar": "İsteğe bağlı: ilgili karar numarası, ör. K3"
+    }
+  }
+}

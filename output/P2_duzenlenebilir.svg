@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="46.7mm" height="181.9mm" viewBox="0 0 46.7 181.9" version="1.1">
+<title>P2 - Kısa tuş devresi (3 tuş, 11 pin 1.0 mm)</title>
+<g id="Takviye" inkscape:groupmode="layer" inkscape:label="Takviye (arka yuz, ZIF)">
+<rect id="Takviye_1" fill="#C9B37E" x="17.3" y="169" width="12.1" height="7.9"/>
+</g>
+<g id="Gumus" inkscape:groupmode="layer" inkscape:label="Gumus iletken">
+<g id="Gumus_Hatlar">
+<polyline id="Hat_Net1_A_ust" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22,43.05 14.39,43.05 12.7,45.976 12.7,67.842 18.75,75.431 18.75,76.4"/>
+<polyline id="Hat_Net4_Ortak" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.4,47.55 32.75,47.55 33.9,48.7 33.9,73.8 33.15,74.55 28.15,74.55 27.25,75.45 27.25,76.4"/>
+<polyline id="Hat_Net4_Bus_BC" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="20.6,58.5 33.9,58.5"/>
+<polyline id="Hat_Net2_B_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="20.6,62.95 20.6,76.4"/>
+<polyline id="Hat_Net3_C_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.8,62.95 27.8,69.4 22.7,75.524 22.7,76.4"/>
+<polyline id="Kontak_01" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="18.35,76.1 18.35,176.9"/>
+<polyline id="Kontak_02" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="19.35,76.1 19.35,176.9"/>
+<polyline id="Kontak_03" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="20.35,76.1 20.35,176.9"/>
+<polyline id="Kontak_04" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="21.35,76.1 21.35,176.9"/>
+<polyline id="Kontak_05" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.35,76.1 22.35,176.9"/>
+<polyline id="Kontak_06" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.35,76.1 23.35,176.9"/>
+<polyline id="Kontak_07_dummy" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.35,163.95 24.35,176.9"/>
+<polyline id="Kontak_08_dummy" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.35,163.95 25.35,176.9"/>
+<polyline id="Kontak_09" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="26.35,76.1 26.35,176.9"/>
+<polyline id="Kontak_10" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.35,76.1 27.35,176.9"/>
+<polyline id="Kontak_11" fill="none" stroke="#7F7F7F" stroke-width="0.6" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="28.35,76.1 28.35,176.9"/>
+</g>
+<g id="Ped_A">
+<rect id="Ped_A_1" fill="#7F7F7F" x="21.7" y="42.8" width="5" height="0.55"/>
+<rect id="Ped_A_2" fill="#7F7F7F" x="21.7" y="47.25" width="5" height="0.55"/>
+<rect id="Ped_A_3" fill="#7F7F7F" x="21.7" y="43.35" width="0.6" height="3.4"/>
+<rect id="Ped_A_4" fill="#7F7F7F" x="22.8" y="43.85" width="0.6" height="3.4"/>
+<rect id="Ped_A_5" fill="#7F7F7F" x="23.9" y="43.35" width="0.6" height="3.4"/>
+<rect id="Ped_A_6" fill="#7F7F7F" x="25" y="43.85" width="0.6" height="3.4"/>
+<rect id="Ped_A_7" fill="#7F7F7F" x="26.1" y="43.35" width="0.6" height="3.4"/>
+</g>
+<g id="Ped_B">
+<rect id="Ped_B_1" fill="#7F7F7F" x="15.9" y="58.25" width="5" height="0.55"/>
+<rect id="Ped_B_2" fill="#7F7F7F" x="15.9" y="62.7" width="5" height="0.55"/>
+<rect id="Ped_B_3" fill="#7F7F7F" x="15.9" y="59.3" width="0.6" height="3.4"/>
+<rect id="Ped_B_4" fill="#7F7F7F" x="17" y="58.8" width="0.6" height="3.4"/>
+<rect id="Ped_B_5" fill="#7F7F7F" x="18.1" y="59.3" width="0.6" height="3.4"/>
+<rect id="Ped_B_6" fill="#7F7F7F" x="19.2" y="58.8" width="0.6" height="3.4"/>
+<rect id="Ped_B_7" fill="#7F7F7F" x="20.3" y="59.3" width="0.6" height="3.4"/>
+</g>
+<g id="Ped_C">
+<rect id="Ped_C_1" fill="#7F7F7F" x="27.5" y="58.25" width="5" height="0.55"/>
+<rect id="Ped_C_2" fill="#7F7F7F" x="27.5" y="62.7" width="5" height="0.55"/>
+<rect id="Ped_C_3" fill="#7F7F7F" x="27.5" y="59.3" width="0.6" height="3.4"/>
+<rect id="Ped_C_4" fill="#7F7F7F" x="28.6" y="58.8" width="0.6" height="3.4"/>
+<rect id="Ped_C_5" fill="#7F7F7F" x="29.7" y="59.3" width="0.6" height="3.4"/>
+<rect id="Ped_C_6" fill="#7F7F7F" x="30.8" y="58.8" width="0.6" height="3.4"/>
+<rect id="Ped_C_7" fill="#7F7F7F" x="31.9" y="59.3" width="0.6" height="3.4"/>
+</g>
+<g id="Blok_Net1">
+<rect id="Blok_Net1_1" fill="#7F7F7F" x="18.05" y="76.1" width="1.6" height="1.25"/>
+</g>
+<g id="Blok_Net2">
+<rect id="Blok_Net2_1" fill="#7F7F7F" x="20.05" y="76.1" width="1.6" height="1.25"/>
+</g>
+<g id="Blok_Net3">
+<rect id="Blok_Net3_1" fill="#7F7F7F" x="22.05" y="76.1" width="1.6" height="1.25"/>
+</g>
+<g id="Blok_Net4">
+<rect id="Blok_Net4_1" fill="#7F7F7F" x="26.05" y="76.1" width="2.6" height="1.25"/>
+</g>
+</g>
+<g id="Dielektrik" inkscape:groupmode="layer" inkscape:label="Dielektrik (yalitkan)">
+<g id="Dielektrik_Seritler">
+<polyline id="Dielektrik_Serit_01" fill="none" stroke="#2BB5A0" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="20.85,43.05 14.39,43.05 12.7,45.976 12.7,67.842 18.75,75.431 18.75,76.4"/>
+<polyline id="Dielektrik_Serit_02" fill="none" stroke="#2BB5A0" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.55,47.55 32.75,47.55 33.9,48.7 33.9,73.8 33.15,74.55 28.15,74.55 27.25,75.45 27.25,76.4"/>
+<polyline id="Dielektrik_Serit_03" fill="none" stroke="#2BB5A0" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="21.75,58.5 26.65,58.5"/>
+<polyline id="Dielektrik_Serit_04" fill="none" stroke="#2BB5A0" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="33.35,58.5 33.9,58.5"/>
+<polyline id="Dielektrik_Serit_05" fill="none" stroke="#2BB5A0" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="20.6,64.1 20.6,76.4"/>
+<polyline id="Dielektrik_Serit_06" fill="none" stroke="#2BB5A0" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.8,64.1 27.8,69.4 22.7,75.524 22.7,76.4"/>
+<path id="Dielektrik_Alan" fill="#2BB5A0" fill-opacity="0.55" d="M30.05,75.75 L16.65,75.75 L16.65,76.615 L16.6827,76.6261 L16.8,76.684 L16.9088,76.7566 L17.0071,76.8429 L17.0934,76.9412 L17.166,77.05 L17.2239,77.1673 L17.2659,77.2912 L17.2914,77.4195 L17.3,77.55 L17.3,168.9 L29.4,168.9 L29.4,77.55 L29.4086,77.4195 L29.4341,77.2912 L29.4761,77.1673 L29.534,77.05 L29.6066,76.9412 L29.6929,76.8429 L29.7912,76.7566 L29.9,76.684 L30.0173,76.6261 L30.05,76.615 Z"/>
+<rect id="Dielektrik_Ped_Cercevesi_1" fill="none" stroke="#2BB5A0" stroke-opacity="0.55" stroke-width="0.2" x="20.95" y="42.05" width="6.5" height="6.5"/>
+<rect id="Dielektrik_Ped_Cercevesi_2" fill="none" stroke="#2BB5A0" stroke-opacity="0.55" stroke-width="0.2" x="15.15" y="57.5" width="6.5" height="6.5"/>
+<rect id="Dielektrik_Ped_Cercevesi_3" fill="none" stroke="#2BB5A0" stroke-opacity="0.55" stroke-width="0.2" x="26.75" y="57.5" width="6.5" height="6.5"/>
+</g>
+</g>
+<g id="Kesim" inkscape:groupmode="layer" inkscape:label="Kesim (dis kontur + pencereler)">
+<path id="Kesim_Dis_Kontur" fill="none" stroke="#E3001B" stroke-width="0.1" d="M6,5 L40.7,5 A1,1 0 0 1 41.7,6 L41.7,91.4 A1,1 0 0 1 40.7,92.4 L31.4,92.4 L31.4,77.55 A1,1 0 0 0 29.4,77.55 L29.4,176.9 L17.3,176.9 L17.3,77.55 A1,1 0 0 0 15.3,77.55 L15.3,92.4 L6,92.4 A1,1 0 0 1 5,91.4 L5,6 A1,1 0 0 1 6,5 Z"/>
+<g id="Kesim_Oval_Pencereler">
+<rect id="Oval_01" fill="none" stroke="#E3001B" stroke-width="0.1" x="8.4" y="35.95" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_02" fill="none" stroke="#E3001B" stroke-width="0.1" x="35.1" y="35.95" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_03" fill="none" stroke="#E3001B" stroke-width="0.1" x="8.4" y="48.65" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_04" fill="none" stroke="#E3001B" stroke-width="0.1" x="35.1" y="48.65" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_05" fill="none" stroke="#E3001B" stroke-width="0.1" x="22.6" y="49.65" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_06" fill="none" stroke="#E3001B" stroke-width="0.1" x="8.4" y="61.35" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_07" fill="none" stroke="#E3001B" stroke-width="0.1" x="35.1" y="61.35" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_08" fill="none" stroke="#E3001B" stroke-width="0.1" x="16.15" y="65.6" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_09" fill="none" stroke="#E3001B" stroke-width="0.1" x="22.6" y="65.6" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_10" fill="none" stroke="#E3001B" stroke-width="0.1" x="29.05" y="65.6" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_11" fill="none" stroke="#E3001B" stroke-width="0.1" x="8.4" y="74.05" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+<rect id="Oval_12" fill="none" stroke="#E3001B" stroke-width="0.1" x="35.1" y="74.05" width="3.2" height="6.1" rx="1.6" ry="1.6"/>
+</g>
+</g>
+</svg>

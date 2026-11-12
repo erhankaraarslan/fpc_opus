@@ -1,0 +1,18 @@
+{
+  "baslik": "P1 - Kisa LED devresi (12 LED, 11 pin 1.0 mm)",
+  "tip": "led",
+  "pdf": "docs/K.pdf",
+  "sayfa": 0,
+  "kirpim_px": [599, 199, 2557, 8633],
+  "aci_derece": 0.1,
+  "olcek_px_mm": 47.17,
+  "tasarim_modulu": "p1_design",
+  "rota_modulu": "p1_routes",
+  "dogrulama_roi_y": [1550, 3520],
+  "rapor_kirpimlari": {
+    "bas_bolgesi": [150, 1550, 1800, 3820, 0.42],
+    "kopru_kumesi_sag_ust": [1370, 1920, 1790, 2260, 1.2],
+    "konnektor_toplama": [600, 3250, 1550, 3620, 0.75],
+    "konnektor_ucu": [600, 7650, 1300, 8300, 0.6]
+  }
+}

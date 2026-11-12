@@ -1,0 +1,25 @@
+{
+  "_aciklama": "parts/<ad>.json olarak kopyalayin. '_' ile baslayan alanlar aciklamadir, betikler yok sayar.",
+  "baslik": "PX - Parca adi (ozellik, N pin 1.0 mm)",
+  "tip": "tus",
+  "_tip": "tus = tek gumus baski + dielektrik serit/cerceve + oval pencere (P2/P4 tipi); led = iki gumus baski + kopru yamalari + LED (P1/P3 tipi)",
+  "pdf": "docs/K.pdf",
+  "sayfa": 0,
+  "goruntu_indeksi": 0,
+  "kirpim_px": [0, 0, 1000, 1000],
+  "_kirpim_px": "inspect_scan.py ciktisindaki parca kutusu (tam cozunurluk px, 120 px payli)",
+  "aci_derece": 0.0,
+  "_aci_derece": "fpc.py skew <ad> ciktisi; pozitif = saat yonunun tersine dondur",
+  "olcek_px_mm": 47.17,
+  "_olcek_px_mm": "efektif_dpi/25.4 ile baslayin, konnektor adimi olcumuyle kalibre edin (references/01)",
+  "tasarim_modulu": "px_design",
+  "rota_modulu": "px_routes",
+  "dogrulama_roi_y": [0, 1000],
+  "_dogrulama_roi_y": "metriklerin hesaplanacagi deskew px y araligi (bos film / kuyruk ucu disarida birakilabilir)",
+  "oval_kutulari": [],
+  "_oval_kutulari": "tus tipi: her oval icin yaklasik [x0, y0, x1, y1] deskew px (gridview ile okunur)",
+  "rapor_kirpimlari": {
+    "bas_bolgesi": [0, 0, 1000, 1000, 0.4]
+  },
+  "_rapor_kirpimlari": "ad: [x0, y0, x1, y1, olcek] deskew px; rapora girecek kontrol gorselleri"
+}
