@@ -1,0 +1,70 @@
+{
+ "sayfa_sayisi": 1,
+ "sayfa_pt": [
+  612.0,
+  841.0
+ ],
+ "metin_karakter": 0,
+ "goruntu_sayisi": 1,
+ "goruntu_px": [
+  10192,
+  14016
+ ],
+ "efektif_dpi": 1199.06,
+ "px_mm": 47.207,
+ "format": "jpeg",
+ "parcalar": [
+  {
+   "no": 1,
+   "kirpim_px": [
+    699,
+    319,
+    2518,
+    8513
+   ],
+   "yaklasik_mm": [
+    38.5,
+    173.6
+   ]
+  },
+  {
+   "no": 2,
+   "kirpim_px": [
+    2577,
+    359,
+    4456,
+    8593
+   ],
+   "yaklasik_mm": [
+    39.8,
+    174.4
+   ]
+  },
+  {
+   "no": 3,
+   "kirpim_px": [
+    4596,
+    339,
+    6474,
+    12889
+   ],
+   "yaklasik_mm": [
+    39.8,
+    265.9
+   ]
+  },
+  {
+   "no": 4,
+   "kirpim_px": [
+    7014,
+    899,
+    8953,
+    13589
+   ],
+   "yaklasik_mm": [
+    41.1,
+    268.8
+   ]
+  }
+ ]
+}

@@ -1,4 +1,6 @@
-work/
+work/**/*.npy
+work/**/*.png
+work/**/*.jpg
 __pycache__/
 *.pyc
 output/*_yeni.pdf

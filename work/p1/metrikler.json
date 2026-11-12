@@ -1,0 +1,27 @@
+{
+ "tip": "led",
+ "roi_y_px": [
+  1550,
+  3520
+ ],
+ "esik": {
+  "kenar_medyan_mm": 0.06,
+  "kenar_p90_mm": 0.15,
+  "dielektrik_iou_min": 0.95,
+  "karsiliksiz_max": 0.15
+ },
+ "gumus": {
+  "iou": 0.6278038940594156,
+  "kenar_medyan_mm": 0.04239983040067839,
+  "kenar_p90_mm": 0.13554801318209278,
+  "kapsama": 0.9077388628118499,
+  "karsiliksiz_oran": 0.14031773223429025
+ },
+ "gecti": true,
+ "gorseller": {
+  "bas_bolgesi": "work\\p1\\kontrol_bas_bolgesi.png",
+  "kopru_kumesi_sag_ust": "work\\p1\\kontrol_kopru_kumesi_sag_ust.png",
+  "konnektor_toplama": "work\\p1\\kontrol_konnektor_toplama.png",
+  "konnektor_ucu": "work\\p1\\kontrol_konnektor_ucu.png"
+ }
+}

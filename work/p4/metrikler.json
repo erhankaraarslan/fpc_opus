@@ -1,0 +1,40 @@
+{
+ "tip": "tus",
+ "roi_y_px": [
+  1850,
+  12340
+ ],
+ "esik": {
+  "kenar_medyan_mm": 0.06,
+  "kenar_p90_mm": 0.15,
+  "dielektrik_iou_min": 0.95,
+  "karsiliksiz_max": 0.15
+ },
+ "diel_kayma_mm": [
+  0.15,
+  -0.15
+ ],
+ "dielektrik": {
+  "iou": 0.9792674035632568,
+  "kenar_medyan_mm": 0.021199915200339196,
+  "kenar_p90_mm": 0.08479966080135679,
+  "kapsama": 0.9684973846885402
+ },
+ "gumus": {
+  "iou": 0.6867484388631514,
+  "kenar_medyan_mm": 0.04239983040067839,
+  "kenar_p90_mm": 0.0635997456010176,
+  "kapsama": 0.9870759503758999,
+  "karsiliksiz_oran": 0.2025075498558594
+ },
+ "gecti": true,
+ "gorseller": {
+  "bas_bolgesi": "work\\p4\\kontrol_bas_bolgesi.png",
+  "ped_A": "work\\p4\\kontrol_ped_A.png",
+  "pedler_BC": "work\\p4\\kontrol_pedler_BC.png",
+  "capraz_bolge": "work\\p4\\kontrol_capraz_bolge.png",
+  "kuyruk_baglantisi": "work\\p4\\kontrol_kuyruk_baglantisi.png",
+  "kuyruk_genisleme": "work\\p4\\kontrol_kuyruk_genisleme.png",
+  "konnektor_ucu": "work\\p4\\kontrol_konnektor_ucu.png"
+ }
+}
