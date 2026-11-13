@@ -21,6 +21,7 @@ sys.path.insert(0, os.path.abspath(".devin/skills/fpc-vektor/scripts"))
 import cfg  # noqa: E402,F401
 import fpcvec as fv  # noqa: E402
 import p3_routes as pr  # noqa: E402
+import onar  # noqa: E402
 from polyvec import mask_to_polys  # noqa: E402
 from routes_view import refine_all, route_mask  # noqa: E402
 
@@ -109,7 +110,17 @@ def fix_horizontals(pts, L, T):
         if len(edges) >= 3:
             y = float(np.median(edges)) - TRACE_W * S / 2
             if abs(y - y0) < 14:
+                dy = round(y, 1) - y0
                 pts[i][1] = pts[i + 1][1] = round(y, 1)
+                # komşu kısa pah (< 60 px, çapraz) bir dikeye bağlanıyorsa pahın dikey tarafındaki ucunu da dy kaydır:
+                # pah açısı korunur, yatay düzeltmesi sivri köşe üretmez
+                for j, k in ((i - 1, i - 2), (i + 2, i + 3)):
+                    if not (0 <= k < len(pts)):
+                        continue
+                    e = pts[i] if j < i else pts[i + 1]
+                    kisa = abs(pts[j][0] - e[0]) < 60 and abs(pts[j][0] - e[0]) > 0.5
+                    if kisa and abs(pts[k][0] - pts[j][0]) < 0.5:
+                        pts[j][1] = round(pts[j][1] + dy, 1)
     return [tuple(p) for p in pts]
 
 
@@ -212,6 +223,7 @@ def build():
             s["top"] = False
         if s["name"] == "L6_alt" and s["pts"][0][0] > 800:  # L6 alti yama icinde poz4 ust parcasiyla birlesir
             s["top"] = False
+    D.kopru_kurali = onar.kopru_uc_kurali(sel, traces_px)  # T-bağlantısı yama içinde: alt baskı (hedef=True P3te pin 4-10 birleştiriyor: birleşik çift yama)
     json.dump(sel, open("work/p3/bridges.json", "w"))
     Um = unary_union(D.diel_polys)
     for j, s in enumerate(sel, 1):
@@ -233,6 +245,7 @@ def build():
     D.stiff_rects.append((XC - TAIL_W / 2, st, TAIL_W, TAIL_END - st))
     sa, sb = mm(STICKER_PX[0], STICKER_PX[2]), mm(STICKER_PX[1], STICKER_PX[3])
     D.stickers.append((sa[0], sa[1], sb[0] - sa[0], sb[1] - sa[1], 0.8))
+    D.onarimlar = onar.uc_kenetle(D)  # kısa kalan uçları pede/hatta uzat (ağ-güvenli)
     return D
 
 

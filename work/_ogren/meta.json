@@ -1,0 +1,54 @@
+{
+ "siniflar": [
+  "film",
+  "gumus",
+  "gumus_yalitkan_alti",
+  "kopru",
+  "dielektrik",
+  "golge"
+ ],
+ "ozellikler": [
+  "B",
+  "G",
+  "R",
+  "L",
+  "T",
+  "sat",
+  "a",
+  "b",
+  "L1",
+  "L3",
+  "DoG",
+  "std5",
+  "std11",
+  "tex",
+  "grad",
+  "Lbg",
+  "Ts"
+ ],
+ "modeller": {
+  "model": {
+   "parcalar": [
+    "p1",
+    "p2",
+    "p3",
+    "p4"
+   ],
+   "ornek": 641490
+  },
+  "model_led": {
+   "parcalar": [
+    "p1",
+    "p3"
+   ],
+   "ornek": 344903
+  },
+  "model_tus": {
+   "parcalar": [
+    "p2",
+    "p4"
+   ],
+   "ornek": 296587
+  }
+ }
+}

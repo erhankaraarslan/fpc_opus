@@ -1,92 +1,616 @@
 {
-  "ozet_notu": "P1, setin <b>LED arka aydınlatma katmanıdır</b>. 12 adet 0402 LED var. İki gümüş baskı kullanılıyor: alt hatlar ve dielektrik yamaların üstünden geçen köprüler. P2'den çok daha karmaşık: 10 yama kümesi, 20 köprü ve LED'lerin etrafında koruyucu kaplama damlaları var. Bu yüzden çizimin bir kısmı <b>yorumlanarak</b> yapıldı. Yorumlanan 12 rota mor kesikli <b>Kontrol</b> katmanında işaretli; fiziksel kontrol listesi tamamlanmadan üretime vermeyin.",
-  "surec": [
-    {"baslik": "Kırpım ve eğiklik", "aciklama": "Kırpımda eğiklik 0.108° ölçüldü ve 0.1° ile düzeltildi. Hatlar, P2 ile aynı ölçekte (47.17 px/mm) ölçüldü.", "gorseller": ["_tarama/parca_1.png", "p1_deskew.png", "v_outline.png"]},
-    {"baslik": "İlk segmentasyon ve sorunların tespiti", "aciklama": "Basit renk eşiği LED kaplama damlalarını ve gölgeleri de gümüş saydı. Dielektrik yamaların altında kalan gümüşün koyu turkuaz (R &lt; 82) olduğu bulundu.", "gorseller": ["v_seg.png", "v_seg2.png", "v_x1.png"]},
-    {"baslik": "Gölge kopyasının çözülmesi", "aciklama": "Film camda düz yatmadığı için her hattın ~0.5 mm üstüne pürüzsüz bir gölge kopyası düşüyor. Gümüş tanecikli (dokulu), gölge pürüzsüz; doku eşiği (tex &gt; 3.2) ile ayrıldı.", "gorseller": ["seg_led.png", "hl_s.png", "hr_s.png"]},
-    {"baslik": "Başarısız deneme: otomatik iskelet", "aciklama": "Tam otomatik iskelet-graf yöntemi 736 sahte kenar üretti; yalnızca kaba yön bulmak için kullanılabilir.", "gorseller": ["v_skel.png", "segs_vis.png"]},
-    {"baslik": "Topolojinin okunması", "aciklama": "Yama içinde alt gümüşün kesik bırakıldığı bileşen haritası ve birleşik poligon görünümü, ağların en verimli okunduğu görüntüler oldu.", "gorseller": ["v_comp.png", "v_pv.png", "v_ctr.png"]},
-    {"baslik": "Köprü kümelerinin çözümlenmesi", "aciklama": "Sağ üst kümede R1L katodu hattı dikeyde üstten geçip 45° ile yatay hatta dönüyor; yatay hat yamaların altından geçiyor. Her kesişmede üst/alt ayrımı renkle yapıldı.", "gorseller": ["z_x2b.png", "zx3.png", "zx4.png", "zr3.png", "zo_c1.png", "zo_c2.png"]},
-    {"baslik": "Kritik bağlantı kontrolleri", "aciklama": "LED2'nin katot hattının (V466) alt ucunda parlak bir boşluk ve ardından gölge bandı bulundu: R1'e bağlı değil. Bağlı sanılsaydı LED2 kısa devre olurdu.", "gorseller": ["zj466.png", "z_v462.png", "z_bl.png", "v_bot.png"]},
-    {"baslik": "Konnektöre toplanma bölgesi", "aciklama": "Konnektörün üstünde yapışkan bir leke var. Yüksek geçiren filtre ve uyarlamalı eşikle hatlar görünür hale getirildi. Pin sırası, hatların düzlemsel sırası ve ölçülen 45° çaprazlarla belirlendi.", "gorseller": ["zfan_o.png", "zfan_hp2.png", "zfan_m.png"]},
-    {"baslik": "Rotalar ve LED şablonu", "aciklama": "39 rota kaba olarak yazıldı ve gerçek merkez çizgisine oturtuldu. 12 LED yeşil çipten konumlandı; pedler şablondan çizildi.", "gorseller": ["routes_view.png", "z_led1.png", "v_led1e.png"]},
-    {"baslik": "Doğrulama", "aciklama": "Gümüş kenar sapması medyan 0.042 mm, %90 0.136 mm. Taramadaki gümüşün %14'ünün çizimde karşılığı yok; bunun büyük kısmı kaplama, leke ve gölge.", "gorseller": ["ov_head.png", "overlay.png"]}
-  ],
-  "bulgular": [
-    "Yapı: alt gümüş + dielektrik yamalar + üst gümüş köprüler; kuyrukta dielektrik, konnektör ucunda arka takviye, kuyrukta yapıştırma etiket.",
-    "<b>Ortak anot hattı R1</b> kartın çevresini dolaşıyor ve LED'lerin üst pedlerini besliyor.",
-    "LED'ler kısmen seri bağlı. Örnek: LED2'nin katodu LED4'ün anoduna gidiyor. L1, L3, B2 ve B3 katotları ortak bir hatta toplanıyor.",
-    "Konnektörde 11 pozisyonun 8'i kullanılıyor; 2, 4 ve 11. pozisyonlar uçta dummy kontak.",
-    "Kesim ile baskı arasında kuyrukta ~0.26° dönüklük var; kuyruk dielektriği kesime göre asimetrik.",
-    "12 LED, P2'nin oval pencereleriyle x'te 0.1 mm içinde örtüşüyor; iki parçanın ölçümleri birbirini doğruluyor."
-  ],
-  "karar_noktalari": [
-    {"baslik": "Mevcut taramayla mı devam edilsin?", "karar_veren": "kullanıcı", "secenekler": ["Yeni tarama (düz, arkadan aydınlatmalı)", "Mevcut taramayla devam, belirsizleri işaretle", "Devam + multimetre ile doğrulama", "Önce P3/P4"], "secilen": "Mevcut taramayla devam; belirsiz noktalar işaretlenecek", "risk": "Leke ve kaplama altındaki bağlantılar yorum."},
-    {"baslik": "Gölge kopyalarının ayıklanması", "karar_veren": "analiz", "secenekler": ["Parlaklık eşiği", "Doku (yüksek frekans) eşiği"], "secilen": "Doku eşiği tex &gt; 3.2 ve 185 &lt; L &lt; 208", "gerekce": "Gölge ve gümüş benzer parlaklıkta; gölge pürüzsüz (tex 2–3), gümüş tanecikli (tex 4–8).", "kanit": ["seg_led.png", "v_seg.png"]},
-    {"baslik": "İki gümüş baskının modellenmesi", "karar_veren": "analiz", "secenekler": ["Köprü geçen hattın tamamı 2. baskıda", "Sadece köprü parçası 2. baskıda (yama + 0.4 mm bindirme)"], "secilen": "Sadece köprü parçası; alt baskıda yama içinden kesilir", "gerekce": "Serigrafi pratiğine uygun, düzenlemesi kolay; elektriksel bağlantı bindirme ile sağlanıyor.", "kanit": ["v_x1.png", "zx3.png"]},
-    {"baslik": "Köprü üst/alt seçimi", "karar_veren": "analiz", "secenekler": ["Her kesişmeyi elle okumak", "Maske örneklemesiyle otomatik (parça bazında)"], "secilen": "Otomatik örnekleme; B2/B3 altındaki yatay hat elle 'alt' ayarlandı", "gerekce": "29 kesişmenin 28'inde örnekleme kesin sonuç verdi (bir tarafta 0 piksel). Kararsız tek kesişmede aynı yamadaki dikeyler üstten geçtiği için yatay alttan geçiyor kabul edildi.", "kanit": ["zo_c1.png", "zo_c2.png", "zr3.png"]},
-    {"baslik": "LED2 katot hattının (V466) alt ucu", "karar_veren": "analiz", "secenekler": ["R1 alt hattına bağlı", "Bağlı değil, LED4 alt pedine gidiyor"], "secilen": "Bağlı değil: V466 → LED4 alt pedi (seri)", "gerekce": "Sütun profilinde 3730–3742 px arası parlak boşluk ve ardından gölge bandı var. Bağlı olsaydı LED2 kısa devre olurdu.", "kanit": ["zj466.png", "z_v462.png", "v_bot.png"]},
-    {"baslik": "R1'in konnektöre ulaşması", "karar_veren": "analiz", "secenekler": ["R1 alttan döner, x≈11 mm dikeyle pin 1'e gider", "Başka bir yol"], "secilen": "Alttan dönüş, pin 1 (Kontrol katmanında)", "gerekce": "Ortak hat bir pine ulaşmak zorunda; görülebilen tek yol bu. Dikey hat kaplama damlası altında, dokusu zayıf.", "risk": "Yanlışsa LED'lerin besleme pini farklıdır.", "kanit": ["z_bl.png", "zs_bl.png", "zled4.png"]},
-    {"baslik": "Konnektör pin eşlemesi", "karar_veren": "analiz", "secenekler": ["Lekenin altını tahmin etmeden çizmemek", "Düzlemsel sıra + ölçülen çaprazlarla eşlemek"], "secilen": "Düzlemsel sıra: soldan gelen 3 hat → pin 1/3/5, yukarıdan gelenler x sırasıyla → pin 6–9, sağdan gelen → pin 10", "gerekce": "Tek baskı katmanında hatlar kesişemez. Hat sayısı (8) kullanılan pin sayısına eşit. Ölçülen 135° çaprazlar (x+y = 4485 / 4556 / 4633) pin 7/8/9 ile uyumlu.", "risk": "Tüm toplanma bölgesi Kontrol katmanında.", "kanit": ["zfan_hp2.png", "zfan_m.png", "zfan_o.png"]},
-    {"baslik": "LED pedleri", "karar_veren": "analiz", "secenekler": ["Her pedi taramadan ölç", "Ortak şablon"], "secilen": "Şablon: ped 1.65 × 1.6 mm, boşluk 0.85 mm, gövde 0402", "gerekce": "Kaplama damlaları ped kenarlarını örtüyor; 3 LED'den ölçülen değerler tutarlı.", "kanit": ["z_led1.png", "v_led1e.png", "v_led2.png"]},
-    {"baslik": "Kesim ve kuyruk dielektriği", "karar_veren": "analiz", "secenekler": ["Kesim ölçüldüğü gibi (kuyruk 0.4 mm kayık)", "Kesim konnektör eksenine simetrik; dielektrik ölçüldüğü gibi"], "secilen": "Kesim simetrik, dielektrik ölçüldüğü gibi", "gerekce": "Konnektör konumu baskıyla belirlenir; kesim toleransı tasarım niyeti değil.", "kanit": ["t_tail.png", "t_end.png"]},
-    {"baslik": "Otomatik iskelet yöntemi", "karar_veren": "analiz", "secenekler": ["Otomatik iskelet-graf vektörleştirme", "Kaba rota + gerçek merkeze oturtma"], "secilen": "Kaba rota + oturtma", "gerekce": "İskelet yöntemi kaplama ve leke yüzünden 736 sahte kenar üretti.", "kanit": ["v_skel.png"]}
-  ],
-  "kullanici_yonlendirme": [
-    {"baslik": "En büyük kazanç: arkadan aydınlatmalı görüntü", "aciklama": "P1'i ışık masası veya cam üstüne konmuş bir tablet ekranı üzerinde, düz bastırarak fotoğraflayın ya da tarayın (2400 dpi). Gümüş opak olduğu için siyah görünür; gölge, kaplama damlası ve leke sorunları neredeyse tamamen ortadan kalkar. Bu görüntüyle Kontrol katmanındaki 12 rota kesinleşir."},
-    {"baslik": "Multimetre ile 5 dakikalık kontrol", "aciklama": "Süreklilik modunda şunlara bakın: (1) pin 1 ↔ R1 çevre hattı, (2) her pin ↔ hangi LED pedi, (3) LED2 alt pedi ↔ LED4 alt pedi. Sonuçları 'Pin 7 ↔ LED2 alt: VAR' gibi yazmanız yeterli; çizim bir dakikada güncellenir."},
-    {"baslik": "Konnektör toplama bölgesinin yakın fotoğrafı", "aciklama": "Pinlerin 5–10 mm üstündeki bölgeyi yandan ışıkla veya arkadan aydınlatarak telefonla çekin. Lekenin altındaki 8 hattın sırası bununla kesinleşir."},
-    {"baslik": "LED bilgisi", "aciklama": "LED kodu veya rengi ve polaritesi ('+' işaretinin anot olduğu) biliniyorsa bildirin. LED katmanına model bilgisi eklenir ve ped boyutu datasheet'e göre düzeltilir."},
-    {"baslik": "Üretim bilgisi", "aciklama": "İki gümüş baskı mı (köprü modeli), yoksa çift taraflı mı üretiliyor? Üretici farklı bir köprü bindirmesi isterse (varsayılan 0.4 mm) tasarım dosyasında tek parametredir."}
-  ],
-  "gorseller": {
-    "_tarama/genel.png": {"kategori": "Kaynak", "sira": 1, "baslik": "Taramanın genel görünümü", "aciklama": "4 parça: 1 = P1 (bu parça), 2 = P2, 3 = P3, 4 = P4."},
-    "_tarama/parca_1.png": {"kategori": "Kaynak", "sira": 2, "baslik": "P1 önizleme", "aciklama": "12 LED, turkuaz köprü yamaları, kuyrukta beyaz etiket."},
-    "p1_deskew.png": {"kategori": "Ön işleme", "sira": 1, "baslik": "Eğikliği düzeltilmiş görüntü", "aciklama": "0.1° düzeltilmiş tam çözünürlüklü kırpım; tüm px koordinatları bu görüntüye göre.", "olcum": "Hough sapması 0.108°"},
-    "enh.png": {"kategori": "Ön işleme", "sira": 2, "baslik": "Kontrast güçlendirilmiş", "aciklama": "Kaplama damlalarının altını görmek için CLAHE uygulandı."},
-    "fan_hp.png": {"kategori": "Ön işleme", "sira": 3, "baslik": "Yüksek geçiren filtre (konnektör toplama bölgesi)", "aciklama": "Leke, (L − bulanık L) × 4 ile bastırıldı; altındaki çapraz hatlar görünür hale geldi."},
-    "v_seg.png": {"kategori": "Maskeler", "sira": 1, "baslik": "İlk segmentasyon (gürültülü)", "aciklama": "Basit eşik: LED kaplama damlaları ve gölgeler gümüş sayıldı."},
-    "v_seg2.png": {"kategori": "Maskeler", "sira": 2, "baslik": "Alt gümüş ayrımı", "aciklama": "Dielektrik altındaki gümüş koyu turkuaz (R &lt; 82) olarak ayrı renkte; üst gümüş gri."},
-    "seg_led.png": {"kategori": "Maskeler", "sira": 3, "baslik": "Son maskeler: üst gümüş / alt gümüş / dielektrik", "aciklama": "Doku eşiğiyle gölgeler elendi. Gri = dokulu gümüş, lacivert = dielektrik altı gümüş, açık turkuaz = dielektrik.", "karar": "K2"},
-    "comp.png": {"kategori": "Maskeler", "sira": 4, "baslik": "Bağlantı bileşenleri (tam ölçek)", "aciklama": "Yama içinde yalnızca üst gümüş tutuldu; her renk ayrı iletken bileşen."},
-    "fanmask.png": {"kategori": "Maskeler", "sira": 5, "baslik": "Toplama bölgesi uyarlamalı maske", "aciklama": "Leke altında yerel eşik. Gölge kopyalarını da yakalar: yatay hatların ~20 px üstündeki ikizleri gölgedir."},
-    "polyvec_vis.png": {"kategori": "Maskeler", "sira": 6, "baslik": "Birleşik gümüş poligonları", "aciklama": "Temizlenmiş maskeden 0/45/90°'ye oturtulmuş poligon konturları; topoloji okumanın en verimli yolu."},
-    "hl_s.png": {"kategori": "Topoloji", "sira": 1, "baslik": "Sol yarı (maske)", "aciklama": "Sol sütun LED'leri, R1 çevre hattı ve iç döngü."},
-    "hr_s.png": {"kategori": "Topoloji", "sira": 2, "baslik": "Sağ yarı (maske)", "aciklama": "Sağ sütun LED'leri ve köprü kümeleri."},
-    "hl.png": {"kategori": "Topoloji", "sira": 3, "baslik": "Sol yarı (orijinal)", "aciklama": "0.5 ölçek, 100 px ızgara."},
-    "hr.png": {"kategori": "Topoloji", "sira": 4, "baslik": "Sağ yarı (orijinal)", "aciklama": "0.5 ölçek, 100 px ızgara."},
-    "v_comp.png": {"kategori": "Topoloji", "sira": 5, "baslik": "Bileşen haritası", "aciklama": "Yamalar açık turkuaz; altından geçen hatlar yamada kesik görünüyor. Ağlar bu haritadan okundu."},
-    "v_pv.png": {"kategori": "Topoloji", "sira": 6, "baslik": "Birleşik poligon görünümü", "aciklama": "Kırmızı konturlar: tüm gümüş. Orta-alt bölgede leke nedeniyle düzensizlik var."},
-    "v_ctr.png": {"kategori": "Topoloji", "sira": 7, "baslik": "Orta-alt leke bölgesi", "aciklama": "B1/B2/B3 LED'lerinin bağlantıları leke altında; maske güvenilmez. Bu rotalar Kontrol katmanında."},
-    "routes_view.png": {"kategori": "Topoloji", "sira": 8, "baslik": "Rota bindirmesi", "aciklama": "Her renk bir rota. Noktalar, gerçek merkez çizgisine oturtulmuş köşeler."},
-    "v_x1.png": {"kategori": "Karar kanıtı", "sira": 1, "baslik": "Köprü yaması örneği", "aciklama": "Dikey hatlar açık gri (dielektrik üstünde = köprü); yatay hatlar koyu turkuaz (dielektrik altında).", "karar": "K3"},
-    "z_x2b.png": {"kategori": "Karar kanıtı", "sira": 2, "baslik": "Sağ üst köprü kümesi", "aciklama": "x 1449 ve 1614'teki dikeyler üstten, y 2030 ve 2173'teki yataylar alttan geçiyor."},
-    "zx3.png": {"kategori": "Karar kanıtı", "sira": 3, "baslik": "R1 köprüsü (y 2158)", "aciklama": "R1 sağ kenardan sola dönüp yamanın üstünden geçiyor; x 1700'deki T3 hattı altından geçiyor.", "karar": "K3"},
-    "zx4.png": {"kategori": "Karar kanıtı", "sira": 4, "baslik": "R1L katodu: dikeyden 45° çapraza dönüş", "aciklama": "V2 dikeyi y ≈ 2110'da 45° ile sola dönüp y 2173 hattına bağlanıyor. Dikeyin alt kısmı (LED R2 anodu) R1'den besleniyor; bu ayrım bir kısa devre paradoksunu çözdü."},
-    "zr3.png": {"kategori": "Karar kanıtı", "sira": 5, "baslik": "Sağ orta yama kümesi (y 2700)", "aciklama": "y 2714 hattı alttan; x 1614, 1700 dikeyleri ve 45° çapraz üstten geçiyor.", "karar": "K4"},
-    "zo_c1.png": {"kategori": "Karar kanıtı", "sira": 6, "baslik": "Sol alt yama (y 3050–3185)", "aciklama": "Tek yama: x 462 dikeyi altından (koyu turkuaz), y 3115 yatayı üstünden geçiyor. Gri bant yamayı ikiye bölmüş gibi görünüyor ama tek yama.", "karar": "K4"},
-    "zo_c2.png": {"kategori": "Karar kanıtı", "sira": 7, "baslik": "Sol alt yama (y 3290–3435)", "aciklama": "y 3350 yatayı ve x 462 dikeyi altından, y 3376 yatayı üstünden geçiyor.", "karar": "K4"},
-    "zj466.png": {"kategori": "Karar kanıtı", "sira": 8, "baslik": "V466 üst bağlantısı", "aciklama": "LED2 katot hattı y 2714'ten aşağı dikey olarak devam ediyor (L ≈ 190–200: gümüş)."},
-    "z_v462.png": {"kategori": "Karar kanıtı", "sira": 9, "baslik": "V466 dikeyi boyunca", "aciklama": "Dikey 2714'ten 3728 px'e kadar sürekli; alt ucunda boşluk var.", "karar": "K5"},
-    "v_bot.png": {"kategori": "Karar kanıtı", "sira": 10, "baslik": "Sol alt ve sağ alt (poligon)", "aciklama": "Poligon görünümünde R1 alt hattı, V466 ve L4 pedi birleşik görünüyor; bunun nedeni gölge. Sayısal profil, V466 ile R1 arasında boşluk olduğunu gösterdi.", "karar": "K5"},
-    "z_bl.png": {"kategori": "Karar kanıtı", "sira": 11, "baslik": "R1 sol alt dönüşü", "aciklama": "R1 x 220'den aşağı iner, y 3776'da sağa döner; ardından pahla x 516 dikeyine bağlanır.", "karar": "K6"},
-    "zs_bl.png": {"kategori": "Karar kanıtı", "sira": 12, "baslik": "Sol alt bölge (maske)", "aciklama": "LED3/LED4 iç döngüsü ve R1 alt U'su."},
-    "zled4.png": {"kategori": "Karar kanıtı", "sira": 13, "baslik": "LED4 çevresi", "aciklama": "Kaplama damlası ped kenarlarını örtüyor.", "karar": "K6"},
-    "zfan_o.png": {"kategori": "Karar kanıtı", "sira": 14, "baslik": "Konnektör toplama bölgesi (orijinal)", "aciklama": "Yarı saydam leke kontrastı düşürüyor.", "karar": "K7"},
-    "zfan_hp2.png": {"kategori": "Karar kanıtı", "sira": 15, "baslik": "Toplama bölgesi (yüksek geçiren)", "aciklama": "Soldan 3 çapraz sağ-aşağı, sağdan 3 çapraz sol-aşağı iniyor; 8 hat 8 pine.", "karar": "K7"},
-    "zfan_m.png": {"kategori": "Karar kanıtı", "sira": 16, "baslik": "Toplama bölgesi (uyarlamalı maske)", "aciklama": "45° parçaların konumları; pin eşlemesindeki doğru denklemleri buradan.", "karar": "K7"},
-    "z_led1.png": {"kategori": "Ölçüm", "sira": 1, "baslik": "LED1 yakın çekim", "aciklama": "0402 LED, iki ped arasındaki boşlukta; yeşil 'T' emitör.", "karar": "K8"},
-    "v_led1e.png": {"kategori": "Ölçüm", "sira": 2, "baslik": "LED1 ped yapısı (kontrast)", "aciklama": "Üst ped R1'e bağlı; alt ped boyunla y 1981 hattına iniyor.", "olcum": "ped 1.65 mm genişlik, boşluk 0.85 mm"},
-    "v_led1.png": {"kategori": "Ölçüm", "sira": 3, "baslik": "LED1 (orijinal)", "aciklama": "Kaplama damlası alt pedin kenarlarını genişletmiş gibi gösteriyor."},
-    "v_led2.png": {"kategori": "Ölçüm", "sira": 4, "baslik": "LED C1 (orta üst)", "aciklama": "Ped şablonunun doğrulandığı ikinci LED."},
-    "v_outline.png": {"kategori": "Ölçüm", "sira": 5, "baslik": "Kart konturu", "aciklama": "Baş, yarıklar ve kuyruk.", "olcum": "36.5 × 87.1 mm, kuyruk 12.0 mm, yarık 2.1 mm"},
-    "t_tail.png": {"kategori": "Ölçüm", "sira": 6, "baslik": "Kuyruk başlangıcı", "aciklama": "8 hat 1.0 mm adımla; 2. ve 4. pozisyonlar boş. Dielektrik baskı kesime göre asimetrik.", "karar": "K9"},
-    "t_tail2.png": {"kategori": "Ölçüm", "sira": 7, "baslik": "Kuyruk ve etiket", "aciklama": "Beyaz yapıştırma etiket (y 4249–5330 px) dielektriği örtüyor; 'Etiket' katmanında yalnızca konturu var."},
-    "t_end.png": {"kategori": "Ölçüm", "sira": 8, "baslik": "Konnektör ucu", "aciklama": "11 kontak; 2, 4 ve 11 dummy (y 7785 px'ten başlıyor), takviye y 7925 px'ten uca kadar.", "karar": "K9"},
-    "v_skel.png": {"kategori": "Karar kanıtı", "sira": 20, "baslik": "Başarısız: otomatik iskelet", "aciklama": "İskelet grafı 736 sahte kenar üretti; yöntem reddedildi.", "karar": "K10"},
-    "segs_vis.png": {"kategori": "Ölçüm", "sira": 20, "baslik": "Otomatik hat parçası tespiti", "aciklama": "Yatay, dikey ve 45° açılı hat parçaları; ölçüm tablosu olarak kullanıldı, tek başına rota değil."},
-    "segs_top_vis.png": {"kategori": "Ölçüm", "sira": 21, "baslik": "Hat parçaları (üst gümüş)", "aciklama": "Dokulu maske üzerinde; rotalardaki x/y değerleri bu listeden alındı."},
-    "ov_head.png": {"kategori": "Doğrulama", "sira": 1, "baslik": "Baş bölgesi bindirme", "aciklama": "Turuncu kümeler: yatay hatların üstünde ince şerit = gölge; LED çevresinde = kaplama; orta-alt = leke."},
-    "r_edit2.png": {"kategori": "Çıktı kontrolü", "sira": 1, "baslik": "Düzenlenebilir SVG önizlemesi", "aciklama": "Mor kesikli çizgiler = Kontrol katmanı (yorumlanan rotalar)."}
+ "ozet_notu": "P1, setin <b>LED arka aydınlatma katmanıdır</b>. 12 adet 0402 LED var. İki gümüş baskı kullanılıyor: alt hatlar ve dielektrik yamaların üstünden geçen köprüler. P2'den çok daha karmaşık: 10 yama kümesi, 20 köprü ve LED'lerin etrafında koruyucu kaplama damlaları var. Bu yüzden çizimin bir kısmı <b>yorumlanarak</b> yapıldı. Yorumlanan 12 rota mor kesikli <b>Kontrol</b> katmanında işaretli; fiziksel kontrol listesi tamamlanmadan üretime vermeyin.",
+ "surec": [
+  {
+   "baslik": "Kırpım ve eğiklik",
+   "aciklama": "Kırpımda eğiklik 0.108° ölçüldü ve 0.1° ile düzeltildi. Hatlar, P2 ile aynı ölçekte (47.17 px/mm) ölçüldü.",
+   "gorseller": [
+    "_tarama/parca_1.png",
+    "p1_deskew.png",
+    "v_outline.png"
+   ]
+  },
+  {
+   "baslik": "İlk segmentasyon ve sorunların tespiti",
+   "aciklama": "Basit renk eşiği LED kaplama damlalarını ve gölgeleri de gümüş saydı. Dielektrik yamaların altında kalan gümüşün koyu turkuaz (R &lt; 82) olduğu bulundu.",
+   "gorseller": [
+    "v_seg.png",
+    "v_seg2.png",
+    "v_x1.png"
+   ]
+  },
+  {
+   "baslik": "Gölge kopyasının çözülmesi",
+   "aciklama": "Film camda düz yatmadığı için her hattın ~0.5 mm üstüne pürüzsüz bir gölge kopyası düşüyor. Gümüş tanecikli (dokulu), gölge pürüzsüz; doku eşiği (tex &gt; 3.2) ile ayrıldı.",
+   "gorseller": [
+    "seg_led.png",
+    "hl_s.png",
+    "hr_s.png"
+   ]
+  },
+  {
+   "baslik": "Başarısız deneme: otomatik iskelet",
+   "aciklama": "Tam otomatik iskelet-graf yöntemi 736 sahte kenar üretti; yalnızca kaba yön bulmak için kullanılabilir.",
+   "gorseller": [
+    "v_skel.png",
+    "segs_vis.png"
+   ]
+  },
+  {
+   "baslik": "Topolojinin okunması",
+   "aciklama": "Yama içinde alt gümüşün kesik bırakıldığı bileşen haritası ve birleşik poligon görünümü, ağların en verimli okunduğu görüntüler oldu.",
+   "gorseller": [
+    "v_comp.png",
+    "v_pv.png",
+    "v_ctr.png"
+   ]
+  },
+  {
+   "baslik": "Köprü kümelerinin çözümlenmesi",
+   "aciklama": "Sağ üst kümede R1L katodu hattı dikeyde üstten geçip 45° ile yatay hatta dönüyor; yatay hat yamaların altından geçiyor. Her kesişmede üst/alt ayrımı renkle yapıldı.",
+   "gorseller": [
+    "z_x2b.png",
+    "zx3.png",
+    "zx4.png",
+    "zr3.png",
+    "zo_c1.png",
+    "zo_c2.png"
+   ]
+  },
+  {
+   "baslik": "Kritik bağlantı kontrolleri",
+   "aciklama": "LED2'nin katot hattının (V466) alt ucunda parlak bir boşluk ve ardından gölge bandı bulundu: R1'e bağlı değil. Bağlı sanılsaydı LED2 kısa devre olurdu.",
+   "gorseller": [
+    "zj466.png",
+    "z_v462.png",
+    "z_bl.png",
+    "v_bot.png"
+   ]
+  },
+  {
+   "baslik": "Konnektöre toplanma bölgesi",
+   "aciklama": "Konnektörün üstünde yapışkan bir leke var. Yüksek geçiren filtre ve uyarlamalı eşikle hatlar görünür hale getirildi. Pin sırası, hatların düzlemsel sırası ve ölçülen 45° çaprazlarla belirlendi.",
+   "gorseller": [
+    "zfan_o.png",
+    "zfan_hp2.png",
+    "zfan_m.png"
+   ]
+  },
+  {
+   "baslik": "Rotalar ve LED şablonu",
+   "aciklama": "39 rota kaba olarak yazıldı ve gerçek merkez çizgisine oturtuldu. 12 LED yeşil çipten konumlandı; pedler şablondan çizildi.",
+   "gorseller": [
+    "routes_view.png",
+    "z_led1.png",
+    "v_led1e.png"
+   ]
+  },
+  {
+   "baslik": "Doğrulama",
+   "aciklama": "Gümüş kenar sapması medyan 0.042 mm, %90 0.136 mm. Taramadaki gümüşün %14'ünün çizimde karşılığı yok; bunun büyük kısmı kaplama, leke ve gölge.",
+   "gorseller": [
+    "ov_head.png",
+    "overlay.png"
+   ]
   }
+ ],
+ "bulgular": [
+  "Yapı: alt gümüş + dielektrik yamalar + üst gümüş köprüler; kuyrukta dielektrik, konnektör ucunda arka takviye, kuyrukta yapıştırma etiket.",
+  "<b>Ortak anot hattı R1</b> kartın çevresini dolaşıyor ve LED'lerin üst pedlerini besliyor.",
+  "LED'ler kısmen seri bağlı. Örnek: LED2'nin katodu LED4'ün anoduna gidiyor. L1, L3, B2 ve B3 katotları ortak bir hatta toplanıyor.",
+  "Konnektörde 11 pozisyonun 8'i kullanılıyor; 2, 4 ve 11. pozisyonlar uçta dummy kontak.",
+  "Kesim ile baskı arasında kuyrukta ~0.26° dönüklük var; kuyruk dielektriği kesime göre asimetrik.",
+  "12 LED, P2'nin oval pencereleriyle x'te 0.1 mm içinde örtüşüyor; iki parçanın ölçümleri birbirini doğruluyor.",
+  "Faz 3 öncesi düzeltmelerden sonra kalan ağ HATA'ları (4): B1/R3/R4 üst, B2 üst, B3 üst, C1 üst pedleri pinsiz — hepsi orta-alt leke bölgesinde. Pin 6 ile 9 çizimde aynı ağda (H2818, V578'e T ile bağlanıyor; taramada da birleşik görünüyor)."
+ ],
+ "karar_noktalari": [
+  {
+   "baslik": "Mevcut taramayla mı devam edilsin?",
+   "karar_veren": "kullanıcı",
+   "secenekler": [
+    "Yeni tarama (düz, arkadan aydınlatmalı)",
+    "Mevcut taramayla devam, belirsizleri işaretle",
+    "Devam + multimetre ile doğrulama",
+    "Önce P3/P4"
+   ],
+   "secilen": "Mevcut taramayla devam; belirsiz noktalar işaretlenecek",
+   "risk": "Leke ve kaplama altındaki bağlantılar yorum."
+  },
+  {
+   "baslik": "Gölge kopyalarının ayıklanması",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "Parlaklık eşiği",
+    "Doku (yüksek frekans) eşiği"
+   ],
+   "secilen": "Doku eşiği tex &gt; 3.2 ve 185 &lt; L &lt; 208",
+   "gerekce": "Gölge ve gümüş benzer parlaklıkta; gölge pürüzsüz (tex 2–3), gümüş tanecikli (tex 4–8).",
+   "kanit": [
+    "seg_led.png",
+    "v_seg.png"
+   ]
+  },
+  {
+   "baslik": "İki gümüş baskının modellenmesi",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "Köprü geçen hattın tamamı 2. baskıda",
+    "Sadece köprü parçası 2. baskıda (yama + 0.4 mm bindirme)"
+   ],
+   "secilen": "Sadece köprü parçası; alt baskıda yama içinden kesilir",
+   "gerekce": "Serigrafi pratiğine uygun, düzenlemesi kolay; elektriksel bağlantı bindirme ile sağlanıyor.",
+   "kanit": [
+    "v_x1.png",
+    "zx3.png"
+   ]
+  },
+  {
+   "baslik": "Köprü üst/alt seçimi",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "Her kesişmeyi elle okumak",
+    "Maske örneklemesiyle otomatik (parça bazında)"
+   ],
+   "secilen": "Otomatik örnekleme; B2/B3 altındaki yatay hat elle 'alt' ayarlandı",
+   "gerekce": "29 kesişmenin 28'inde örnekleme kesin sonuç verdi (bir tarafta 0 piksel). Kararsız tek kesişmede aynı yamadaki dikeyler üstten geçtiği için yatay alttan geçiyor kabul edildi.",
+   "kanit": [
+    "zo_c1.png",
+    "zo_c2.png",
+    "zr3.png"
+   ]
+  },
+  {
+   "baslik": "LED2 katot hattının (V466) alt ucu",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "R1 alt hattına bağlı",
+    "Bağlı değil, LED4 alt pedine gidiyor"
+   ],
+   "secilen": "Bağlı değil: V466 → LED4 alt pedi (seri)",
+   "gerekce": "Sütun profilinde 3730–3742 px arası parlak boşluk ve ardından gölge bandı var. Bağlı olsaydı LED2 kısa devre olurdu.",
+   "kanit": [
+    "zj466.png",
+    "z_v462.png",
+    "v_bot.png"
+   ]
+  },
+  {
+   "baslik": "R1'in konnektöre ulaşması",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "R1 alttan döner, x≈11 mm dikeyle pin 1'e gider",
+    "Başka bir yol"
+   ],
+   "secilen": "Alttan dönüş, pin 1 (Kontrol katmanında)",
+   "gerekce": "Ortak hat bir pine ulaşmak zorunda; görülebilen tek yol bu. Dikey hat kaplama damlası altında, dokusu zayıf.",
+   "risk": "Yanlışsa LED'lerin besleme pini farklıdır.",
+   "kanit": [
+    "z_bl.png",
+    "zs_bl.png",
+    "zled4.png"
+   ]
+  },
+  {
+   "baslik": "Konnektör pin eşlemesi",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "Lekenin altını tahmin etmeden çizmemek",
+    "Düzlemsel sıra + ölçülen çaprazlarla eşlemek"
+   ],
+   "secilen": "Düzlemsel sıra: soldan gelen 3 hat → pin 1/3/5, yukarıdan gelenler x sırasıyla → pin 6–9, sağdan gelen → pin 10",
+   "gerekce": "Tek baskı katmanında hatlar kesişemez. Hat sayısı (8) kullanılan pin sayısına eşit. Ölçülen 135° çaprazlar (x+y = 4485 / 4556 / 4633) pin 7/8/9 ile uyumlu.",
+   "risk": "Tüm toplanma bölgesi Kontrol katmanında.",
+   "kanit": [
+    "zfan_hp2.png",
+    "zfan_m.png",
+    "zfan_o.png"
+   ]
+  },
+  {
+   "baslik": "LED pedleri",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "Her pedi taramadan ölç",
+    "Ortak şablon"
+   ],
+   "secilen": "Şablon: ped 1.65 × 1.6 mm, boşluk 0.85 mm, gövde 0402",
+   "gerekce": "Kaplama damlaları ped kenarlarını örtüyor; 3 LED'den ölçülen değerler tutarlı.",
+   "kanit": [
+    "z_led1.png",
+    "v_led1e.png",
+    "v_led2.png"
+   ]
+  },
+  {
+   "baslik": "Kesim ve kuyruk dielektriği",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "Kesim ölçüldüğü gibi (kuyruk 0.4 mm kayık)",
+    "Kesim konnektör eksenine simetrik; dielektrik ölçüldüğü gibi"
+   ],
+   "secilen": "Kesim simetrik, dielektrik ölçüldüğü gibi",
+   "gerekce": "Konnektör konumu baskıyla belirlenir; kesim toleransı tasarım niyeti değil.",
+   "kanit": [
+    "t_tail.png",
+    "t_end.png"
+   ]
+  },
+  {
+   "baslik": "Otomatik iskelet yöntemi",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "Otomatik iskelet-graf vektörleştirme",
+    "Kaba rota + gerçek merkeze oturtma"
+   ],
+   "secilen": "Kaba rota + oturtma",
+   "gerekce": "İskelet yöntemi kaplama ve leke yüzünden 736 sahte kenar üretti.",
+   "kanit": [
+    "v_skel.png"
+   ]
+  },
+  {
+   "baslik": "Ped–boyun hattı boşlukları (Faz 1 kontrolü)",
+   "karar_veren": "kullanıcı",
+   "soru": "Çizimde değmeyen uçlar düzeltilsin mi?",
+   "secenekler": [
+    "Düzelt (uç kenetleme)",
+    "Olduğu gibi bırak"
+   ],
+   "secilen": "Düzelt: onar.uc_kenetle (ağ-güvenli)",
+   "gerekce": "7 hat ucu 0.01–0.16 mm boşlukla pede değmiyordu (kaba rota ped kenarında başlıyor, refine kısaltıyor). Uçlar hat doğrultusunda pede 0.25 mm bindirildi. Pin 1 (L1/L2/R1/R2 üst) ve pin 3 (L3/L4 üst) RAPOR eşlemesiyle uyumlu hale geldi. H3317→V466 (0.055 mm) birleştirmesi iki ayrı pinli ağı (5 ve 7) birleştireceği için reddedildi: taramadaki boşluk korundu."
+  },
+  {
+   "baslik": "Yarık üst ucu ölçüsü",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "69.9 mm (önceki)",
+    "70.7 mm (yeniden ölçüm)"
+   ],
+   "secilen": "70.7 mm",
+   "gerekce": "Yarık merkezinde (x 651 / 1315 px) dikey profil: kenar çizgisi y≈3509 px = 70.68 mm, iki yarıkta aynı. 69.9 ile R2L_alt yatayı kesim konturunun dışına taşıyordu (kontur_disi 0.126 mm²)."
+  },
+  {
+   "baslik": "C1_ust köprüsü",
+   "karar_veren": "analiz",
+   "secenekler": [
+    "Köprü",
+    "Alt baskı"
+   ],
+   "secilen": "Alt baskı (köprü uç kuralı)",
+   "gerekce": "Rota ucu yama içinde biten parça köprü olamaz (köprü yalnız iki ucu yalıtkan dışına çıkınca bağlantı kurar).",
+   "risk": "C1_ust ucu yine boşta (serbest_uc); B1/B2/B3/C1 üst pedleri ile R3/R4 üst pedleri leke bölgesinde pinsiz kalıyor — taramadan çözülemedi, arka tarama/multimetre bekliyor."
+  }
+ ],
+ "kullanici_yonlendirme": [
+  {
+   "baslik": "En büyük kazanç: arkadan aydınlatmalı görüntü",
+   "aciklama": "P1'i ışık masası veya cam üstüne konmuş bir tablet ekranı üzerinde, düz bastırarak fotoğraflayın ya da tarayın (2400 dpi). Gümüş opak olduğu için siyah görünür; gölge, kaplama damlası ve leke sorunları neredeyse tamamen ortadan kalkar. Bu görüntüyle Kontrol katmanındaki 12 rota kesinleşir."
+  },
+  {
+   "baslik": "Multimetre ile 5 dakikalık kontrol",
+   "aciklama": "Süreklilik modunda şunlara bakın: (1) pin 1 ↔ R1 çevre hattı, (2) her pin ↔ hangi LED pedi, (3) LED2 alt pedi ↔ LED4 alt pedi. Sonuçları 'Pin 7 ↔ LED2 alt: VAR' gibi yazmanız yeterli; çizim bir dakikada güncellenir."
+  },
+  {
+   "baslik": "Konnektör toplama bölgesinin yakın fotoğrafı",
+   "aciklama": "Pinlerin 5–10 mm üstündeki bölgeyi yandan ışıkla veya arkadan aydınlatarak telefonla çekin. Lekenin altındaki 8 hattın sırası bununla kesinleşir."
+  },
+  {
+   "baslik": "LED bilgisi",
+   "aciklama": "LED kodu veya rengi ve polaritesi ('+' işaretinin anot olduğu) biliniyorsa bildirin. LED katmanına model bilgisi eklenir ve ped boyutu datasheet'e göre düzeltilir."
+  },
+  {
+   "baslik": "Üretim bilgisi",
+   "aciklama": "İki gümüş baskı mı (köprü modeli), yoksa çift taraflı mı üretiliyor? Üretici farklı bir köprü bindirmesi isterse (varsayılan 0.4 mm) tasarım dosyasında tek parametredir."
+  }
+ ],
+ "gorseller": {
+  "_tarama/genel.png": {
+   "kategori": "Kaynak",
+   "sira": 1,
+   "baslik": "Taramanın genel görünümü",
+   "aciklama": "4 parça: 1 = P1 (bu parça), 2 = P2, 3 = P3, 4 = P4."
+  },
+  "_tarama/parca_1.png": {
+   "kategori": "Kaynak",
+   "sira": 2,
+   "baslik": "P1 önizleme",
+   "aciklama": "12 LED, turkuaz köprü yamaları, kuyrukta beyaz etiket."
+  },
+  "p1_deskew.png": {
+   "kategori": "Ön işleme",
+   "sira": 1,
+   "baslik": "Eğikliği düzeltilmiş görüntü",
+   "aciklama": "0.1° düzeltilmiş tam çözünürlüklü kırpım; tüm px koordinatları bu görüntüye göre.",
+   "olcum": "Hough sapması 0.108°"
+  },
+  "enh.png": {
+   "kategori": "Ön işleme",
+   "sira": 2,
+   "baslik": "Kontrast güçlendirilmiş",
+   "aciklama": "Kaplama damlalarının altını görmek için CLAHE uygulandı."
+  },
+  "fan_hp.png": {
+   "kategori": "Ön işleme",
+   "sira": 3,
+   "baslik": "Yüksek geçiren filtre (konnektör toplama bölgesi)",
+   "aciklama": "Leke, (L − bulanık L) × 4 ile bastırıldı; altındaki çapraz hatlar görünür hale geldi."
+  },
+  "v_seg.png": {
+   "kategori": "Maskeler",
+   "sira": 1,
+   "baslik": "İlk segmentasyon (gürültülü)",
+   "aciklama": "Basit eşik: LED kaplama damlaları ve gölgeler gümüş sayıldı."
+  },
+  "v_seg2.png": {
+   "kategori": "Maskeler",
+   "sira": 2,
+   "baslik": "Alt gümüş ayrımı",
+   "aciklama": "Dielektrik altındaki gümüş koyu turkuaz (R &lt; 82) olarak ayrı renkte; üst gümüş gri."
+  },
+  "seg_led.png": {
+   "kategori": "Maskeler",
+   "sira": 3,
+   "baslik": "Son maskeler: üst gümüş / alt gümüş / dielektrik",
+   "aciklama": "Doku eşiğiyle gölgeler elendi. Gri = dokulu gümüş, lacivert = dielektrik altı gümüş, açık turkuaz = dielektrik.",
+   "karar": "K2"
+  },
+  "comp.png": {
+   "kategori": "Maskeler",
+   "sira": 4,
+   "baslik": "Bağlantı bileşenleri (tam ölçek)",
+   "aciklama": "Yama içinde yalnızca üst gümüş tutuldu; her renk ayrı iletken bileşen."
+  },
+  "fanmask.png": {
+   "kategori": "Maskeler",
+   "sira": 5,
+   "baslik": "Toplama bölgesi uyarlamalı maske",
+   "aciklama": "Leke altında yerel eşik. Gölge kopyalarını da yakalar: yatay hatların ~20 px üstündeki ikizleri gölgedir."
+  },
+  "polyvec_vis.png": {
+   "kategori": "Maskeler",
+   "sira": 6,
+   "baslik": "Birleşik gümüş poligonları",
+   "aciklama": "Temizlenmiş maskeden 0/45/90°'ye oturtulmuş poligon konturları; topoloji okumanın en verimli yolu."
+  },
+  "hl_s.png": {
+   "kategori": "Topoloji",
+   "sira": 1,
+   "baslik": "Sol yarı (maske)",
+   "aciklama": "Sol sütun LED'leri, R1 çevre hattı ve iç döngü."
+  },
+  "hr_s.png": {
+   "kategori": "Topoloji",
+   "sira": 2,
+   "baslik": "Sağ yarı (maske)",
+   "aciklama": "Sağ sütun LED'leri ve köprü kümeleri."
+  },
+  "hl.png": {
+   "kategori": "Topoloji",
+   "sira": 3,
+   "baslik": "Sol yarı (orijinal)",
+   "aciklama": "0.5 ölçek, 100 px ızgara."
+  },
+  "hr.png": {
+   "kategori": "Topoloji",
+   "sira": 4,
+   "baslik": "Sağ yarı (orijinal)",
+   "aciklama": "0.5 ölçek, 100 px ızgara."
+  },
+  "v_comp.png": {
+   "kategori": "Topoloji",
+   "sira": 5,
+   "baslik": "Bileşen haritası",
+   "aciklama": "Yamalar açık turkuaz; altından geçen hatlar yamada kesik görünüyor. Ağlar bu haritadan okundu."
+  },
+  "v_pv.png": {
+   "kategori": "Topoloji",
+   "sira": 6,
+   "baslik": "Birleşik poligon görünümü",
+   "aciklama": "Kırmızı konturlar: tüm gümüş. Orta-alt bölgede leke nedeniyle düzensizlik var."
+  },
+  "v_ctr.png": {
+   "kategori": "Topoloji",
+   "sira": 7,
+   "baslik": "Orta-alt leke bölgesi",
+   "aciklama": "B1/B2/B3 LED'lerinin bağlantıları leke altında; maske güvenilmez. Bu rotalar Kontrol katmanında."
+  },
+  "routes_view.png": {
+   "kategori": "Topoloji",
+   "sira": 8,
+   "baslik": "Rota bindirmesi",
+   "aciklama": "Her renk bir rota. Noktalar, gerçek merkez çizgisine oturtulmuş köşeler."
+  },
+  "v_x1.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 1,
+   "baslik": "Köprü yaması örneği",
+   "aciklama": "Dikey hatlar açık gri (dielektrik üstünde = köprü); yatay hatlar koyu turkuaz (dielektrik altında).",
+   "karar": "K3"
+  },
+  "z_x2b.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 2,
+   "baslik": "Sağ üst köprü kümesi",
+   "aciklama": "x 1449 ve 1614'teki dikeyler üstten, y 2030 ve 2173'teki yataylar alttan geçiyor."
+  },
+  "zx3.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 3,
+   "baslik": "R1 köprüsü (y 2158)",
+   "aciklama": "R1 sağ kenardan sola dönüp yamanın üstünden geçiyor; x 1700'deki T3 hattı altından geçiyor.",
+   "karar": "K3"
+  },
+  "zx4.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 4,
+   "baslik": "R1L katodu: dikeyden 45° çapraza dönüş",
+   "aciklama": "V2 dikeyi y ≈ 2110'da 45° ile sola dönüp y 2173 hattına bağlanıyor. Dikeyin alt kısmı (LED R2 anodu) R1'den besleniyor; bu ayrım bir kısa devre paradoksunu çözdü."
+  },
+  "zr3.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 5,
+   "baslik": "Sağ orta yama kümesi (y 2700)",
+   "aciklama": "y 2714 hattı alttan; x 1614, 1700 dikeyleri ve 45° çapraz üstten geçiyor.",
+   "karar": "K4"
+  },
+  "zo_c1.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 6,
+   "baslik": "Sol alt yama (y 3050–3185)",
+   "aciklama": "Tek yama: x 462 dikeyi altından (koyu turkuaz), y 3115 yatayı üstünden geçiyor. Gri bant yamayı ikiye bölmüş gibi görünüyor ama tek yama.",
+   "karar": "K4"
+  },
+  "zo_c2.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 7,
+   "baslik": "Sol alt yama (y 3290–3435)",
+   "aciklama": "y 3350 yatayı ve x 462 dikeyi altından, y 3376 yatayı üstünden geçiyor.",
+   "karar": "K4"
+  },
+  "zj466.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 8,
+   "baslik": "V466 üst bağlantısı",
+   "aciklama": "LED2 katot hattı y 2714'ten aşağı dikey olarak devam ediyor (L ≈ 190–200: gümüş)."
+  },
+  "z_v462.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 9,
+   "baslik": "V466 dikeyi boyunca",
+   "aciklama": "Dikey 2714'ten 3728 px'e kadar sürekli; alt ucunda boşluk var.",
+   "karar": "K5"
+  },
+  "v_bot.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 10,
+   "baslik": "Sol alt ve sağ alt (poligon)",
+   "aciklama": "Poligon görünümünde R1 alt hattı, V466 ve L4 pedi birleşik görünüyor; bunun nedeni gölge. Sayısal profil, V466 ile R1 arasında boşluk olduğunu gösterdi.",
+   "karar": "K5"
+  },
+  "z_bl.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 11,
+   "baslik": "R1 sol alt dönüşü",
+   "aciklama": "R1 x 220'den aşağı iner, y 3776'da sağa döner; ardından pahla x 516 dikeyine bağlanır.",
+   "karar": "K6"
+  },
+  "zs_bl.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 12,
+   "baslik": "Sol alt bölge (maske)",
+   "aciklama": "LED3/LED4 iç döngüsü ve R1 alt U'su."
+  },
+  "zled4.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 13,
+   "baslik": "LED4 çevresi",
+   "aciklama": "Kaplama damlası ped kenarlarını örtüyor.",
+   "karar": "K6"
+  },
+  "zfan_o.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 14,
+   "baslik": "Konnektör toplama bölgesi (orijinal)",
+   "aciklama": "Yarı saydam leke kontrastı düşürüyor.",
+   "karar": "K7"
+  },
+  "zfan_hp2.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 15,
+   "baslik": "Toplama bölgesi (yüksek geçiren)",
+   "aciklama": "Soldan 3 çapraz sağ-aşağı, sağdan 3 çapraz sol-aşağı iniyor; 8 hat 8 pine.",
+   "karar": "K7"
+  },
+  "zfan_m.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 16,
+   "baslik": "Toplama bölgesi (uyarlamalı maske)",
+   "aciklama": "45° parçaların konumları; pin eşlemesindeki doğru denklemleri buradan.",
+   "karar": "K7"
+  },
+  "z_led1.png": {
+   "kategori": "Ölçüm",
+   "sira": 1,
+   "baslik": "LED1 yakın çekim",
+   "aciklama": "0402 LED, iki ped arasındaki boşlukta; yeşil 'T' emitör.",
+   "karar": "K8"
+  },
+  "v_led1e.png": {
+   "kategori": "Ölçüm",
+   "sira": 2,
+   "baslik": "LED1 ped yapısı (kontrast)",
+   "aciklama": "Üst ped R1'e bağlı; alt ped boyunla y 1981 hattına iniyor.",
+   "olcum": "ped 1.65 mm genişlik, boşluk 0.85 mm"
+  },
+  "v_led1.png": {
+   "kategori": "Ölçüm",
+   "sira": 3,
+   "baslik": "LED1 (orijinal)",
+   "aciklama": "Kaplama damlası alt pedin kenarlarını genişletmiş gibi gösteriyor."
+  },
+  "v_led2.png": {
+   "kategori": "Ölçüm",
+   "sira": 4,
+   "baslik": "LED C1 (orta üst)",
+   "aciklama": "Ped şablonunun doğrulandığı ikinci LED."
+  },
+  "v_outline.png": {
+   "kategori": "Ölçüm",
+   "sira": 5,
+   "baslik": "Kart konturu",
+   "aciklama": "Baş, yarıklar ve kuyruk.",
+   "olcum": "36.5 × 87.1 mm, kuyruk 12.0 mm, yarık 2.1 mm"
+  },
+  "t_tail.png": {
+   "kategori": "Ölçüm",
+   "sira": 6,
+   "baslik": "Kuyruk başlangıcı",
+   "aciklama": "8 hat 1.0 mm adımla; 2. ve 4. pozisyonlar boş. Dielektrik baskı kesime göre asimetrik.",
+   "karar": "K9"
+  },
+  "t_tail2.png": {
+   "kategori": "Ölçüm",
+   "sira": 7,
+   "baslik": "Kuyruk ve etiket",
+   "aciklama": "Beyaz yapıştırma etiket (y 4249–5330 px) dielektriği örtüyor; 'Etiket' katmanında yalnızca konturu var."
+  },
+  "t_end.png": {
+   "kategori": "Ölçüm",
+   "sira": 8,
+   "baslik": "Konnektör ucu",
+   "aciklama": "11 kontak; 2, 4 ve 11 dummy (y 7785 px'ten başlıyor), takviye y 7925 px'ten uca kadar.",
+   "karar": "K9"
+  },
+  "v_skel.png": {
+   "kategori": "Karar kanıtı",
+   "sira": 20,
+   "baslik": "Başarısız: otomatik iskelet",
+   "aciklama": "İskelet grafı 736 sahte kenar üretti; yöntem reddedildi.",
+   "karar": "K10"
+  },
+  "segs_vis.png": {
+   "kategori": "Ölçüm",
+   "sira": 20,
+   "baslik": "Otomatik hat parçası tespiti",
+   "aciklama": "Yatay, dikey ve 45° açılı hat parçaları; ölçüm tablosu olarak kullanıldı, tek başına rota değil."
+  },
+  "segs_top_vis.png": {
+   "kategori": "Ölçüm",
+   "sira": 21,
+   "baslik": "Hat parçaları (üst gümüş)",
+   "aciklama": "Dokulu maske üzerinde; rotalardaki x/y değerleri bu listeden alındı."
+  },
+  "ov_head.png": {
+   "kategori": "Doğrulama",
+   "sira": 1,
+   "baslik": "Baş bölgesi bindirme",
+   "aciklama": "Turuncu kümeler: yatay hatların üstünde ince şerit = gölge; LED çevresinde = kaplama; orta-alt = leke."
+  },
+  "r_edit2.png": {
+   "kategori": "Çıktı kontrolü",
+   "sira": 1,
+   "baslik": "Düzenlenebilir SVG önizlemesi",
+   "aciklama": "Mor kesikli çizgiler = Kontrol katmanı (yorumlanan rotalar)."
+  }
+ }
 }

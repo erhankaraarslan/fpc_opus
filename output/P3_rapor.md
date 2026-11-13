@@ -1,8 +1,8 @@
 # P3 - Uzun LED devresi (20 LED, 11 pin 1.0 mm)
 
-*12.11.2026 00:50 — fpc-vektor skill · etkileşimli sürüm: `P3_rapor.html`*
+*13.11.2026 19:24 — fpc-vektor skill · etkileşimli sürüm: `P3_rapor.html`*
 
-**Kabul:** KALDI · **Belirsiz rota:** 12 · **Kontrol maddesi:** 19 · **Karar noktası:** 8
+**Kabul:** KALDI · **Belirsiz rota:** 12 · **Kontrol maddesi:** 19 · **Karar noktası:** 9
 
 ## Özet
 
@@ -30,6 +30,7 @@
 - Kuyruk P4 ile aynı biçimde baş altında 11.35 mm, sonra 11.8 mm — bu bir kesim tasarımı (iki parçada birden).
 - Konnektörde dummy yok: 11 kontağın hepsi kullanılıyor.
 - Film sağ yarıda camdan kalkık: hatlar bulanık, doku eşiği çalışmıyor; yatay hatların 20–28 px üstünde gölge kopyası var.
+- Düzeltmelerden sonra kalan HATA'lar: L5/R5 alt (önceden biliniyordu) ve R6 alt (birleşik çift yama).
 
 ## Karar noktaları
 
@@ -99,6 +100,14 @@
 - Gerekçe: Kümeler sınıflandırıldı: kaplama 0.088, çift hat boşluğu 0.014, kalan gölge/bulanık kenar. Çizilmemiş hat kümesi kalmadı.
 - Kanıt: [overlay.png](P3_rapor_gorseller/overlay.jpg), [kontrol_bas_ust.png](P3_rapor_gorseller/kontrol_bas_ust.jpg)
 
+### K9. Yama içindeki T-bağlantılar (Faz 1 kontrolü)
+
+- Seçenek: Düzelt (köprü uç kuralı)
+- Seçenek: Olduğu gibi bırak
+- **Seçilen:** Düzelt: onar.kopru_uc_kurali
+- Gerekçe: Poz7, Poz10 ve R6_alt rotalarının ucu yama içinde bitiyordu ve o parça köprü seçilmişti; köprü yalıtkan üstünde bittiği için bağlantı çizimde yoktu. Uçtaki parça alt baskıya alındı; Poz7/Poz10 ince bölge ve köprü bulguları kalktı. Ayrıca yatay gölge düzeltmesinin bozduğu pah (Q_R8, 115° sivri köşe) pah ucunu da kaydırarak düzeltildi.
+- Risk: R6 alt pedi hâlâ pinsiz: bağlandığı R2_alt dikeyi aynı birleşik çift yamada Q yatayının üstünden köprüyle geçiyor. Hedef parçayı da alt baskıya almak pin 4 ile 10'u birleştirdi (yanlış) — reddedildi. Çözüm yamayı ikiye ayırmak; arka tarama ile kesinleşir.
+
 ## Ölçüler
 
 | Ölçü | Değer | Not |
@@ -114,9 +123,9 @@
 | Köprü bindirmesi | 0.4 mm | yama kenarından dışarı |
 | Kart sınır kutusu | 36.60 × 263.40 mm | Kesim konturu |
 | Kart alanı | 6473.4 mm² |  |
-| Gümüş alanı (alt baskı) | 1591.9 mm² |  |
+| Gümüş alanı (alt baskı) | 1593.4 mm² |  |
 | Dielektrik alanı | 1791.6 mm² |  |
-| Köprü alanı (2. gümüş baskı) | 86.90 mm² | 43 köprü |
+| Köprü alanı (2. gümüş baskı) | 84.07 mm² | 40 köprü |
 
 | Eleman | Adet |
 |---|---|
@@ -125,7 +134,7 @@
 | Oval pencere | 0 |
 | LED | 20 |
 | Dielektrik yama | 16 |
-| Köprü | 43 |
+| Köprü | 40 |
 | Kontrol (belirsiz) rota | 12 |
 
 ### Varsayımlar
@@ -141,10 +150,113 @@
 
 | Metrik | Değer | Eşik | Sonuç |
 |---|---|---|---|
-| Gümüş kenar sapması medyan | 0.042 mm | ≤ 0.06 mm | ✔ |
-| Gümüş kenar sapması %90 | 0.131 mm | ≤ 0.15 mm | ✔ |
+| Gümüş kenar sapması medyan | 0.064 mm | ≤ 0.06 mm | ✘ |
+| Gümüş kenar sapması %90 | 0.171 mm | ≤ 0.15 mm | ✘ |
+| Gümüş kenar kapsaması | 0.803 | ≥ 0.8 | ✔ |
+| Taramada karşılıksız gümüş (gölge hariç) | 0.162 | ≤ 0.15 | ✘ |
+| Ağ / tutarlılık HATA (bilinmeyen) | 2 | ≤ 0 | ✘ |
+| Gümüş sistematik ofset (her yan) / kayma | -0.025 mm / (+0.000, +0.037) mm | |ofset| uyarı > 0.03 | — |
+| Gümüş işaretli sapma medyanı | -0.030 mm | + geniş / − dar | — |
+| Gümüş yoğunluk kenarı (maskeden bağımsız) medyan / %90 | 0.045 / 0.090 mm | kapsama 0.87; ±6 px dışı sapma ölçülmez (kapı değil) | — |
+| Gümüş yoğunluk ofseti / kayma / bulanıklık σ | -0.027 mm / (-0.001, +0.007) mm / 0.020 mm | maske ofsetiyle farkı = maske yanlılığı | — |
+| Gümüş: tarama kenarlarının çizime ≤ 3 px oranı | 0.367 | bilgi (ters yön) | — |
 | Gümüş IoU | 0.563 | bilgi | — |
-| Taramada karşılıksız gümüş | 0.207 | ≤ 0.15 | ✘ |
+| Taramada karşılıksız gümüş (ham / gölge hariç) | 0.207 / 0.162 | kapıda gölge hariç | — |
+| Gölge ofseti δ (genel) / kalkık karo | 0.30 mm / 3 | golge_haritasi.png | — |
+| Gümüş kenar (eski tam-piksel yöntem) medyan / %90 | 0.042 / 0.131 mm | önceki sürümle kıyas | — |
+
+### En büyük sapmalı elemanlar
+
+| Eleman | Tür | Medyan mm | Ofset mm | Kayma mm | Kapsama | Örnek |
+|---|---|---|---|---|---|---|
+| Kopru_10_X_R3R4 | kopru | 0.222 | -0.021 | (+0.000, +0.097) | 0.36 | 96 |
+| X_R3R4 | hat | 0.158 | -0.018 | (+0.000, +0.008) | 0.44 | 167 |
+| Z_hat | hat | 0.149 | +0.079 | (+0.000, -0.147) | 0.41 | 306 |
+| B3_alt | hat | 0.137 | +0.035 | (+0.084, +0.000) | 0.38 | 24 |
+| Kopru_59_L7R7_alt | kopru | 0.113 | +0.123 | (+0.000, +0.036) | 0.36 | 56 |
+| Kopru_09_X_L3 | kopru | 0.099 | -0.004 | (-0.052, +0.000) | 0.45 | 110 |
+| R5_ust | hat | 0.180 | -0.093 | (+0.052, -0.047) | 0.80 | 69 |
+| LED_L7_ped_ust | led_ped | 0.164 | -0.015 | (-0.074, +0.000) | 0.57 | 80 |
+| L4_ust | hat | 0.159 | -0.073 | (-0.086, -0.090) | 0.59 | 78 |
+| Kopru_45_Z_hat | kopru | 0.154 | -0.148 | (+0.000, +0.037) | 0.54 | 56 |
+| LED_R2_ped_ust | led_ped | 0.149 | -0.050 | (-0.041, +0.184) | 0.77 | 79 |
+| L6_ust | hat | 0.148 | +0.034 | (-0.061, +0.117) | 0.66 | 86 |
+
+## Ağ ve tasarım tutarlılığı
+
+HATA 2 · UYARI 20 · bilgi 28 · kabul edilmiş 0
+
+| Seviye | Kontrol | Açıklama | Konum (mm) | Kimlik |
+|---|---|---|---|---|
+| HATA | Cihaz ucu hiçbir pine ulaşmıyor | Hiçbir pine ulaşmayan ağ: LED_L5.alt, LED_R5.alt (kopukluk veya eksik hat) | (5.07, 88.24) | `pinsiz_ag:LED_L5.alt,LED_R5.alt` |
+| HATA | Cihaz ucu hiçbir pine ulaşmıyor | Hiçbir pine ulaşmayan ağ: LED_R6.alt (kopukluk veya eksik hat) | (31.68, 100.81) | `pinsiz_ag:LED_R6.alt` |
+| UYARI | Bitişik olmayan pinler aynı ağda | Pinler 1, 8 aynı ağda (bitişik değil: şüpheli) | (12.77, 62.02) | `ayrik_pinler:1,8` |
+| UYARI | Eleman taramada doğrulanamadı | 'B3_alt' kenar örneklerinin yalnız %38'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor) | (25.65, 63.45) | `eleman_eslesmedi:B3_alt` |
+| UYARI | Eleman taramada doğrulanamadı | 'Kopru_09_X_L3' kenar örneklerinin yalnız %45'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor) | (7.73, 46.06) | `eleman_eslesmedi:Kopru_09_X_L3` |
+| UYARI | Eleman taramada doğrulanamadı | 'Kopru_10_X_R3R4' kenar örneklerinin yalnız %36'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor) | (27.93, 64.06) | `eleman_eslesmedi:Kopru_10_X_R3R4` |
+| UYARI | Eleman taramada doğrulanamadı | 'Kopru_59_L7R7_alt' kenar örneklerinin yalnız %36'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor) | (7.81, 115.75) | `eleman_eslesmedi:Kopru_59_L7R7_alt` |
+| UYARI | Eleman taramada doğrulanamadı | 'X_R3R4' kenar örneklerinin yalnız %44'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor) | (26.17, 64.06) | `eleman_eslesmedi:X_R3R4` |
+| UYARI | Eleman taramada doğrulanamadı | 'Z_hat' kenar örneklerinin yalnız %41'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor) | (17.98, 56.92) | `eleman_eslesmedi:Z_hat` |
+| UYARI | Elemanın taramadan sapması büyük | 'B1_ust' medyan sapma 0.112 mm (ofset -0.107, kayma -0.019/+0.000 mm) | (12.79, 57.89) | `eleman_sapma:B1_ust` |
+| UYARI | Elemanın taramadan sapması büyük | 'Kopru_33_C1_alt' medyan sapma 0.127 mm (ofset +0.037, kayma +0.000/-0.136 mm) | (21.59, 48.63) | `eleman_sapma:Kopru_33_C1_alt` |
+| UYARI | Elemanın taramadan sapması büyük | 'Kopru_45_Z_hat' medyan sapma 0.154 mm (ofset -0.148, kayma +0.000/+0.037 mm) | (21.61, 56.91) | `eleman_sapma:Kopru_45_Z_hat` |
+| UYARI | Elemanın taramadan sapması büyük | 'L3_ust' medyan sapma 0.112 mm (ofset +0.002, kayma -0.026/-0.036 mm) | (4.4, 52.11) | `eleman_sapma:L3_ust` |
+| UYARI | Elemanın taramadan sapması büyük | 'L4_ust' medyan sapma 0.159 mm (ofset -0.073, kayma -0.086/-0.090 mm) | (4.45, 64.58) | `eleman_sapma:L4_ust` |
+| UYARI | Elemanın taramadan sapması büyük | 'L5R5_alt' medyan sapma 0.112 mm (ofset +0.007, kayma +0.120/+0.101 mm) | (18.45, 91.14) | `eleman_sapma:L5R5_alt` |
+| UYARI | Elemanın taramadan sapması büyük | 'L6_ust' medyan sapma 0.148 mm (ofset +0.034, kayma -0.061/+0.117 mm) | (4.51, 96.49) | `eleman_sapma:L6_ust` |
+| UYARI | Elemanın taramadan sapması büyük | 'R3_ust' medyan sapma 0.117 mm (ofset -0.078, kayma +0.015/-0.007 mm) | (32.15, 51.91) | `eleman_sapma:R3_ust` |
+| UYARI | Elemanın taramadan sapması büyük | 'R5_ust' medyan sapma 0.180 mm (ofset -0.093, kayma +0.052/-0.047 mm) | (32.28, 84.05) | `eleman_sapma:R5_ust` |
+| UYARI | Hattın ucu boşta | 'Z_hat' hattının başı hiçbir gümüşe değmiyor (açık uç) | (11.85, 56.91) | `serbest_uc:Z_hat:bas` |
+| UYARI | Farklı ağlar çok yakın / uç kısa | Nb ile R2_alt arası 0.033 mm (değmesi gerekiyorsa uç kısa; değilse aralık dar) | (33.77, 82.77) | `yakin_bosluk:Nb/R2_alt` |
+| UYARI | Farklı ağlar çok yakın / uç kısa | R1_ortak ile X_hat arası 0.138 mm (değmesi gerekiyorsa uç kısa; değilse aralık dar) | (2.49, 38.28) | `yakin_bosluk:R1_ortak/X_hat` |
+| UYARI | Köprü altı yalıtım payı dar | 'Kopru_34_R2_alt' altındaki kesişmede yalıtkan payı < 0.15 mm | (33.5, 83.03) | `yalitim_payi:Kopru_34_R2_alt:33.5,83.0` |
+
+### Çizimden çıkarılan ağlar
+
+| Ağ | Pinler | Uçlar | Hat |
+|---|---|---|---|
+| 1 | 1, 8 | LED_B1.alt, LED_L1.ust, LED_L2.alt, LED_L4.alt, LED_L8.alt, LED_R1.ust, LED_R2.ust, LED_R4.alt | 19 |
+| 2 | 2 | LED_L8.ust | 2 |
+| 3 | 3 | LED_L3.ust, LED_L4.ust, LED_L5.ust, LED_L6.ust, LED_L7.ust | 11 |
+| 4 | 4 | LED_B1.ust, LED_B2.ust, LED_B3.ust, LED_C1.ust, LED_L6.alt, LED_R8.ust | 13 |
+| 5 | 5 | LED_R3.ust, LED_R5.ust, LED_R6.ust, LED_R7.ust | 9 |
+| 6 | 6 | LED_B2.alt | 2 |
+| 7 | 7 | LED_B3.alt, LED_L1.alt, LED_L2.ust, LED_L3.alt, LED_R3.alt, LED_R4.ust | 14 |
+| 8 | 9 | LED_C1.alt, LED_R1.alt | 4 |
+| 9 | 10 | LED_R2.alt | 2 |
+| 10 | 11 | LED_L7.alt, LED_R7.alt, LED_R8.alt | 6 |
+| 11 | PİNSİZ | LED_L5.alt, LED_R5.alt | 3 |
+| 12 | PİNSİZ | LED_R6.alt | 2 |
+
+### Otomatik onarımlar
+
+- Uç kenetleme: X_hat bas ucu: 0.138 mm boşluk -> 'R1_ortak' (reddedildi: iki pinli ağı birleştirir (pin [7] / [1, 8]))
+- Köprü uç kuralı: 'Poz7' yama içindeki parçası alt baskıya alındı
+- Köprü uç kuralı: 'R6_alt' yama içindeki parçası alt baskıya alındı
+- Köprü uç kuralı: 'Poz10' yama içindeki parçası alt baskıya alındı
+
+## Önerilen düzeltmeler (ölçümden)
+
+- **genislik:** 0.5 mm hatlar (44 hat) taramada her yandan -0.029 mm farklı: ölçülen genişlik ≈ 0.557 mm -> 0.55 mm (0.05'e yuvarlı)
+- **eleman:** 'LED_C1_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.015, +0.215) mm kaymış -> (+0.015, -0.215) mm taşı
+- **eleman:** 'B3_ust' (hat) taramaya göre (-0.006, +0.194) mm kaymış -> (+0.006, -0.194) mm taşı
+- **eleman:** 'LED_L5_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.111, +0.163) mm kaymış -> (-0.111, -0.163) mm taşı
+- **eleman:** 'R4_alt' (hat) taramaya göre (+0.006, +0.126) mm kaymış -> (-0.006, -0.126) mm taşı
+- **eleman:** 'Kopru_55_Q_R8' (kopru) taramaya göre (-0.115, +0.012) mm kaymış -> (+0.115, -0.012) mm taşı
+- **eleman:** 'LED_R4_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.001, +0.101) mm kaymış -> (-0.001, -0.101) mm taşı
+- **eleman:** 'LED_C1_ped_alt' (led_ped) her yandan +0.101 mm geniş
+- **eleman:** 'LED_B2_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.047, +0.092) mm kaymış -> (-0.047, -0.092) mm taşı
+- **eleman:** 'LED_B3_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.019, +0.091) mm kaymış -> (-0.019, -0.091) mm taşı
+- **eleman:** 'L4_ust' (hat) taramaya göre (-0.086, -0.090) mm kaymış -> (+0.086, +0.090) mm taşı
+- **eleman:** 'Poz7' (hat) taramaya göre (+0.009, -0.083) mm kaymış -> (-0.009, +0.083) mm taşı
+- **eleman:** 'LED_R2_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.009, +0.082) mm kaymış -> (+0.009, -0.082) mm taşı
+- **eleman:** 'LED_R5_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.078, +0.066) mm kaymış -> (-0.078, -0.066) mm taşı
+- **eleman:** 'Kopru_34_R2_alt' (kopru) her yandan -0.077 mm dar
+- **eleman:** 'LED_R3_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.017, +0.075) mm kaymış -> (+0.017, -0.075) mm taşı
+- **eleman:** 'L4_ust' (hat) her yandan -0.073 mm dar; genişlik 0.5 -> 0.646 mm
+- **eleman:** 'LED_B1_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.018, +0.073) mm kaymış -> (+0.018, -0.073) mm taşı
+- **eleman:** 'LED_L3_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.031, +0.071) mm kaymış -> (+0.031, -0.071) mm taşı
+- **eleman:** 'LED_L2_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.013, +0.066) mm kaymış -> (-0.013, -0.066) mm taşı
 
 ## Pin eşlemesi
 
@@ -248,6 +360,16 @@ Sol yelpaze, kuyruk başlangıcı ve sağ alt LED'ler.
 
 ![Koyuluk maskesi (alt)](P3_rapor_gorseller/m_dark_4950_k.jpg)
 
+**[Maskeler] Gölge ofseti (film kalkıklığı) haritası** — `golge_haritasi.png`  
+Film camdan kalkık olduğunda her gümüş şeklin koyu kopyası δ kadar yukarı düşer. Karolardaki sayı yerel δ (mm), renk mavi (küçük) → kırmızı (büyük); büyük δ = film daha kalkık, kenarlar daha bulanık. Mor = gölge olarak açıklanan pikseller (doğrulamada karşılıksız gümüş ve kenar örneklerinden çıkarılır).
+
+![Gölge ofseti (film kalkıklığı) haritası](P3_rapor_gorseller/golge_haritasi_k.jpg)
+
+**[Maskeler] Öğrenen sınıflandırıcı sınıf haritası** — `ogren_siniflar.png`  
+Onaylı çizimlerden eğitilen rastgele orman: gri film, kırmızı gümüş, lacivert yalıtkan altı gümüş, mavi köprü, turkuaz dielektrik, mor gölge.
+
+![Öğrenen sınıflandırıcı sınıf haritası](P3_rapor_gorseller/ogren_siniflar_k.jpg)
+
 **[Maskeler] Maske / segmentasyon görseli** — `seg_hizli.png`  
 Renk ve doku eşikleriyle elde edilen malzeme maskesi.
 
@@ -328,6 +450,16 @@ Refine edilmiş tüm rotalar, renkli; adlar rota ortasında.
 
 ![Son rotalar taramada](P3_rapor_gorseller/routes_son_k.jpg)
 
+**[Topoloji] Çizimden çıkarılan ağ haritası** — `ag_haritasi.png`  
+Çizim geometrisinden çıkarılan elektrik ağları: her ağ ayrı renk, köprüler koyu kontur, altta pin numaraları; kırmızı halka = HATA, turuncu = UYARI, gri = bilinen (kabul edilmiş) bulgu.
+
+![Çizimden çıkarılan ağ haritası](P3_rapor_gorseller/ag_haritasi_k.jpg)
+
+**[Topoloji] Otomatik rota önerisi** — `rota_onerisi.png`  
+Aday segment + MILP + graf ile önerilen rotalar: yeşil güvenli, turuncu düşük güven (flag). Elle yazılan rotaların başlangıcıdır.
+
+![Otomatik rota önerisi](P3_rapor_gorseller/rota_onerisi_k.jpg)
+
 **[Karar kanıtı] Kesik üst kenar** — `v_top.png`  
 Sol üst köşe (x≈105, y≈180 px) orijinal; oradan sağa doğru çapraz/dalgalı kesik.
 
@@ -388,10 +520,45 @@ Doğrulama bindirmesinden kırpım. Bindirme renkleri: kırmızı gümüş (alt 
 
 ![Rapor kontrol kırpımı: konnektor ucu](P3_rapor_gorseller/kontrol_konnektor_ucu_k.jpg)
 
+**[Doğrulama] Kenar sapması ısı haritası: b sirasi** — `kontrol_sapma_b_sirasi.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: b sirasi](P3_rapor_gorseller/kontrol_sapma_b_sirasi_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: bas alt** — `kontrol_sapma_bas_alt.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: bas alt](P3_rapor_gorseller/kontrol_sapma_bas_alt_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: bas ust** — `kontrol_sapma_bas_ust.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: bas ust](P3_rapor_gorseller/kontrol_sapma_bas_ust_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: bas yelpaze** — `kontrol_sapma_bas_yelpaze.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: bas yelpaze](P3_rapor_gorseller/kontrol_sapma_bas_yelpaze_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: konnektor ucu** — `kontrol_sapma_konnektor_ucu.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: konnektor ucu](P3_rapor_gorseller/kontrol_sapma_konnektor_ucu_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: yama sirasi 4480** — `kontrol_sapma_yama_sirasi_4480.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: yama sirasi 4480](P3_rapor_gorseller/kontrol_sapma_yama_sirasi_4480_k.jpg)
+
 **[Doğrulama] Rapor kontrol kırpımı: yama sirasi 4480** — `kontrol_yama_sirasi_4480.png`  
 Doğrulama bindirmesinden kırpım. Bindirme renkleri: kırmızı gümüş (alt baskı), mavi köprü (2. baskı), yeşil dielektrik, mor kesim/oval, turuncu taramada olup çizimde karşılığı olmayan gümüş.
 
 ![Rapor kontrol kırpımı: yama sirasi 4480](P3_rapor_gorseller/kontrol_yama_sirasi_4480_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: tamamı** — `ov_sapma.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: tamamı](P3_rapor_gorseller/ov_sapma_k.jpg)
 
 **[Doğrulama] Taramaya bindirme** — `overlay.png`  
 Çizim geometrisi taramanın üstüne çizildi. Bindirme renkleri: kırmızı gümüş (alt baskı), mavi köprü (2. baskı), yeşil dielektrik, mor kesim/oval, turuncu taramada olup çizimde karşılığı olmayan gümüş.

@@ -4,3 +4,6 @@ work/**/*.jpg
 __pycache__/
 *.pyc
 output/*_yeni.pdf
+
+# öğrenen model dosyaları (100+ MB; fpc.py ogren egit all ile yeniden üretilir)
+work/_ogren/*.yml

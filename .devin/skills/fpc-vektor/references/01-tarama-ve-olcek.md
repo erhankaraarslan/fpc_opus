@@ -20,6 +20,10 @@
 - `fpc.py skew <ad>`: Hough doğrularının eksenden ağırlıklı sapması. P2: 0.76°, P1: 0.10°.
 - Doğrulama: deskew sonrası uzun bir dikey hattın merkezi baş/son farkı ≤ 2 px
   (`measure.py <ad> h y-10 y+10 x0 x1` iki farklı y'de).
+- **Bükülme otomatik kestirimi**: `fpc.py bukulme <ad>` → döndürülmüş kırpımda 200 px bantların yatay gradyan
+  profilleri komşu bantlarla alt-piksel korele edilir, kaymalar toplanır → `work/<ad>/bukulme_onerisi.json`
+  (`xc`, `dx_noktalar`, kalan eğim). Doğrusal olmayan genlik < 3 px ise bükülme düzeltmesine gerek yok.
+  P4'te elle ölçülen bükülmeyle korelasyon 0.982 (RMS fark 4.6 px); P3 genlik 4.2 px.
 - **Kesim deseni baskıya göre ayrıca dönük olabilir** (P2 ~0.2°, P1 kuyrukta ~0.26°). Baskı (hatlar)
   referans alınır; kesim ideal hizalı/simetrik çizilir ve fark rapora "varsayım" olarak yazılır.
 
@@ -29,7 +33,13 @@
 2. Merkezlerin pozisyon indeksine doğrusal fiti → adım px. Boş pozisyonları (2 adım atlayan aralık)
    indeksle dikkate al.
 3. Adım = 1.00 mm kabul → `olcek_px_mm`. K.pdf: 47.17 (nominal 47.21, fark %0.08).
-4. px→mm: `mm_x = (px - eksen_px) / s + W/2`, `mm_y = (py - ust_kenar_px) / s`. Orijin baş sol üst köşe,
+   **Otomatik**: `fpc.py olcek <ad> x0 y0 x1 y1 [adim_mm] [x|y]` (ROI yalnız kontakları içersin, takviye/etiket
+   kenarı değil): DTFT kaba periyot + faz → her pozisyonda yarı-yükseklik ağırlıklı merkez → MAD ayıklamalı
+   doğrusal fit (dummy pozisyonlar indeksle atlanır). Çıktıda hat sayısı ve artık RMS: RMS > 1 px = ROI kötü.
+   K.pdf: P2 1.0019 mm (8 hat, RMS 0.13 px), P3 1.0003 mm (10 hat, RMS 0.30 px) @ 47.17 px/mm.
+4. **y ölçeği** konnektörden ölçülemez (adım x yönünde). Yeni taramalarda aynı camda bir çelik cetvel / mm
+   ızgara tara ve `olcek ... y` ile ayrıca ölç; x ile y farkı > %0.1 ise tarayıcı motor yönü hatası var.
+5. px→mm: `mm_x = (px - eksen_px) / s + W/2`, `mm_y = (py - ust_kenar_px) / s`. Orijin baş sol üst köşe,
    y aşağı. `SCAN = dict(s=..., px0=eksen_px, py0=ust_kenar_px, mm0=(W/2, 0))` tasarımda tutulur.
 
 ## 1.5 Kesim konturu ölçümü

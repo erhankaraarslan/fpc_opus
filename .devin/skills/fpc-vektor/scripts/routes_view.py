@@ -29,19 +29,25 @@ def route_mask(ad):
     return m
 
 
+# Refine yöntemi: boş = maske koşusu (varsayılan). verify.load_design, parts/<ad>.json "refine_yontemi": "profil"
+# ise buraya img (BGR tarama), golge (maske) ve w_nom (px, isteğe bağlı) koyar -> merkezler yoğunluk kenarıyla inceltilir.
+AYAR = {}
+
+
 def refine_all(routes, mask):
     out = {}
+    kw = dict(img=AYAR.get("img"), golge=AYAR.get("golge"), w_nom=AYAR.get("w_nom"))
     for r in routes:
         k = r.get("raw_from", 0 if r.get("raw") else None)
         if k == 0:
             out[r["name"]] = dict(pts=[list(map(float, p)) for p in r["pts"]], w=None)
             continue
         if k is not None:
-            v, ws, angs = refine_route(mask, r["pts"][:k + 1], search=r.get("search", 22))
+            v, ws, angs = refine_route(mask, r["pts"][:k + 1], search=r.get("search", 22), **kw)
             pts = v.round(1).tolist() + [list(map(float, p)) for p in r["pts"][k + 1:]]
             out[r["name"]] = dict(pts=pts, w=ws, ang=angs)
             continue
-        v, ws, angs = refine_route(mask, r["pts"], search=r.get("search", 22))
+        v, ws, angs = refine_route(mask, r["pts"], search=r.get("search", 22), **kw)
         out[r["name"]] = dict(pts=v.round(1).tolist(), w=[None if w is None else round(w, 1) for w in ws],
                               ang=[None if a is None else round(a, 2) for a in angs])
     return out

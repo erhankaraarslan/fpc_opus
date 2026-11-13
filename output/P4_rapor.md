@@ -1,6 +1,6 @@
 # P4 - Uzun tuş devresi (3 tuş, 11 pin 1.0 mm)
 
-*12.11.2026 00:50 — fpc-vektor skill · etkileşimli sürüm: `P4_rapor.html`*
+*13.11.2026 17:40 — fpc-vektor skill · etkileşimli sürüm: `P4_rapor.html`*
 
 **Kabul:** GEÇTİ · **Belirsiz rota:** 0 · **Kontrol maddesi:** 5 · **Karar noktası:** 10
 
@@ -165,13 +165,74 @@
 
 | Metrik | Değer | Eşik | Sonuç |
 |---|---|---|---|
-| Dielektrik kenar sapması medyan | 0.021 mm | ≤ 0.06 mm | ✔ |
-| Dielektrik kenar sapması %90 | 0.085 mm | ≤ 0.15 mm | ✔ |
+| Gümüş kenar sapması medyan | 0.015 mm | ≤ 0.06 mm | ✔ |
+| Gümüş kenar sapması %90 | 0.042 mm | ≤ 0.15 mm | ✔ |
+| Gümüş kenar kapsaması | 0.962 | ≥ 0.8 | ✔ |
 | Dielektrik IoU | 0.979 | ≥ 0.95 | ✔ |
-| Gümüş kenar sapması medyan | 0.042 mm | ≤ 0.06 mm | ✔ |
-| Gümüş kenar sapması %90 | 0.064 mm | ≤ 0.15 mm | ✔ |
-| Gümüş IoU | 0.687 | bilgi | — |
-| Taramada karşılıksız gümüş | 0.203 | bilgi | — |
+| Dielektrik kenar sapması medyan | 0.022 mm | ≤ 0.06 mm | ✔ |
+| Dielektrik kenar sapması %90 | 0.081 mm | ≤ 0.15 mm | ✔ |
+| Ağ / tutarlılık HATA (bilinmeyen) | 0 | ≤ 0 | ✔ |
+| Gümüş sistematik ofset (her yan) / kayma | -0.009 mm / (-0.004, +0.021) mm | |ofset| uyarı > 0.03 | — |
+| Gümüş işaretli sapma medyanı | -0.011 mm | + geniş / − dar | — |
+| Gümüş yoğunluk kenarı (maskeden bağımsız) medyan / %90 | 0.014 / 0.038 mm | kapsama 0.99; ±6 px dışı sapma ölçülmez (kapı değil) | — |
+| Gümüş yoğunluk ofseti / kayma / bulanıklık σ | -0.008 mm / (-0.004, +0.024) mm / 0.036 mm | maske ofsetiyle farkı = maske yanlılığı | — |
+| Gümüş: tarama kenarlarının çizime ≤ 3 px oranı | 0.579 | bilgi (ters yön) | — |
+| Gümüş IoU | 0.744 | bilgi | — |
+| Taramada karşılıksız gümüş (ham / gölge hariç) | 0.185 / 0.173 | uyarı > 0.15 | — |
+| Dielektrik sistematik ofset (her yan) / kayma | -0.020 mm / (-0.017, -0.018) mm | |ofset| uyarı > 0.03 | — |
+| Dielektrik işaretli sapma medyanı | -0.014 mm | + geniş / − dar | — |
+| Dielektrik yoğunluk kenarı (maskeden bağımsız) medyan / %90 | 0.030 / 0.090 mm | kapsama 0.99; ±6 px dışı sapma ölçülmez (kapı değil) | — |
+| Dielektrik yoğunluk ofseti / kayma / bulanıklık σ | -0.011 mm / (-0.022, -0.037) mm / 0.042 mm | maske ofsetiyle farkı = maske yanlılığı | — |
+| Dielektrik: tarama kenarlarının çizime ≤ 3 px oranı | 0.841 | bilgi (ters yön) | — |
+| Dielektrik IoU | 0.979 | kapıda | — |
+| Gölge ofseti δ (genel) / kalkık karo | 0.36 mm / 7 | golge_haritasi.png | — |
+| Gümüş kenar (eski tam-piksel yöntem) medyan / %90 | 0.021 / 0.042 mm | önceki sürümle kıyas | — |
+| Dielektrik kenar (eski tam-piksel yöntem) medyan / %90 | 0.021 / 0.085 mm | önceki sürümle kıyas | — |
+
+### En büyük sapmalı elemanlar
+
+| Eleman | Tür | Medyan mm | Ofset mm | Kayma mm | Kapsama | Örnek |
+|---|---|---|---|---|---|---|
+| Blok_Net4 | dikdortgen | 0.155 | +0.000 | (+0.000, +0.000) | 0.03 | 77 |
+| Blok_Net1 | dikdortgen | 0.067 | +0.028 | (-0.049, +0.000) | 0.17 | 58 |
+| Ped_A | tus_ped | 0.058 | +0.048 | (-0.002, -0.057) | 0.33 | 845 |
+| Ped_B | tus_ped | 0.049 | +0.050 | (+0.013, -0.062) | 0.48 | 857 |
+| Blok_Net3 | dikdortgen | 0.040 | +0.000 | (+0.000, +0.000) | 0.05 | 58 |
+| Blok_Net2 | dikdortgen | 0.017 | +0.000 | (+0.000, +0.000) | 0.05 | 58 |
+| Ped_C | tus_ped | 0.046 | -0.025 | (+0.024, +0.029) | 0.53 | 776 |
+| Kontak_01 | kontak | 0.025 | -0.040 | (+0.027, +0.000) | 1.00 | 4107 |
+| Kontak_02 | kontak | 0.022 | -0.022 | (-0.002, +0.000) | 1.00 | 4108 |
+| Hat_Net4_Ortak | hat | 0.021 | -0.005 | (-0.002, +0.043) | 0.98 | 2833 |
+| Hat_Net2_B_alt | hat | 0.021 | -0.007 | (-0.006, +0.155) | 0.96 | 2104 |
+| Kontak_03 | kontak | 0.018 | -0.016 | (+0.006, +0.000) | 1.00 | 4107 |
+
+## Ağ ve tasarım tutarlılığı
+
+HATA 0 · UYARI 1 · bilgi 14 · kabul edilmiş 0
+
+| Seviye | Kontrol | Açıklama | Konum (mm) | Kimlik |
+|---|---|---|---|---|
+| UYARI | Taramada çizilmemiş gümüş | Taramadaki gümüşün %17'i (gölge hariç) çizimde karşılıksız (turuncu kümeleri inceleyin) | — | `karsiliksiz_gumus:gumus` |
+
+### Çizimden çıkarılan ağlar
+
+| Ağ | Pinler | Uçlar | Hat |
+|---|---|---|---|
+| 1 | 1, 2 | Ped_A.ust | 3 |
+| 2 | 3, 4 | Ped_B.alt | 3 |
+| 3 | 5, 6 | Ped_C.alt | 3 |
+| 4 | 9, 10, 11 | Ped_A.alt, Ped_B.ust, Ped_C.ust | 6 |
+| 5 | dummy 7 | — | 0 |
+| 6 | dummy 8 | — | 0 |
+
+## Önerilen düzeltmeler (ölçümden)
+
+- **diel_kayma:** Dielektrik, telafiden sonra hâlâ (-0.022, -0.037) mm kayık: SCAN['diel_kayma_mm'] [0.15, -0.15] -> [0.172, -0.113] (çizim ideal kalır, yalnız doğrulama telafisi).
+- **hizalama:** Gümüş çizimi genel olarak (-0.004, +0.024) mm kaymış. mm ile tanımlı (parametrik) elemanlar için SCAN px0 1040.0 -> 1040.2, py0 183.0 -> 181.8. Taramadan px ile okunan rotalar bu değişiklikten etkilenmez.
+- **eleman:** 'Hat_Net2_B_alt' (hat) taramaya göre (-0.008, +0.101) mm kaymış -> (+0.008, -0.101) mm taşı
+- **eleman:** 'Ped_A' (tus_ped) taramaya göre (+0.002, +0.048) mm kaymış -> (-0.002, -0.048) mm taşı
+- **eleman:** 'Hat_Net4_Ortak' (hat) taramaya göre (-0.005, +0.045) mm kaymış -> (+0.005, -0.045) mm taşı
+- **eleman:** 'Ped_B' (tus_ped) taramaya göre (+0.007, +0.041) mm kaymış -> (-0.007, -0.041) mm taşı
 
 ## Pin eşlemesi
 
@@ -246,6 +307,11 @@ Yerel arka plana göre gümüş ve G−R &gt; 30 dielektrik; topoloji buradan ok
 
 ![Gümüş + dielektrik maskesi](P4_rapor_gorseller/seg3_k.jpg)
 
+**[Maskeler] Gölge ofseti (film kalkıklığı) haritası** — `golge_haritasi.png`  
+Film camdan kalkık olduğunda her gümüş şeklin koyu kopyası δ kadar yukarı düşer. Karolardaki sayı yerel δ (mm), renk mavi (küçük) → kırmızı (büyük); büyük δ = film daha kalkık, kenarlar daha bulanık. Mor = gölge olarak açıklanan pikseller (doğrulamada karşılıksız gümüş ve kenar örneklerinden çıkarılır).
+
+![Gölge ofseti (film kalkıklığı) haritası](P4_rapor_gorseller/golge_haritasi_k.jpg)
+
 **[Ölçüm] Kuyruk hatları yakın çekim** — `v_tailmid.png`  
 9 hat + 7-8 pozisyonlarında boşluk. Hat 0.6, aralık 0.4 mm. *Ölçüm: adım 47.31 px*
 
@@ -306,6 +372,11 @@ Bus (y≈2721 px) C üst barından sağ dış hatta (Net4) bağlanıyor. Beyaz n
 
 ![B/C bus'ının sağ hatta bağlantısı](P4_rapor_gorseller/v_busR_k.jpg)
 
+**[Topoloji] Çizimden çıkarılan ağ haritası** — `ag_haritasi.png`  
+Çizim geometrisinden çıkarılan elektrik ağları: her ağ ayrı renk, köprüler koyu kontur, altta pin numaraları; kırmızı halka = HATA, turuncu = UYARI, gri = bilinen (kabul edilmiş) bulgu.
+
+![Çizimden çıkarılan ağ haritası](P4_rapor_gorseller/ag_haritasi_k.jpg)
+
 **[Karar kanıtı] Bükülme düzeltmesi öncesi / sonrası** — `v_bukulme_once_sonra.png`  
 Baş alt bölgesindeki üç hat (y 4250–6100 px) ve üst uçlarındaki dikey kılavuz çizgileri. Önce hatlar kılavuzdan 12 px sapıyor, sonra üst üste.
 
@@ -360,6 +431,46 @@ Doğrulama bindirmesinden kırpım. Bindirme renkleri: kırmızı gümüş (alt 
 Doğrulama bindirmesinden kırpım. Bindirme renkleri: kırmızı gümüş (alt baskı), mavi köprü (2. baskı), yeşil dielektrik, mor kesim/oval, turuncu taramada olup çizimde karşılığı olmayan gümüş.
 
 ![Rapor kontrol kırpımı: pedler bc](P4_rapor_gorseller/kontrol_pedler_BC_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: bas bolgesi** — `kontrol_sapma_bas_bolgesi.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: bas bolgesi](P4_rapor_gorseller/kontrol_sapma_bas_bolgesi_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: capraz bolge** — `kontrol_sapma_capraz_bolge.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: capraz bolge](P4_rapor_gorseller/kontrol_sapma_capraz_bolge_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: konnektor ucu** — `kontrol_sapma_konnektor_ucu.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: konnektor ucu](P4_rapor_gorseller/kontrol_sapma_konnektor_ucu_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: kuyruk baglantisi** — `kontrol_sapma_kuyruk_baglantisi.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: kuyruk baglantisi](P4_rapor_gorseller/kontrol_sapma_kuyruk_baglantisi_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: kuyruk genisleme** — `kontrol_sapma_kuyruk_genisleme.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: kuyruk genisleme](P4_rapor_gorseller/kontrol_sapma_kuyruk_genisleme_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: ped a** — `kontrol_sapma_ped_A.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: ped a](P4_rapor_gorseller/kontrol_sapma_ped_A_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: pedler bc** — `kontrol_sapma_pedler_BC.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: pedler bc](P4_rapor_gorseller/kontrol_sapma_pedler_BC_k.jpg)
+
+**[Doğrulama] Kenar sapması ısı haritası: tamamı** — `ov_sapma.png`  
+Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: yeşil ≤ 0.02 mm, sarı ≤ 0.05, turuncu ≤ 0.10, kırmızı > 0.10 mm, mor taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).
+
+![Kenar sapması ısı haritası: tamamı](P4_rapor_gorseller/ov_sapma_k.jpg)
 
 **[Doğrulama] Taramaya bindirme** — `overlay.png`  
 Çizim geometrisi taramanın üstüne çizildi. Bindirme renkleri: kırmızı gümüş (alt baskı), mavi köprü (2. baskı), yeşil dielektrik, mor kesim/oval, turuncu taramada olup çizimde karşılığı olmayan gümüş.

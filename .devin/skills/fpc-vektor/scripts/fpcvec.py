@@ -67,6 +67,9 @@ class Design:
     check: list = field(default_factory=list)          # (ad, [(x,y)...])
     # Takviye (arka yüz)
     stiff_rects: list = field(default_factory=list)    # (x, y, w, h)
+    # Ağ kontrolü için isteğe bağlı açık tanımlar (yoksa adlandırma kuralından çıkarılır, bkz. netlist.py)
+    pins: list = field(default_factory=list)           # (ad, shapely geom mm, dummy mu)
+    devices: list = field(default_factory=list)        # (ad, [(uç_adı, shapely geom mm), ...])
     # Tarama hizalama: deskew px -> mm   (mm = (px - px0) / s + mm0)
     scan: dict | None = None
 
@@ -105,6 +108,30 @@ class Design:
         g += [box(x, y, x + w, y + h) for _, x, y, w, h in self.silver_rects]
         g += [LineString(p).buffer(w / 2, cap_style="flat") for _, p, w in self.marks]
         return unary_union(g)
+
+    def silver_elements(self):
+        """Alt gümüş elemanları: [(ad, tür, Polygon|MultiPolygon mm)]. Tür: hat | kontak | led_ped | tus_ped |
+        dikdortgen | isaret. Hatlarda köprü kesimleri çıkarılmıştır; dikdörtgenler grup adına göre birleşiktir."""
+        cut = {}
+        for n, g in self.bridge_cut:
+            cut.setdefault(n, []).append(g)
+        out = []
+        for n, p, w in self.traces:
+            t = LineString(p).buffer(w / 2, **MITRE)
+            if n in cut:
+                t = t.difference(unary_union(cut[n]))
+            out.append((n, "kontak" if n.startswith("Kontak_") else "hat", t))
+        groups = {}
+        for g, x, y, w, h in self.silver_rects:
+            groups.setdefault(g, []).append(box(x, y, x + w, y + h))
+        for g, rs in groups.items():
+            kind = "led_ped" if g.startswith("LED_") else "tus_ped" if g.startswith("Ped_") else "dikdortgen"
+            out.append((g, kind, unary_union(rs)))
+        out += [(n, "isaret", LineString(p).buffer(w / 2, cap_style="flat")) for n, p, w in self.marks]
+        return out
+
+    def bridge_elements(self):
+        return [(n, "kopru", LineString(p).buffer(w / 2, **MITRE)) for n, p, w in self.bridges]
 
     def bridge_geom(self):
         return unary_union([LineString(p).buffer(w / 2, **MITRE) for _, p, w in self.bridges])

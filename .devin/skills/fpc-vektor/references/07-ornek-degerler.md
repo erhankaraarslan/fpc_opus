@@ -24,7 +24,8 @@ Yeni bir parçada başlangıç değeri ve "makul mü?" kontrolü için kullan. �
 | Ovaller | 12 × 3.2 × 6.1; sütun x = 5.0 / 31.7, satır 34.0 + k·12.7; orta 19.2 @47.7; alt sıra 12.75/19.2/25.65 @63.65 |
 | Kuyruk | blok üst 71.1, çentik 72.35, dummy 7-8 başlangıç 158.95, dielektrik sonu 163.9, takviye 164.0 |
 | Çaprazlar | sol üst 60.02°, sol alt 51.44°, sağ alt 50.21° (45 değil — ölçüldü) |
-| Metrik | diel IoU 0.968, kenar 0.042/0.127; gümüş 0.042/0.085 |
+| Metrik (alt-piksel) | diel IoU 0.968, kenar 0.032/0.118; gümüş 0.021/0.067 (yoğunluk 0.020/0.064, σ 0.032), ofset −0.009 mm, IoU 0.81; ağ = RAPOR pin eşlemesi |
+| Gölge / ölçek | δ 15 px (0.32 mm); konnektör adımı 1.0019 mm @47.17 (8 hat, RMS 0.13 px) |
 
 ## P1 — kısa LED devresi (`parts/p1_design.py`, `parts/p1_routes.py`)
 | | |
@@ -38,7 +39,7 @@ Yeni bir parçada başlangıç değeri ve "makul mü?" kontrolü için kullan. �
 | LED | 12 × 0402; ped 1.65 × 1.6, boşluk 0.85; site = çip + (4, 8) px |
 | "+" | 0.8 mm / 0.15 mm; sol sütun ofset (+59,+119) px, diğerleri (−47,+113) px |
 | Yamalar / köprüler | 10 yama (birleşik kümeler dahil), 20 köprü, bindirme 0.4 mm |
-| Metrik | gümüş kenar 0.042/0.136, karşılıksız 0.140 |
+| Metrik (alt-piksel) | gümüş kenar 0.036/0.133, kapsama 0.82, karşılıksız 0.140; 8 HATA (üst ped–boyun boşluğu 0.07–0.16 mm) |
 | Set kontrolü | LED ↔ P2 oval: x farkı ≤ 0.11 mm, y farkı ortalama +0.27 mm |
 
 ## P4 — uzun tuş devresi (`parts/p4_design.py`)
@@ -50,7 +51,7 @@ Yeni bir parçada başlangıç değeri ve "makul mü?" kontrolü için kullan. �
 | Tuş grubu | P2 ile aynı: KEY_X 19.2, ±5.8, pedler 5.0; A y=38.1, B/C y=53.55 |
 | Ovaller | 20 × 3.3 × 6.1; sütun XC ± 13.35; satır 32.15 + k·12.75 (k = 0,1,2,3,4.5,5.5,6.5,7.5) |
 | Dielektrik kayması | x +0.15 / y −0.15 mm (çizim ideal, doğrulamada telafi) |
-| Metrik | diel IoU 0.979, kenar 0.021/0.085; gümüş 0.042/0.064 |
+| Metrik (alt-piksel) | diel IoU 0.979, kenar 0.022/0.081; gümüş 0.015/0.043, ofset −0.008 mm |
 
 ## P3 — uzun LED devresi (`parts/p3_design.py`, `parts/p3_routes.py`)
 | | |
@@ -60,5 +61,6 @@ Yeni bir parçada başlangıç değeri ve "makul mü?" kontrolü için kullan. �
 | Kuyruk | P4 ile aynı biçim: 11.35 → 11.8 mm; yarık 2.1 mm, üst ucu 122.6; 11 kontak, dummy yok |
 | LED | 20 × 0402, site = çip + (3, 5) px; "+" sol sütun (+57,+111), sağ/orta (−47,+113)/(−48,+99) |
 | Yamalar / köprüler | 16 yama, 45 köprü; köprü seçimi renkten (gri üst / koyu turkuaz alt) |
-| Metrik | gümüş kenar 0.042/0.131 (m_band), karşılıksız 0.207 (kaplama 0.088) |
+| Metrik (alt-piksel) | gümüş kenar 0.064/0.170 (m_band; eski piksel 0.042/0.131), yoğunluk 0.045/0.090; karşılıksız 0.207, gölge hariç 0.162; 2 HATA |
+| Gölge / ölçek / bükülme | δ 14 px (0.30 mm), sağ üst 0.3–0.5 mm (kalkık); adım 1.0003 mm (10 hat); bükülme genliği 4.2 px |
 | Set kontrolü | LED ↔ P4 oval: x ≤ 0.11 mm, y sabit −2.6 mm kayma dışında ≤ 0.21 mm |

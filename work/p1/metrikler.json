@@ -7,17 +7,1074 @@
  "esik": {
   "kenar_medyan_mm": 0.06,
   "kenar_p90_mm": 0.15,
+  "kenar_kapsama_min": 0.8,
   "dielektrik_iou_min": 0.95,
-  "karsiliksiz_max": 0.15
+  "karsiliksiz_max": 0.15,
+  "ofset_uyari_mm": 0.03,
+  "maske_yanlilik_uyari_mm": 0.02,
+  "eleman_medyan_uyari_mm": 0.1,
+  "eleman_kapsama_uyari": 0.5,
+  "eleman_min_ornek": 20
+ },
+ "golge_modeli": true,
+ "golge": {
+  "delta_mm": 0.2967988128047488,
+  "kalkik_karo": 3
  },
  "gumus": {
-  "iou": 0.6278038940594156,
-  "kenar_medyan_mm": 0.04239983040067839,
-  "kenar_p90_mm": 0.13554801318209278,
-  "kapsama": 0.9077388628118499,
-  "karsiliksiz_oran": 0.14031773223429025
+  "iou": 0.6284039200241756,
+  "kenar": {
+   "ornek": 17547,
+   "kapsama": 0.8231606542428905,
+   "golge_orani": 0.07380178947968313,
+   "medyan_mm": 0.03554334491491318,
+   "p90_mm": 0.13284173607826233,
+   "isaretli_medyan_mm": 0.00029708421789109707,
+   "ofset_mm": 0.0020816863739002403,
+   "kayma_mm": [
+    -0.0007698407610758895,
+    -0.018629743079590165
+   ]
+  },
+  "yogunluk": {
+   "ornek": 17547,
+   "kapsama": 0.8758762181569499,
+   "golge_orani": 0.07380178947968313,
+   "medyan_mm": 0.023892603814601898,
+   "p90_mm": 0.08773119747638702,
+   "isaretli_medyan_mm": -0.005440222565084696,
+   "sigma_mm": 0.015485144220292568,
+   "ofset_mm": -0.0070409202354293895,
+   "kayma_mm": [
+    -0.0008026059005752207,
+    -0.02856644171167471
+   ]
+  },
+  "ters": {
+   "kapsama_3px": 0.5337769804988137,
+   "bant_ici": 0.8754701695503733,
+   "p90_mm": 0.16959932446479797
+  },
+  "karsiliksiz_oran": 0.14031773223429025,
+  "karsiliksiz_golge_haric": 0.11967272658276569,
+  "piksel": {
+   "medyan_mm": 0.04239983040067839,
+   "p90_mm": 0.13554801318209278,
+   "kapsama": 0.9098221992059382
+  }
  },
- "gecti": true,
+ "elemanlar_en_kotu": [
+  {
+   "ad": "B1_alt",
+   "tur": "hat",
+   "ornek": 20,
+   "kapsama": 0.15,
+   "medyan_mm": 0.17982754111289978,
+   "p90_mm": 0.1919519454240799,
+   "konum": [
+    12.67,
+    65.92
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.08718129992485046,
+    "ofset_mm": -0.03378877988696292,
+    "kayma_mm": [
+     -0.06719293670008675,
+     0.0
+    ],
+    "sigma_mm": 0.020238349214196205,
+    "kapsama": 0.45
+   }
+  },
+  {
+   "ad": "B1_ust",
+   "tur": "hat",
+   "ornek": 51,
+   "kapsama": 0.39215686274509803,
+   "medyan_mm": 0.14035144448280334,
+   "p90_mm": 0.16582930088043213,
+   "ofset_mm": -0.07402294826748344,
+   "kayma_mm": [
+    -0.048251296044553915,
+    0.10112059401940157
+   ],
+   "rms_mm": 0.07833467200194076,
+   "konum": [
+    13.68,
+    62.0
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.028362691402435303,
+    "ofset_mm": -0.0004911067400898543,
+    "kayma_mm": [
+     0.008072204601096915,
+     0.030926323971424734
+    ],
+    "sigma_mm": 0.011647549457848072,
+    "kapsama": 0.5686274509803921
+   }
+  },
+  {
+   "ad": "R3L_ust",
+   "tur": "hat",
+   "ornek": 67,
+   "kapsama": 0.3880597014925373,
+   "medyan_mm": 0.1356048882007599,
+   "p90_mm": 0.206791490316391,
+   "ofset_mm": 0.020556620749816047,
+   "kayma_mm": [
+    0.02800767489469012,
+    0.028007674894690342
+   ],
+   "rms_mm": 0.1345483657885304,
+   "konum": [
+    32.44,
+    56.04
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.05550065264105797,
+    "ofset_mm": 0.007231042717034688,
+    "kayma_mm": [
+     0.009786604358427787,
+     0.009786604358427743
+    ],
+    "sigma_mm": 0.018122857436537743,
+    "kapsama": 0.6567164179104478
+   }
+  },
+  {
+   "ad": "B2_alt",
+   "tur": "hat",
+   "ornek": 112,
+   "kapsama": 0.16964285714285715,
+   "medyan_mm": 0.10079381614923477,
+   "p90_mm": 0.1612083911895752,
+   "ofset_mm": 0.050154252589052,
+   "kayma_mm": [
+    -0.016958393570272356,
+    -0.16744560471270595
+   ],
+   "rms_mm": 0.054553856188509074,
+   "konum": [
+    21.12,
+    65.99
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.07371219247579575,
+    "ofset_mm": -0.015948728408858383,
+    "kayma_mm": [
+     -0.09153639192614271,
+     0.033430542132344386
+    ],
+    "sigma_mm": 0.016820529475808144,
+    "kapsama": 0.6428571428571429
+   }
+  },
+  {
+   "ad": "H2818",
+   "tur": "hat",
+   "ornek": 514,
+   "kapsama": 0.42996108949416345,
+   "medyan_mm": 0.0767689123749733,
+   "p90_mm": 0.1674026995897293,
+   "ofset_mm": -0.008820413821175689,
+   "kayma_mm": [
+    0.05682142709515947,
+    -0.06808506426093211
+   ],
+   "rms_mm": 0.04149386755207547,
+   "konum": [
+    15.94,
+    61.64
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.0532497838139534,
+    "ofset_mm": -0.005867038549496149,
+    "kayma_mm": [
+     0.01283182479883794,
+     -0.05722511215079905
+    ],
+    "sigma_mm": 0.018678709864616394,
+    "kapsama": 0.7120622568093385
+   }
+  },
+  {
+   "ad": "R1_alt",
+   "tur": "hat",
+   "ornek": 236,
+   "kapsama": 0.4322033898305085,
+   "medyan_mm": 0.07538214325904846,
+   "p90_mm": 0.20782969892024994,
+   "ofset_mm": 0.07845748442388308,
+   "kayma_mm": [
+    -0.034930996865433564,
+    -0.032373699041168054
+   ],
+   "rms_mm": 0.07337747412635846,
+   "konum": [
+    7.99,
+    72.78
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.028518522158265114,
+    "ofset_mm": 0.00043216856000746523,
+    "kayma_mm": [
+     -0.05270801040942238,
+     -0.01724784878171747
+    ],
+    "sigma_mm": 0.011489090509712696,
+    "kapsama": 0.75
+   }
+  },
+  {
+   "ad": "LED_B1_ped_ust",
+   "tur": "led_ped",
+   "ornek": 70,
+   "kapsama": 0.42857142857142855,
+   "medyan_mm": 0.07399627566337585,
+   "p90_mm": 0.19068185985088348,
+   "ofset_mm": 0.09409852087641277,
+   "kayma_mm": [
+    0.02231604263790718,
+    -0.0241584096938583
+   ],
+   "rms_mm": 0.06962006176604754,
+   "konum": [
+    12.76,
+    62.29
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.055889517068862915,
+    "ofset_mm": 0.009395839033040478,
+    "kayma_mm": [
+     0.031107608955179424,
+     0.038535623958256486
+    ],
+    "sigma_mm": 0.01351865753531456,
+    "kapsama": 0.5857142857142857
+   }
+  },
+  {
+   "ad": "H3317",
+   "tur": "hat",
+   "ornek": 400,
+   "kapsama": 0.315,
+   "medyan_mm": 0.049178894609212875,
+   "p90_mm": 0.1447593718767166,
+   "ofset_mm": 0.04524437459486909,
+   "kayma_mm": [
+    -0.2558680884507219,
+    -0.02140411838604909
+   ],
+   "rms_mm": 0.02558849695651968,
+   "konum": [
+    13.86,
+    67.47
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.015620230697095394,
+    "ofset_mm": -0.0027013191300275,
+    "kayma_mm": [
+     -0.030534914853448347,
+     0.00037193437977512805
+    ],
+    "sigma_mm": 0.015952831134200096,
+    "kapsama": 0.6175
+   }
+  },
+  {
+   "ad": "V1143",
+   "tur": "hat",
+   "ornek": 293,
+   "kapsama": 0.46757679180887374,
+   "medyan_mm": 0.042094580829143524,
+   "p90_mm": 0.18606585264205933,
+   "ofset_mm": -0.005937265169210348,
+   "kayma_mm": [
+    -0.02004072380911265,
+    -0.21922304937240744
+   ],
+   "rms_mm": 0.051962764462995345,
+   "konum": [
+    20.98,
+    62.81
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.015280435793101788,
+    "ofset_mm": 0.0008310154274302591,
+    "kayma_mm": [
+     0.0022151607837978715,
+     0.025814454472906558
+    ],
+    "sigma_mm": 0.016162730753421783,
+    "kapsama": 0.8600682593856656
+   }
+  },
+  {
+   "ad": "LED_L2_ped_alt",
+   "tur": "led_ped",
+   "ornek": 80,
+   "kapsama": 0.825,
+   "medyan_mm": 0.15782184898853302,
+   "p90_mm": 0.23882213234901428,
+   "ofset_mm": -0.012993901194731771,
+   "kayma_mm": [
+    0.09066940978316787,
+    0.16270715315666734
+   ],
+   "rms_mm": 0.0663736620787593,
+   "konum": [
+    4.97,
+    47.59
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.05123313143849373,
+    "ofset_mm": -0.03032352977273454,
+    "kayma_mm": [
+     -0.011611684051290804,
+     -0.003831642097392921
+    ],
+    "sigma_mm": 0.015517216175794601,
+    "kapsama": 0.5625
+   }
+  },
+  {
+   "ad": "LED_C1_ped_alt",
+   "tur": "led_ped",
+   "ornek": 79,
+   "kapsama": 0.7088607594936709,
+   "medyan_mm": 0.12018372118473053,
+   "p90_mm": 0.2178063690662384,
+   "ofset_mm": 0.023571656033947033,
+   "kayma_mm": [
+    0.046027875882194313,
+    0.15535630750228244
+   ],
+   "rms_mm": 0.09718838461544685,
+   "konum": [
+    19.14,
+    49.2
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.06166520714759827,
+    "ofset_mm": 0.035500744820510216,
+    "kayma_mm": [
+     -0.00938965224049874,
+     0.08584386684052318
+    ],
+    "sigma_mm": 0.01554636750370264,
+    "kapsama": 0.6075949367088608
+   }
+  },
+  {
+   "ad": "LED_B1_ped_alt",
+   "tur": "led_ped",
+   "ornek": 80,
+   "kapsama": 0.55,
+   "medyan_mm": 0.11809169501066208,
+   "p90_mm": 0.19182875752449036,
+   "ofset_mm": 0.03025412262745405,
+   "kayma_mm": [
+    0.059526051823874514,
+    0.12196662467520701
+   ],
+   "rms_mm": 0.0987888521640215,
+   "konum": [
+    12.76,
+    64.74
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.03786412253975868,
+    "ofset_mm": 0.03076735536598528,
+    "kayma_mm": [
+     0.0011302950733657088,
+     0.025896794524691426
+    ],
+    "sigma_mm": 0.014044499024748802,
+    "kapsama": 0.5875
+   }
+  },
+  {
+   "ad": "Kopru_35_R2L_alt",
+   "tur": "kopru",
+   "ornek": 73,
+   "kapsama": 0.9315068493150684,
+   "medyan_mm": 0.11461204290390015,
+   "p90_mm": 0.2267080843448639,
+   "ofset_mm": 0.11285985642173514,
+   "kayma_mm": [
+    -0.027416803560789484,
+    0.14235179056175037
+   ],
+   "rms_mm": 0.028992616091223257,
+   "konum": [
+    31.42,
+    53.58
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.029462184756994247,
+    "ofset_mm": 0.003017734664389491,
+    "kayma_mm": [
+     -0.007245705173650368,
+     0.07224058134585874
+    ],
+    "sigma_mm": 0.02925707958638668,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "B3_ust",
+   "tur": "hat",
+   "ornek": 115,
+   "kapsama": 0.7304347826086957,
+   "medyan_mm": 0.10930407792329788,
+   "p90_mm": 0.22701072692871094,
+   "ofset_mm": -0.0022510428790614764,
+   "kayma_mm": [
+    -0.16293945382293176,
+    0.05971782548005952
+   ],
+   "rms_mm": 0.08521579657203243,
+   "konum": [
+    24.63,
+    60.35
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.05607573688030243,
+    "ofset_mm": -0.0011578911628882136,
+    "kayma_mm": [
+     -0.012256188850407418,
+     0.057410090387051325
+    ],
+    "sigma_mm": 0.013473697006702423,
+    "kapsama": 0.7130434782608696
+   }
+  },
+  {
+   "ad": "LED_L2_ped_ust",
+   "tur": "led_ped",
+   "ornek": 80,
+   "kapsama": 0.925,
+   "medyan_mm": 0.10842102766036987,
+   "p90_mm": 0.19467245042324066,
+   "ofset_mm": 0.004935710758094646,
+   "kayma_mm": [
+    0.07597696194841823,
+    0.1482139167018949
+   ],
+   "rms_mm": 0.04564844427384313,
+   "konum": [
+    4.97,
+    45.14
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.045139655470848083,
+    "ofset_mm": 0.004479181217585207,
+    "kayma_mm": [
+     0.03278254584342441,
+     0.014508805939939093
+    ],
+    "sigma_mm": 0.020836053416132927,
+    "kapsama": 0.8625
+   }
+  }
+ ],
+ "ag": {
+  "aglar": [
+   {
+    "pinler": [
+     1
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_L1.ust",
+     "LED_L2.ust",
+     "LED_R1.ust",
+     "LED_R2.ust"
+    ],
+    "hatlar": [
+     "L1_ust",
+     "L2_ust",
+     "LED_L1_ped_ust",
+     "LED_L2_ped_ust",
+     "LED_R1_ped_ust",
+     "LED_R2_ped_ust",
+     "R1",
+     "R1L_ust",
+     "R1_alt"
+    ],
+    "no": 1
+   },
+   {
+    "pinler": [
+     3
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_L3.ust",
+     "LED_L4.ust"
+    ],
+    "hatlar": [
+     "L3_ust",
+     "L4_ust",
+     "LED_L3_ped_ust",
+     "LED_L4_ped_ust"
+    ],
+    "no": 2
+   },
+   {
+    "pinler": [
+     5
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_B1.alt"
+    ],
+    "hatlar": [
+     "B1_alt",
+     "H3317",
+     "LED_B1_ped_alt"
+    ],
+    "no": 3
+   },
+   {
+    "pinler": [
+     6,
+     9
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_B2.alt",
+     "LED_B3.alt",
+     "LED_L1.alt",
+     "LED_L3.alt",
+     "LED_R3.alt"
+    ],
+    "hatlar": [
+     "B2_alt",
+     "B3_alt",
+     "H2818",
+     "L1_alt",
+     "LED_B2_ped_alt",
+     "LED_B3_ped_alt",
+     "LED_L1_ped_alt",
+     "LED_L3_ped_alt",
+     "LED_R3_ped_alt",
+     "R3L_alt",
+     "V578"
+    ],
+    "no": 4
+   },
+   {
+    "pinler": [
+     7
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_L2.alt",
+     "LED_L4.alt",
+     "LED_R4.alt"
+    ],
+    "hatlar": [
+     "L2_alt",
+     "LED_L2_ped_alt",
+     "LED_L4_ped_alt",
+     "LED_R4_ped_alt",
+     "V1143",
+     "V466"
+    ],
+    "no": 5
+   },
+   {
+    "pinler": [
+     8
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_C1.alt",
+     "LED_R1.alt"
+    ],
+    "hatlar": [
+     "C1_alt",
+     "LED_C1_ped_alt",
+     "LED_R1_ped_alt",
+     "R1L_alt"
+    ],
+    "no": 6
+   },
+   {
+    "pinler": [
+     10
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_R2.alt"
+    ],
+    "hatlar": [
+     "LED_R2_ped_alt",
+     "R2L_alt"
+    ],
+    "no": 7
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     2
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 8
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     4
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 9
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     11
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 10
+   },
+   {
+    "pinler": [],
+    "dummy": [],
+    "uclar": [
+     "LED_B1.ust",
+     "LED_R3.ust",
+     "LED_R4.ust"
+    ],
+    "hatlar": [
+     "B1_ust",
+     "LED_B1_ped_ust",
+     "LED_R3_ped_ust",
+     "LED_R4_ped_ust",
+     "R3L_ust",
+     "T3",
+     "T3_R4L"
+    ],
+    "no": 11
+   },
+   {
+    "pinler": [],
+    "dummy": [],
+    "uclar": [
+     "LED_B2.ust"
+    ],
+    "hatlar": [
+     "B2_ust",
+     "LED_B2_ped_ust"
+    ],
+    "no": 12
+   },
+   {
+    "pinler": [],
+    "dummy": [],
+    "uclar": [
+     "LED_B3.ust"
+    ],
+    "hatlar": [
+     "B3_ust",
+     "LED_B3_ped_ust"
+    ],
+    "no": 13
+   },
+   {
+    "pinler": [],
+    "dummy": [],
+    "uclar": [
+     "LED_C1.ust"
+    ],
+    "hatlar": [
+     "C1_ust",
+     "LED_C1_ped_ust"
+    ],
+    "no": 14
+   }
+  ],
+  "ozet": {
+   "ag": 14,
+   "pin": 8,
+   "dummy": 3,
+   "cihaz": 12,
+   "bilesen": 33,
+   "kopru": 19
+  },
+  "imza": [
+   "P10|LED_R2.alt",
+   "P1|LED_L1.ust;LED_L2.ust;LED_R1.ust;LED_R2.ust",
+   "P3|LED_L3.ust;LED_L4.ust",
+   "P5|LED_B1.alt",
+   "P6,9|LED_B2.alt;LED_B3.alt;LED_L1.alt;LED_L3.alt;LED_R3.alt",
+   "P7|LED_L2.alt;LED_L4.alt;LED_R4.alt",
+   "P8|LED_C1.alt;LED_R1.alt",
+   "P|",
+   "P|",
+   "P|",
+   "P|LED_B1.ust;LED_R3.ust;LED_R4.ust",
+   "P|LED_B2.ust",
+   "P|LED_B3.ust",
+   "P|LED_C1.ust"
+  ]
+ },
+ "bulgular": [
+  {
+   "seviye": "HATA",
+   "kod": "pinsiz_ag",
+   "id": "pinsiz_ag:LED_B1.ust,LED_R3.ust,LED_R4.ust",
+   "mesaj": "Hiçbir pine ulaşmayan ağ: LED_B1.ust, LED_R3.ust, LED_R4.ust (kopukluk veya eksik hat)",
+   "konum": [
+    12.76,
+    62.29
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "HATA",
+   "kod": "pinsiz_ag",
+   "id": "pinsiz_ag:LED_B2.ust",
+   "mesaj": "Hiçbir pine ulaşmayan ağ: LED_B2.ust (kopukluk veya eksik hat)",
+   "konum": [
+    19.16,
+    62.25
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "HATA",
+   "kod": "pinsiz_ag",
+   "id": "pinsiz_ag:LED_B3.ust",
+   "mesaj": "Hiçbir pine ulaşmayan ağ: LED_B3.ust (kopukluk veya eksik hat)",
+   "konum": [
+    25.48,
+    62.38
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "HATA",
+   "kod": "pinsiz_ag",
+   "id": "pinsiz_ag:LED_C1.ust",
+   "mesaj": "Hiçbir pine ulaşmayan ağ: LED_C1.ust (kopukluk veya eksik hat)",
+   "konum": [
+    19.14,
+    46.75
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "ayrik_pinler",
+   "id": "ayrik_pinler:6,9",
+   "mesaj": "Pinler 6, 9 aynı ağda (bitişik değil: şüpheli)",
+   "konum": [
+    19.16,
+    64.7
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:B1_alt",
+   "mesaj": "'B1_alt' kenar örneklerinin yalnız %15'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    12.67,
+    65.92
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:B1_ust",
+   "mesaj": "'B1_ust' kenar örneklerinin yalnız %39'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    13.68,
+    62.0
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:B2_alt",
+   "mesaj": "'B2_alt' kenar örneklerinin yalnız %17'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    21.12,
+    65.99
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:H2818",
+   "mesaj": "'H2818' kenar örneklerinin yalnız %43'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    15.94,
+    61.64
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:H3317",
+   "mesaj": "'H3317' kenar örneklerinin yalnız %32'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    13.86,
+    67.47
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:R1_alt",
+   "mesaj": "'R1_alt' kenar örneklerinin yalnız %43'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    7.99,
+    72.78
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:R3L_ust",
+   "mesaj": "'R3L_ust' kenar örneklerinin yalnız %39'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    32.44,
+    56.04
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:V1143",
+   "mesaj": "'V1143' kenar örneklerinin yalnız %47'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    20.98,
+    62.81
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_sapma",
+   "id": "eleman_sapma:B2_ust",
+   "mesaj": "'B2_ust' medyan sapma 0.105 mm (ofset +0.006, kayma -0.123/+0.020 mm)",
+   "konum": [
+    18.45,
+    60.29
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_sapma",
+   "id": "eleman_sapma:B3_ust",
+   "mesaj": "'B3_ust' medyan sapma 0.109 mm (ofset -0.002, kayma -0.163/+0.060 mm)",
+   "konum": [
+    24.63,
+    60.35
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "eleman_sapma",
+   "id": "eleman_sapma:Kopru_35_R2L_alt",
+   "mesaj": "'Kopru_35_R2L_alt' medyan sapma 0.115 mm (ofset +0.113, kayma -0.027/+0.142 mm)",
+   "konum": [
+    31.42,
+    53.58
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "serbest_uc",
+   "id": "serbest_uc:C1_ust:son",
+   "mesaj": "'C1_ust' hattının sonu hiçbir gümüşe değmiyor (açık uç)",
+   "konum": [
+    15.77,
+    61.25
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "yakin_bosluk",
+   "id": "yakin_bosluk:H3317/V466",
+   "mesaj": "V466 ile H3317 arası 0.055 mm (değmesi gerekiyorsa uç kısa; değilse aralık dar)",
+   "konum": [
+    7.55,
+    66.36
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:H3317",
+   "mesaj": "'H3317' 0/45/90 dışı açılar: 46.1°",
+   "konum": [
+    7.58,
+    66.61
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:LED_B1_ped_ust",
+   "mesaj": "'LED_B1_ped_ust' kenar örneklerinin yalnız %43'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    12.76,
+    62.29
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_sapma",
+   "id": "eleman_sapma:LED_B1_ped_alt",
+   "mesaj": "'LED_B1_ped_alt' medyan sapma 0.118 mm (ofset +0.030, kayma +0.060/+0.122 mm)",
+   "konum": [
+    12.76,
+    64.74
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_sapma",
+   "id": "eleman_sapma:LED_B3_ped_ust",
+   "mesaj": "'LED_B3_ped_ust' medyan sapma 0.102 mm (ofset +0.031, kayma -0.087/+0.116 mm)",
+   "konum": [
+    25.48,
+    62.37
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_sapma",
+   "id": "eleman_sapma:LED_C1_ped_alt",
+   "mesaj": "'LED_C1_ped_alt' medyan sapma 0.120 mm (ofset +0.024, kayma +0.046/+0.155 mm)",
+   "konum": [
+    19.14,
+    49.2
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_sapma",
+   "id": "eleman_sapma:LED_L2_ped_alt",
+   "mesaj": "'LED_L2_ped_alt' medyan sapma 0.158 mm (ofset -0.013, kayma +0.091/+0.163 mm)",
+   "konum": [
+    4.97,
+    47.59
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_sapma",
+   "id": "eleman_sapma:LED_L2_ped_ust",
+   "mesaj": "'LED_L2_ped_ust' medyan sapma 0.108 mm (ofset +0.005, kayma +0.076/+0.148 mm)",
+   "konum": [
+    4.97,
+    45.14
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  }
+ ],
+ "bulgu_sayim": {
+  "HATA": 4,
+  "UYARI": 14,
+  "BILGI": 7,
+  "bilinen": 0
+ },
+ "kapilar": [
+  {
+   "ad": "Gümüş kenar sapması medyan",
+   "deger": 0.03554334491491318,
+   "birim": "mm",
+   "op": "≤",
+   "esik": 0.06,
+   "gecti": true
+  },
+  {
+   "ad": "Gümüş kenar sapması %90",
+   "deger": 0.13284173607826233,
+   "birim": "mm",
+   "op": "≤",
+   "esik": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "Gümüş kenar kapsaması",
+   "deger": 0.8231606542428905,
+   "birim": "",
+   "op": "≥",
+   "esik": 0.8,
+   "gecti": true
+  },
+  {
+   "ad": "Taramada karşılıksız gümüş (gölge hariç)",
+   "deger": 0.11967272658276569,
+   "birim": "",
+   "op": "≤",
+   "esik": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "Ağ / tutarlılık HATA (bilinmeyen)",
+   "deger": 4,
+   "birim": "adet",
+   "op": "≤",
+   "esik": 0,
+   "gecti": false
+  }
+ ],
+ "gecti": false,
  "gorseller": {
   "bas_bolgesi": "work\\p1\\kontrol_bas_bolgesi.png",
   "kopru_kumesi_sag_ust": "work\\p1\\kontrol_kopru_kumesi_sag_ust.png",

@@ -1,0 +1,95 @@
+[
+ {
+  "tur": "diel_kayma",
+  "oncelik": 0.04570541125644603,
+  "mesaj": "Dielektrik, telafiden sonra hâlâ (+0.000, -0.046) mm kayık: SCAN['diel_kayma_mm'] [0.0, 0.0] -> [-0.0, 0.046] (çizim ideal kalır, yalnız doğrulama telafisi).",
+  "deger": [
+   -0.0,
+   0.046
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Blok_Net1",
+  "oncelik": 0.08755015533294933,
+  "konum": [
+   13.85,
+   71.73
+  ],
+  "mesaj": "'Blok_Net1' (dikdortgen) taramaya göre (+0.088, +0.010) mm kaymış -> (-0.088, -0.010) mm taşı",
+  "deger": [
+   -0.088,
+   -0.01
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Blok_Net3",
+  "oncelik": 0.0860867638067118,
+  "konum": [
+   17.85,
+   71.73
+  ],
+  "mesaj": "'Blok_Net3' (dikdortgen) taramaya göre (+0.086, +0.013) mm kaymış -> (-0.086, -0.013) mm taşı",
+  "deger": [
+   -0.086,
+   -0.013
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Blok_Net2",
+  "oncelik": 0.08458114704246351,
+  "konum": [
+   15.85,
+   71.73
+  ],
+  "mesaj": "'Blok_Net2' (dikdortgen) taramaya göre (+0.085, -0.005) mm kaymış -> (-0.085, +0.005) mm taşı",
+  "deger": [
+   -0.085,
+   0.005
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Hat_Net3_C_alt",
+  "oncelik": 0.07774504214785655,
+  "konum": [
+   21.18,
+   65.01
+  ],
+  "mesaj": "'Hat_Net3_C_alt' (hat) taramaya göre (+0.062, -0.078) mm kaymış -> (-0.062, +0.078) mm taşı",
+  "deger": [
+   -0.062,
+   0.078
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Blok_Net4",
+  "oncelik": 0.06979452753011978,
+  "konum": [
+   22.35,
+   71.72
+  ],
+  "mesaj": "'Blok_Net4' (dikdortgen) taramaya göre (+0.070, +0.026) mm kaymış -> (-0.070, -0.026) mm taşı",
+  "deger": [
+   -0.07,
+   -0.026
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Ped_B",
+  "oncelik": 0.05194938885701245,
+  "konum": [
+   13.4,
+   55.78
+  ],
+  "mesaj": "'Ped_B' (tus_ped) taramaya göre (-0.008, +0.052) mm kaymış -> (+0.008, -0.052) mm taşı",
+  "deger": [
+   0.008,
+   -0.052
+  ]
+ }
+]

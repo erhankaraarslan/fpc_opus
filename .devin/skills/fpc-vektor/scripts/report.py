@@ -38,9 +38,37 @@ LEJANT = ("Bindirme renkleri: <b style='color:#d00'>kırmızı</b> gümüş (alt
           "köprü (2. baskı), <b style='color:#090'>yeşil</b> dielektrik, <b style='color:#c0c'>mor</b> kesim/oval, "
           "<b style='color:#e90'>turuncu</b> taramada olup çizimde karşılığı olmayan gümüş.")
 
+SAPMA_LEJANT = ("Çizimin her kenar örneğinde taramadaki malzeme kenarına alt-piksel uzaklık: <b style='color:#0a0'>yeşil</b> ≤ 0.02 mm, "
+                "<b style='color:#bb0'>sarı</b> ≤ 0.05, <b style='color:#e90'>turuncu</b> ≤ 0.10, <b style='color:#d00'>kırmızı</b> > 0.10 mm, "
+                "<b style='color:#c0c'>mor</b> taramada karşılık bulunamadı (eleman yanlış yerde ya da referans maske orada eksik).")
+AG_LEJANT = ("Çizim geometrisinden çıkarılan elektrik ağları: her ağ ayrı renk, köprüler koyu kontur, altta pin numaraları; "
+             "<b style='color:#d00'>kırmızı</b> halka = HATA, <b style='color:#e90'>turuncu</b> = UYARI, gri = bilinen (kabul edilmiş) bulgu.")
+GOLGE_LEJANT = ("Film camdan kalkık olduğunda her gümüş şeklin koyu kopyası δ kadar yukarı düşer. Karolardaki sayı yerel δ (mm), "
+                "renk mavi (küçük) → kırmızı (büyük); büyük δ = film daha kalkık, kenarlar daha bulanık. Mor = gölge olarak "
+                "açıklanan pikseller (doğrulamada karşılıksız gümüş ve kenar örneklerinden çıkarılır).")
+KOD_ACIKLAMA = {
+    "maske_yanliligi": "Referans maske eşiği kenarı kaydırıyor",
+    "kisa_devre": "Bir cihazın (LED/tuş) iki ucu aynı ağda", "pinsiz_ag": "Cihaz ucu hiçbir pine ulaşmıyor",
+    "tarak_sayisi": "Tuş pedinde 2 ayrık tarak yok", "led_uclari": "LED ped grupları eksik",
+    "ayrik_pinler": "Bitişik olmayan pinler aynı ağda", "bitisik_pinler": "Bitişik pinler bloğu",
+    "bos_pin": "Kullanılan pin cihaza bağlı değil", "dummy_bagli": "Dummy pin bir ağa bağlı",
+    "yuzen_gumus": "Bağlantısız gümüş", "serbest_uc": "Hattın ucu boşta", "yakin_bosluk": "Farklı ağlar çok yakın / uç kısa",
+    "ince_bolge": "Min. genişlik altı bölge", "kopru_bindirme": "Köprü bindirmesi kısa",
+    "kopru_ucu_yalitkanda": "Köprü ucu yalıtkan üstünde", "kopru_ucu_bosta": "Köprü ucu alt gümüşe değmiyor",
+    "kopru_tamamen_yalitkanda": "Köprü hiçbir yere bağlanmıyor", "kopru_yalitkan_disi": "Köprü ortada yalıtkandan çıkıyor",
+    "yalitimsiz_kesisim": "Köprü yalıtkansız kesişiyor", "yalitim_payi": "Köprü altı yalıtım payı dar",
+    "mikro_segment": "Çok kısa çizgi parçası", "dar_donus": "Sivri köşe", "gereksiz_dugum": "Doğrusal fazladan düğüm",
+    "aci_45_disi": "0/45/90 dışı açı", "kontur_disi": "Kart dışına taşan gümüş", "kesim_payi": "Kesim kenarına çok yakın",
+    "pencere": "Oval pencereyle kesişen gümüş", "ust_uste_hat": "Üst üste binen hatlar",
+    "kenar_ofset": "Sistematik genişlik farkı", "eleman_sapma": "Elemanın taramadan sapması büyük",
+    "eleman_eslesmedi": "Eleman taramada doğrulanamadı", "karsiliksiz_gumus": "Taramada çizilmemiş gümüş",
+}
+
 GENEL_REHBER = [
-    ("Önce durum kartlarına bakın", "Kabul durumu GEÇTİ ise kenar sapmaları eşik içindedir. Belirsiz rota sayısı 0 değilse "
-     "'Fiziksel kontrol' bölümündeki maddeler doğrulanmadan çizim üretime verilmemelidir."),
+    ("Önce durum kartlarına bakın", "Kabul durumu GEÇTİ ise kenar sapmaları eşik içinde ve çizimde bilinmeyen elektrik HATA'sı "
+     "yoktur. Belirsiz rota sayısı 0 değilse 'Fiziksel kontrol' maddeleri doğrulanmadan çizim üretime verilmemelidir."),
+    ("Kontrol bulgularını okuyun", "'Ağ ve tutarlılık' bölümü çizimin kendi içindeki sorunları (kopuk ped, açık uç, köprü "
+     "hatası, kısa parça) konumuyla listeler; ağ tablosu çizimden çıkarılan pin → LED/ped bağlantılarıdır."),
     ("Karar noktalarını okuyun", "Ölçümün yetmediği her yerde hangi seçeneğin neden seçildiği ve kanıt görselleri verilmiştir. "
      "Katılmadığınız karar varsa numarasıyla bildirin (ör. 'K4: koyu bantlar gerçek bar')."),
     ("Galeride inceleyin", "Görsellere tıklayınca büyük açılır; fare tekerleğiyle yakınlaştırıp sürükleyebilirsiniz. "
@@ -62,6 +90,21 @@ CORELDRAW = [
 def _otomatik(ad):
     """Analiz kaydında açıklaması olmayan görseller için dosya adından kategori/açıklama."""
     n = ad.lower()
+    if n.startswith(("kontrol_sapma_", "ov_sapma")):
+        return "Doğrulama", f"Kenar sapması ısı haritası: {n.replace('kontrol_sapma_', '').replace('ov_sapma', 'tamamı')[:-4].replace('_', ' ')}", SAPMA_LEJANT
+    if n.startswith("ag_"):
+        return "Topoloji", "Çizimden çıkarılan ağ haritası", AG_LEJANT
+    if n.startswith("ogren_"):
+        return "Maskeler", "Öğrenen sınıflandırıcı sınıf haritası", ("Onaylı çizimlerden eğitilen rastgele orman: gri film, kırmızı gümüş, "
+                                                                     "lacivert yalıtkan altı gümüş, mavi köprü, turkuaz dielektrik, mor gölge.")
+    if n.startswith("rota_onerisi"):
+        return "Topoloji", "Otomatik rota önerisi", ("Aday segment + MILP + graf ile önerilen rotalar: yeşil güvenli, turuncu düşük "
+                                                     "güven (flag). Elle yazılan rotaların başlangıcıdır.")
+    if n.startswith("golge_"):
+        return "Maskeler", "Gölge ofseti (film kalkıklığı) haritası", GOLGE_LEJANT
+    if n.startswith("kayit_"):
+        return "Ön işleme", "Ön + arka tarama çakıştırma kontrolü", ("Kırmızı = ön yüz yapı haritası, yeşil = hizalanmış arka yüz; "
+                                                                    "sarı = örtüşme. Kırmızı/yeşil saçak = yerel kayma.")
     if n.startswith("kontrol_"):
         return "Doğrulama", f"Rapor kontrol kırpımı: {n[8:-4].replace('_', ' ')}", "Doğrulama bindirmesinden kırpım. " + LEJANT
     if n.startswith(("ov_", "overlay")):
@@ -138,24 +181,90 @@ def collect(ad, D, M):
 
 
 def metric_rows(M):
-    Es = M["esik"]
+    """(metrik, değer, eşik, sonuç) — kabul kapıları + bilgi satırları."""
     rows = []
-    for key, lbl in (("dielektrik", "Dielektrik"), ("gumus", "Gümüş")):
+    for k in M["kapilar"]:
+        v = f"{k['deger']:.0f}" if k["birim"] == "adet" else f"{k['deger']:.3f}" + (f" {k['birim']}" if k["birim"] else "")
+        rows.append((k["ad"], v, f"{k['op']} {k['esik']}" + (f" {k['birim']}" if k["birim"] == "mm" else ""), k["gecti"]))
+    for key, lbl in (("gumus", "Gümüş"), ("dielektrik", "Dielektrik")):
+        if key not in M:
+            continue
+        m, kn = M[key], M[key]["kenar"]
+        if kn.get("ofset_mm") is not None:
+            ks = kn.get("kayma_mm", [0, 0])
+            rows.append((f"{lbl} sistematik ofset (her yan) / kayma", f"{kn['ofset_mm']:+.3f} mm / ({ks[0]:+.3f}, {ks[1]:+.3f}) mm",
+                         f"|ofset| uyarı > {M['esik'].get('ofset_uyari_mm', 0.03)}", None))
+        rows.append((f"{lbl} işaretli sapma medyanı", f"{kn.get('isaretli_medyan_mm', 0):+.3f} mm", "+ geniş / − dar", None))
+        y = m.get("yogunluk") or {}
+        if y.get("medyan_mm") is not None:
+            ys = y.get("kayma_mm", [0, 0])
+            rows.append((f"{lbl} yoğunluk kenarı (maskeden bağımsız) medyan / %90", f"{y['medyan_mm']:.3f} / {y['p90_mm']:.3f} mm",
+                         f"kapsama {y['kapsama']:.2f}; ±6 px dışı sapma ölçülmez (kapı değil)", None))
+            rows.append((f"{lbl} yoğunluk ofseti / kayma / bulanıklık σ",
+                         f"{y.get('ofset_mm', 0):+.3f} mm / ({ys[0]:+.3f}, {ys[1]:+.3f}) mm / {y.get('sigma_mm', 0):.3f} mm",
+                         "maske ofsetiyle farkı = maske yanlılığı", None))
+        if m.get("ters"):
+            rows.append((f"{lbl}: tarama kenarlarının çizime ≤ 3 px oranı", f"{m['ters'].get('kapsama_3px', 0):.3f}", "bilgi (ters yön)", None))
+        rows.append((f"{lbl} IoU", f"{m['iou']:.3f}", "bilgi" if key == "gumus" else "kapıda", None))
+        if key == "gumus":
+            gh = m.get("karsiliksiz_golge_haric", m["karsiliksiz_oran"])
+            rows.append(("Taramada karşılıksız gümüş (ham / gölge hariç)", f"{m['karsiliksiz_oran']:.3f} / {gh:.3f}",
+                         f"uyarı > {M['esik']['karsiliksiz_max']}" if M["tip"] != "led" else "kapıda gölge hariç", None))
+    if M.get("golge"):
+        rows.append(("Gölge ofseti δ (genel) / kalkık karo", f"{M['golge']['delta_mm']:.2f} mm / {M['golge']['kalkik_karo']}",
+                     "golge_haritasi.png", None))
+    for key, lbl in (("gumus", "Gümüş"), ("dielektrik", "Dielektrik")):
         if key not in M:
             continue
         m = M[key]
-        rows.append((f"{lbl} kenar sapması medyan", f"{m['kenar_medyan_mm']:.3f} mm", f"≤ {Es['kenar_medyan_mm']} mm",
-                     m["kenar_medyan_mm"] <= Es["kenar_medyan_mm"]))
-        rows.append((f"{lbl} kenar sapması %90", f"{m['kenar_p90_mm']:.3f} mm", f"≤ {Es['kenar_p90_mm']} mm",
-                     m["kenar_p90_mm"] <= Es["kenar_p90_mm"]))
-        if key == "dielektrik":
-            rows.append(("Dielektrik IoU", f"{m['iou']:.3f}", f"≥ {Es['dielektrik_iou_min']}", m["iou"] >= Es["dielektrik_iou_min"]))
-        else:
-            rows.append(("Gümüş IoU", f"{m['iou']:.3f}", "bilgi", None))
-            led = M["tip"] == "led"
-            rows.append(("Taramada karşılıksız gümüş", f"{m['karsiliksiz_oran']:.3f}", f"≤ {Es['karsiliksiz_max']}" if led else "bilgi",
-                         (m["karsiliksiz_oran"] <= Es["karsiliksiz_max"]) if led else None))
+        p = m.get("piksel", {})
+        if p:
+            rows.append((f"{lbl} kenar (eski tam-piksel yöntem) medyan / %90", f"{p['medyan_mm']:.3f} / {p['p90_mm']:.3f} mm",
+                         "önceki sürümle kıyas", None))
     return rows
+
+
+def onarim_rows(D):
+    import onar
+    out = [f"Uç kenetleme: {x}" for x in onar.ozet(getattr(D, "onarimlar", []) or [])]
+    out += [f"Köprü uç kuralı: '{x}' yama içindeki parçası alt baskıya alındı" for x in getattr(D, "kopru_kurali", []) or []]
+    return out
+
+
+def oneri_rows(ad, n=20):
+    p = cfg.work(ad, "oneriler.json")
+    if not os.path.exists(p):
+        return []
+    return [(o["tur"], o["mesaj"]) for o in json.load(open(p, encoding="utf-8"))[:n]]
+
+
+def _konum(b):
+    return f"({b['konum'][0]}, {b['konum'][1]})" if b.get("konum") else "—"
+
+
+def bulgu_rows(M, html=True):
+    rows = []
+    for b in M.get("bulgular", []):
+        if b["seviye"] == "BILGI":
+            continue
+        sev = ("bilinen " + b["seviye"]) if b["bilinen"] else b["seviye"]
+        rows.append((sev, KOD_ACIKLAMA.get(b["kod"], b["kod"]), b["mesaj"] + (f" — kabul gerekçesi: {b['gerekce']}" if b["bilinen"] else ""),
+                     _konum(b), b["id"]))
+    return rows
+
+
+def ag_rows(M):
+    return [(str(a["no"]), ", ".join(map(str, a["pinler"])) or ("dummy " + ", ".join(map(str, a["dummy"])) if a["dummy"] else "PİNSİZ"),
+             ", ".join(a["uclar"]) or "—", str(len(a["hatlar"]))) for a in M.get("ag", {}).get("aglar", [])]
+
+
+def eleman_rows(M):
+    out = []
+    for r in M.get("elemanlar_en_kotu", [])[:12]:
+        k = r.get("kayma_mm", [0, 0])
+        out.append((r["ad"], r["tur"], f"{r.get('medyan_mm', float('nan')):.3f}", f"{r.get('ofset_mm', 0):+.3f}",
+                    f"({k[0]:+.3f}, {k[1]:+.3f})", f"{r['kapsama']:.2f}", str(r["ornek"])))
+    return out
 
 
 # ------------------------------------------------------------------ HTML
@@ -253,7 +362,8 @@ def to_html(X, imgs, rel):
     js_data = [dict(key=g["key"], src=f"{rel}/{g['stem']}.jpg", baslik=g["baslik"], aciklama=g["aciklama"],
                     kategori=g["kategori"], olcum=g["olcum"]) for g in imgs]
     nav = [("ozet", "Özet"), ("rehber", "Nasıl incelenir?"), ("surec", "Süreç"), ("bulgular", "Bulgular"),
-           ("kararlar", "Karar noktaları"), ("olculer", "Ölçüler"), ("dogrulama", "Doğrulama"), ("pinler", "Pin eşlemesi"),
+           ("kararlar", "Karar noktaları"), ("olculer", "Ölçüler"), ("dogrulama", "Doğrulama"),
+           ("kontroller", "Ağ ve tutarlılık"), ("oneriler", "Önerilen düzeltmeler"), ("pinler", "Pin eşlemesi"),
            ("kontrol", "Fiziksel kontrol"), ("yonlendirme", "Daha iyi sonuç için"), ("galeri", "Analiz görselleri"),
            ("ciktilar", "Çıktılar ve CorelDRAW"), ("ek", "Ek: parametreler")]
     H = [f"<!doctype html><html lang='tr'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width'>"
@@ -263,9 +373,12 @@ def to_html(X, imgs, rel):
     st = M["gecti"]
     H.append(f"<header class='ust'><h1>{E(D.title)}</h1><p>Oluşturma: {datetime.datetime.now():%d.%m.%Y %H:%M} · "
              f"Kaynak: {E(c['pdf'])} · fpc-vektor skill</p></header>")
-    g = M["gumus"]
+    g = M["gumus"]["kenar"]
+    bs = M["bulgu_sayim"]
     cards = [("Kabul durumu", f"<span class='{'ok' if st else 'bad'}'>{'GEÇTİ' if st else 'KALDI'}</span>"),
-             ("Gümüş kenar sapması (medyan / %90)", f"{g['kenar_medyan_mm']:.3f} / {g['kenar_p90_mm']:.3f} mm")]
+             ("Gümüş kenar sapması (medyan / %90)", f"{g.get('medyan_mm', 9):.3f} / {g.get('p90_mm', 9):.3f} mm"),
+             ("Ağ / tutarlılık (HATA / UYARI)", f"<span class='{'bad' if bs['HATA'] else 'ok'}'>{bs['HATA']}</span> / "
+                                                f"<span class='{'warn' if bs['UYARI'] else 'ok'}'>{bs['UYARI']}</span>")]
     if "dielektrik" in M:
         cards.append(("Dielektrik IoU", f"{M['dielektrik']['iou']:.3f}"))
     cards += [("Belirsiz (Kontrol) rota", f"<span class='{'warn' if D.check else 'ok'}'>{len(D.check)}</span>"),
@@ -329,9 +442,40 @@ def to_html(X, imgs, rel):
     H.append(f"<section id='dogrulama'><h2>Doğrulama (taramaya bindirme)</h2><p>Kabul durumu: "
              f"{'<span class=\"rozet r-ok\">GEÇTİ</span>' if st else '<span class=\"rozet r-bad\">KALDI</span>'} · ROI y = "
              f"{M['roi_y_px']} px</p>" + _tbl(["Metrik", "Değer", "Eşik", "Sonuç"], rows)
-             + "<div class='bilgi'>Kenar sapması: çizimin her kenar pikselinden taramada ölçülen malzeme kenarına mesafe. "
-               "IoU (örtüşme oranı) gümüşte bilgi amaçlıdır: dokulu ped içleri, LED kaplama damlaları ve gölgeler referans "
-               "maskeyi bozar. " + LEJANT + "</div>" + f"<div class='karar' style='border:none;padding:0;background:none'><div class='kanit'>{kan}</div></div></section>")
+             + "<div class='bilgi'>Kenar sapması (alt-piksel): çizim kenarı boyunca her ~0.06 mm'de normal doğrultusunda taramadaki "
+               "malzeme kenarı aranır; işaret + ise çizim dışarı taşıyor (geniş), − ise içeride (dar). Kapsama = karşılık bulunan "
+               "örnek oranı. Ofset/kayma, sapmaların 'düzgün genişleme + öteleme' modeline uydurulmasıdır (sistematik hata). "
+               "IoU gümüşte bilgi amaçlıdır: dokulu ped içleri, LED kaplama damlaları ve gölgeler referans maskeyi bozar. "
+               + LEJANT + " " + SAPMA_LEJANT + "</div>"
+               + (("<h3>En büyük sapmalı elemanlar</h3>" + _tbl(["Eleman", "Tür", "Medyan |sapma| mm", "Ofset mm", "Kayma (x, y) mm",
+                                                               "Kapsama", "Örnek"], [tuple(E(x) for x in r) for r in eleman_rows(M)])
+                   + "<p class='small'>Düzeltme yönü: eleman ofset kadar daraltılır, kaymanın tersine taşınır. Tüm elemanlar: "
+                     "<code>work/&lt;ad&gt;/eleman_sapma.json</code>.</p>") if eleman_rows(M) else "")
+               + f"<div class='karar' style='border:none;padding:0;background:none'><div class='kanit'>{kan}</div></div></section>")
+    # Ağ ve tutarlılık
+    bs = M["bulgu_sayim"]
+    br = bulgu_rows(M)
+    agk = "".join(_thumb(k, gidx, imgs, rel, h=220) for k in [x["key"] for x in imgs if x["key"].startswith("ag_")])
+    H.append("<section id='kontroller'><h2>Ağ ve tasarım tutarlılığı</h2>"
+             f"<p>Çizim geometrisinden (taramadan bağımsız) çıkarılan elektrik ağları ve çizim kontrolleri. HATA {bs['HATA']}, "
+             f"UYARI {bs['UYARI']}, bilgi {bs['BILGI']}, kullanıcı tarafından kabul edilmiş {bs['bilinen']}. Bilinmeyen HATA kabul "
+             "kapısını düşürür; bilerek kabul edilenler <code>parts/&lt;ad&gt;.json</code> → <code>kabul_edilen_bulgular</code> "
+             "ile işaretlenir.</p>"
+             + (_tbl(["Seviye", "Kontrol", "Açıklama", "Konum (mm)", "Kimlik"],
+                     [(f"<span class='{'bad' if 'HATA' in a and 'bilinen' not in a else 'warn'}'>{E(a)}</span>", E(b), E(c_), E(d), f"<code>{E(i)}</code>")
+                      for a, b, c_, d, i in br]) if br else "<p class='ok'>HATA/UYARI yok.</p>")
+             + "<h3>Çizimden çıkarılan ağlar</h3>" + _tbl(["Ağ", "Pinler", "Uçlar (LED/ped)", "Hat sayısı"], [tuple(E(x) for x in r) for r in ag_rows(M)])
+             + "<p class='small'>Bu tablo RAPOR pin eşlemesiyle karşılaştırılmalıdır; fark varsa ya çizim ya da eşleme yanlıştır.</p>"
+             + (("<h3>Otomatik onarımlar</h3><ul>" + "".join(f"<li>{E(x)}</li>" for x in onarim_rows(D)) + "</ul>") if onarim_rows(D) else "")
+             + (f"<div class='karar' style='border:none;padding:0;background:none'><div class='kanit'>{agk}</div></div>" if agk else "")
+             + f"<div class='bilgi'>{AG_LEJANT}</div></section>")
+    orr = oneri_rows(X["ad"])
+    H.append("<section id='oneriler'><h2>Önerilen düzeltmeler (ölçümden)</h2>"
+             + ("<p>Yoğunluk kenarı ölçümünden (maskeden bağımsız) çıkarılan somut düzeltmeler; otomatik uygulanmaz. "
+                "Tasarım niyetiyle (simetri, ortak adım) çelişen öneri varsa ölçüm analiz kaydına yazılır, niyet korunur. "
+                "Şablon/tahmin elemanların (LED pedleri) önerileri kaplama altı belirsizliği taşır.</p>"
+                + _tbl(["Tür", "Öneri"], [(E(a), E(b)) for a, b in orr]) if orr else "<p class='ok'>Eşik üstü öneri yok.</p>")
+             + "</section>")
     # Pinler
     if R.get("pin_eslemesi"):
         H.append("<section id='pinler'><h2>Konnektör pin eşlemesi</h2>" + _tbl(["Pin", "Bağlantı"], [(E(a), E(b)) for a, b in R["pin_eslemesi"]])
@@ -416,6 +560,20 @@ def to_md(X, imgs, rel):
         L += ["", "### Varsayımlar", ""] + [f"- {v}" for v in R["varsayimlar"]]
     L += ["", "## Doğrulama", "", "| Metrik | Değer | Eşik | Sonuç |", "|---|---|---|---|"]
     L += [f"| {a} | {b} | {t} | {'—' if ok is None else ('✔' if ok else '✘')} |" for a, b, t, ok in metric_rows(M)]
+    if eleman_rows(M):
+        L += ["", "### En büyük sapmalı elemanlar", "", "| Eleman | Tür | Medyan mm | Ofset mm | Kayma mm | Kapsama | Örnek |",
+              "|---|---|---|---|---|---|---|"] + ["| " + " | ".join(r) + " |" for r in eleman_rows(M)]
+    bs = M["bulgu_sayim"]
+    L += ["", "## Ağ ve tasarım tutarlılığı", "", f"HATA {bs['HATA']} · UYARI {bs['UYARI']} · bilgi {bs['BILGI']} · kabul edilmiş {bs['bilinen']}", ""]
+    if bulgu_rows(M):
+        L += ["| Seviye | Kontrol | Açıklama | Konum (mm) | Kimlik |", "|---|---|---|---|---|"]
+        L += [f"| {a} | {b} | {c_.replace('|', '/')} | {d} | `{i}` |" for a, b, c_, d, i in bulgu_rows(M)]
+    L += ["", "### Çizimden çıkarılan ağlar", "", "| Ağ | Pinler | Uçlar | Hat |", "|---|---|---|---|"]
+    L += ["| " + " | ".join(r) + " |" for r in ag_rows(M)]
+    if onarim_rows(D):
+        L += ["", "### Otomatik onarımlar", ""] + [f"- {x}" for x in onarim_rows(D)]
+    if oneri_rows(X["ad"]):
+        L += ["", "## Önerilen düzeltmeler (ölçümden)", ""] + [f"- **{a}:** {b}" for a, b in oneri_rows(X["ad"])]
     if R.get("pin_eslemesi"):
         L += ["", "## Pin eşlemesi", "", "| Pin | Bağlantı |", "|---|---|"] + [f"| {a} | {b} |" for a, b in R["pin_eslemesi"]]
     if X["kl"]:
@@ -461,6 +619,15 @@ def to_pdf_html(X, imgs):
              + "".join(f"<tr><td>{E(str(a))}</td><td>{E(str(b))}</td><td>{E(str(n))}</td></tr>" for a, b, n in list(R.get("olculer", [])) + X["auto"]) + "</table>")
     H.append("<h2>Doğrulama</h2><table><tr><th>Metrik</th><th>Değer</th><th>Eşik</th><th>Sonuç</th></tr>"
              + "".join(f"<tr><td>{E(a)}</td><td>{b}</td><td>{E(t)}</td><td>{'—' if ok is None else ('✔' if ok else '✘')}</td></tr>" for a, b, t, ok in metric_rows(M)) + "</table>")
+    bs = M["bulgu_sayim"]
+    H.append(f"<h2>Ağ ve tasarım tutarlılığı</h2><p>HATA {bs['HATA']} · UYARI {bs['UYARI']} · bilgi {bs['BILGI']} · kabul edilmiş {bs['bilinen']}</p>")
+    if bulgu_rows(M):
+        H.append("<table><tr><th>Seviye</th><th>Kontrol</th><th>Açıklama</th><th>Konum (mm)</th></tr>"
+                 + "".join(f"<tr><td>{E(a)}</td><td>{E(b)}</td><td>{E(c_)}</td><td>{E(d)}</td></tr>" for a, b, c_, d, _ in bulgu_rows(M)) + "</table>")
+    H.append("<h3>Çizimden çıkarılan ağlar</h3><table><tr><th>Ağ</th><th>Pinler</th><th>Uçlar</th><th>Hat</th></tr>"
+             + "".join("<tr>" + "".join(f"<td>{E(x)}</td>" for x in r) + "</tr>" for r in ag_rows(M)) + "</table>")
+    if oneri_rows(X["ad"]):
+        H.append("<h2>Önerilen düzeltmeler (ölçümden)</h2><ul>" + "".join(f"<li><b>{E(a)}:</b> {E(b)}</li>" for a, b in oneri_rows(X["ad"])) + "</ul>")
     if R.get("pin_eslemesi"):
         H.append("<h2>Pin eşlemesi</h2><table>" + "".join(f"<tr><td>{E(a)}</td><td>{E(b)}</td></tr>" for a, b in R["pin_eslemesi"]) + "</table>")
     if X["kl"]:
@@ -501,7 +668,9 @@ def run(ad, D=None, M=None):
     D = D or verify.load_design(ad)
     if M is None:
         mp = cfg.work(ad, "metrikler.json")
-        M = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else verify.verify(ad, D)
+        M = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else None
+        if not M or "kapilar" not in M:  # yok ya da eski sürüm metrikleri
+            M = verify.verify(ad, D)
     X = collect(ad, D, M)
     P = X["P"]
     rel = f"{P}_rapor_gorseller"

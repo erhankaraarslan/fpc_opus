@@ -26,6 +26,11 @@ işaretleri (gümüş), kuyrukta dielektrik + konnektör + takviye, kuyrukta yap
      çoğunlukla gürültü/ped kenarı.
    - Birleşik görünüm: `polyvec.mask_to_polys(m_top|m_under temizlenmiş)` konturlarını tarama üzerine
      çiz (0.42 ölçek, 100 px ızgara) → ağ topolojisini bu görüntüden oku. Bu, en verimli tek görüntü.
+6a. **Otomatik başlangıç (Faz 3)**: önce `fpc.py ogren uygula <ad>` (eğitilmiş model varsa; `ogren dene` ile bu
+   tarayıcıda el maskesinden iyi olduğu görülmüşse), sonra `fpc.py topoloji <ad>` → `work/<ad>/rota_onerisi.py`.
+   Öneri yatay/dikey/45° adaylardan MILP ile çakışmasız seçilip graf olarak birleştirilir; düşük güvenli rotalar
+   `flag=True`. Kaba rotaları buradan kopyalayıp adlandır, eksikleri ekle, sonra refine döngüsü. K.pdf P1 (el
+   maskesi): mevcut rotaların %62'si önerilmiş, önerilerin %85'i mevcut rotalarda (kesinlik).
 7. **Kaba rotalar** (`parts/<ad>_routes.py`): her hat bir `dict(name, pts=[(x,y),...])`. Köşeleri
    yaklaşık ver (±15 px); pahlar ayrı köşe. Kuralar:
    - Seg listesindeki kesin x/y değerlerini kullan (ör. dikey x=1450 → tüm köşelerde 1450).
@@ -37,6 +42,15 @@ işaretleri (gümüş), kuyrukta dielektrik + konnektör + takviye, kuyrukta yap
    yakın gümüş koşusuna oturtulur; açı 0/45/90/135'e ±5° (kısa segment ±12°) içinde ise kilitlenir.
    Çıktıdaki açı listesinde 45'in katı olmayan değer = hatalı kaba köşe → düzelt. Genişlik listesi
    hat genişliğinden (P1 ~23 px) çok farklıysa (≤12 veya ≥34) segment yanlış hatta oturmuştur.
+   **Profil refine** (`parts/<ad>.json "refine_yontemi": "profil"`): maske koşusundan sonra iki kenar yoğunluk
+   kenarıyla alt-piksel inceltilir; dış tarafı gölgede kalan kenar atılır ve karşı kenar ± genişlik/2 kullanılır
+   (p3_design `fix_horizontals` işinin genel hali). Açmadan önce `fpc.py refine_dene <ad>`: ağ imzası AYNI ve
+   metrikler iyi/eşit olmalı. K.pdf: P1 0.036→0.034, P3 0.064→0.062 mm (medyan), ağ aynı.
+8a. **Arka yüz taraması varsa** (`arka` yapılandırması + `fpc.py kayit <ad>`): `<ad>_arka.png` ön görüntüyle
+   piksel hizalıdır. Arkadan 1. gümüş baskı dielektrik/köprü örtüsü olmadan görünür: yama içinde arka görüntüde
+   gümüş sürekli ise o hat **alt** baskıdır, kesikse (dielektrik görünüyorsa) köprüdür. LED pedleri kaplama
+   altında arkadan ölçülebilir (şablon yerine ölçü). `kayit.json` yerel artık > 2 px ise film iki tarama arasında
+   deforme olmuştur: kararları yerel olarak doğrula.
 9. **Konnektör toplama bölgesi (fan)**: genelde leke altında. Kural: kuyruğa giren hatlar
    **düzlemsel sıradadır** (kesişmez): soldan gelenler (alttaki en sola) sol pinlere, yukarıdan
    gelenler x sırasıyla, sağdan gelenler sağ pinlere. 45° çaprazları ölçülen doğrulara uydur
@@ -45,6 +59,11 @@ işaretleri (gümüş), kuyrukta dielektrik + konnektör + takviye, kuyrukta yap
 10. **Yamalar**: `m_teal|m_under` → yatay/dikey 31 px kapama (köprülerin bıraktığı boşlukları kapatır)
     → 11 px açma → `mask_to_polys` (eps 4, snap 15) → dolgu oranı > 0.9 ise zarf dikdörtgen.
     Bitişik yamalar birleşik çokgen olarak kalabilir; sorun değil (köprü seçimi parça bazlıdır).
+10a. **Onarımlar (tasarım modülünde)**: köprü seçiminden sonra `onar.kopru_uc_kurali(sel, traces_px)`; `build()`
+    sonunda `D.onarimlar = onar.uc_kenetle(D)`. Uç kenetleme yalnız ağ-güvenli birleştirmeyi yapar (taramadaki
+    gerçek boşluk — ör. P3 X_hat/R1_ortak K6 kararı, P1 H3317/V466 — iki pinli ağı birleştireceği için korunur).
+    `hedef=True` (T-bağlantı hedef parçası da alt baskı) birleşik çift yamada yanlış birleştirme yapabilir
+    (P3'te pin 4–10): yalnız `check` temizse kullan.
 11. **Köprü seçimi (otomatik)**: her hat ∩ (yamalar −6 px) → sürekli parçalar; her parça boyunca 3 px
     adımla 7×7 pencerede m_top ve m_under sayılır; `m_top > m_under` → köprü (2. baskı). Kararsız
     (ikisi de > 0 ve oran < 3) parçaları elle karar ver: **aynı yamada dikeyler üstten ise yatay alttan**

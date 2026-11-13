@@ -1,0 +1,351 @@
+{
+ "ag": {
+  "aglar": [
+   {
+    "pinler": [
+     1
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_L1.ust",
+     "LED_L2.ust",
+     "LED_R1.ust",
+     "LED_R2.ust"
+    ],
+    "hatlar": [
+     "L1_ust",
+     "L2_ust",
+     "LED_L1_ped_ust",
+     "LED_L2_ped_ust",
+     "LED_R1_ped_ust",
+     "LED_R2_ped_ust",
+     "R1",
+     "R1L_ust",
+     "R1_alt"
+    ],
+    "no": 1
+   },
+   {
+    "pinler": [
+     3
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_L3.ust",
+     "LED_L4.ust"
+    ],
+    "hatlar": [
+     "L3_ust",
+     "L4_ust",
+     "LED_L3_ped_ust",
+     "LED_L4_ped_ust"
+    ],
+    "no": 2
+   },
+   {
+    "pinler": [
+     5
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_B1.alt"
+    ],
+    "hatlar": [
+     "B1_alt",
+     "H3317",
+     "LED_B1_ped_alt"
+    ],
+    "no": 3
+   },
+   {
+    "pinler": [
+     6,
+     9
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_B2.alt",
+     "LED_B3.alt",
+     "LED_L1.alt",
+     "LED_L3.alt",
+     "LED_R3.alt"
+    ],
+    "hatlar": [
+     "B2_alt",
+     "B3_alt",
+     "H2818",
+     "L1_alt",
+     "LED_B2_ped_alt",
+     "LED_B3_ped_alt",
+     "LED_L1_ped_alt",
+     "LED_L3_ped_alt",
+     "LED_R3_ped_alt",
+     "R3L_alt",
+     "V578"
+    ],
+    "no": 4
+   },
+   {
+    "pinler": [
+     7
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_L2.alt",
+     "LED_L4.alt",
+     "LED_R4.alt"
+    ],
+    "hatlar": [
+     "L2_alt",
+     "LED_L2_ped_alt",
+     "LED_L4_ped_alt",
+     "LED_R4_ped_alt",
+     "V1143",
+     "V466"
+    ],
+    "no": 5
+   },
+   {
+    "pinler": [
+     8
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_C1.alt",
+     "LED_R1.alt"
+    ],
+    "hatlar": [
+     "C1_alt",
+     "LED_C1_ped_alt",
+     "LED_R1_ped_alt",
+     "R1L_alt"
+    ],
+    "no": 6
+   },
+   {
+    "pinler": [
+     10
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_R2.alt"
+    ],
+    "hatlar": [
+     "LED_R2_ped_alt",
+     "R2L_alt"
+    ],
+    "no": 7
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     2
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 8
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     4
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 9
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     11
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 10
+   },
+   {
+    "pinler": [],
+    "dummy": [],
+    "uclar": [
+     "LED_B1.ust",
+     "LED_R3.ust",
+     "LED_R4.ust"
+    ],
+    "hatlar": [
+     "B1_ust",
+     "LED_B1_ped_ust",
+     "LED_R3_ped_ust",
+     "LED_R4_ped_ust",
+     "R3L_ust",
+     "T3",
+     "T3_R4L"
+    ],
+    "no": 11
+   },
+   {
+    "pinler": [],
+    "dummy": [],
+    "uclar": [
+     "LED_B2.ust"
+    ],
+    "hatlar": [
+     "B2_ust",
+     "LED_B2_ped_ust"
+    ],
+    "no": 12
+   },
+   {
+    "pinler": [],
+    "dummy": [],
+    "uclar": [
+     "LED_B3.ust"
+    ],
+    "hatlar": [
+     "B3_ust",
+     "LED_B3_ped_ust"
+    ],
+    "no": 13
+   },
+   {
+    "pinler": [],
+    "dummy": [],
+    "uclar": [
+     "LED_C1.ust"
+    ],
+    "hatlar": [
+     "C1_ust",
+     "LED_C1_ped_ust"
+    ],
+    "no": 14
+   }
+  ],
+  "ozet": {
+   "ag": 14,
+   "pin": 8,
+   "dummy": 3,
+   "cihaz": 12,
+   "bilesen": 33,
+   "kopru": 19
+  },
+  "imza": [
+   "P10|LED_R2.alt",
+   "P1|LED_L1.ust;LED_L2.ust;LED_R1.ust;LED_R2.ust",
+   "P3|LED_L3.ust;LED_L4.ust",
+   "P5|LED_B1.alt",
+   "P6,9|LED_B2.alt;LED_B3.alt;LED_L1.alt;LED_L3.alt;LED_R3.alt",
+   "P7|LED_L2.alt;LED_L4.alt;LED_R4.alt",
+   "P8|LED_C1.alt;LED_R1.alt",
+   "P|",
+   "P|",
+   "P|",
+   "P|LED_B1.ust;LED_R3.ust;LED_R4.ust",
+   "P|LED_B2.ust",
+   "P|LED_B3.ust",
+   "P|LED_C1.ust"
+  ]
+ },
+ "bulgular": [
+  {
+   "seviye": "HATA",
+   "kod": "pinsiz_ag",
+   "id": "pinsiz_ag:LED_B1.ust,LED_R3.ust,LED_R4.ust",
+   "mesaj": "Hiçbir pine ulaşmayan ağ: LED_B1.ust, LED_R3.ust, LED_R4.ust (kopukluk veya eksik hat)",
+   "konum": [
+    12.76,
+    62.29
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "HATA",
+   "kod": "pinsiz_ag",
+   "id": "pinsiz_ag:LED_B2.ust",
+   "mesaj": "Hiçbir pine ulaşmayan ağ: LED_B2.ust (kopukluk veya eksik hat)",
+   "konum": [
+    19.16,
+    62.25
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "HATA",
+   "kod": "pinsiz_ag",
+   "id": "pinsiz_ag:LED_B3.ust",
+   "mesaj": "Hiçbir pine ulaşmayan ağ: LED_B3.ust (kopukluk veya eksik hat)",
+   "konum": [
+    25.48,
+    62.38
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "HATA",
+   "kod": "pinsiz_ag",
+   "id": "pinsiz_ag:LED_C1.ust",
+   "mesaj": "Hiçbir pine ulaşmayan ağ: LED_C1.ust (kopukluk veya eksik hat)",
+   "konum": [
+    19.14,
+    46.75
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "ayrik_pinler",
+   "id": "ayrik_pinler:6,9",
+   "mesaj": "Pinler 6, 9 aynı ağda (bitişik değil: şüpheli)",
+   "konum": [
+    19.16,
+    64.7
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "serbest_uc",
+   "id": "serbest_uc:C1_ust:son",
+   "mesaj": "'C1_ust' hattının sonu hiçbir gümüşe değmiyor (açık uç)",
+   "konum": [
+    15.77,
+    61.25
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "yakin_bosluk",
+   "id": "yakin_bosluk:H3317/V466",
+   "mesaj": "V466 ile H3317 arası 0.055 mm (değmesi gerekiyorsa uç kısa; değilse aralık dar)",
+   "konum": [
+    7.55,
+    66.36
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:H3317",
+   "mesaj": "'H3317' 0/45/90 dışı açılar: 46.1°",
+   "konum": [
+    7.58,
+    66.61
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  }
+ ],
+ "sayim": {
+  "HATA": 4,
+  "UYARI": 3,
+  "BILGI": 1,
+  "bilinen": 0
+ }
+}

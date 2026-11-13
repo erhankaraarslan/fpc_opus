@@ -1,0 +1,76 @@
+[
+ {
+  "tur": "diel_kayma",
+  "oncelik": 0.03696669010095158,
+  "mesaj": "Dielektrik, telafiden sonra hâlâ (-0.022, -0.037) mm kayık: SCAN['diel_kayma_mm'] [0.15, -0.15] -> [0.172, -0.113] (çizim ideal kalır, yalnız doğrulama telafisi).",
+  "deger": [
+   0.172,
+   -0.113
+  ]
+ },
+ {
+  "tur": "hizalama",
+  "oncelik": 0.024398326999205328,
+  "mesaj": "Gümüş çizimi genel olarak (-0.004, +0.024) mm kaymış. mm ile tanımlı (parametrik) elemanlar için SCAN px0 1040.0 -> 1040.2, py0 183.0 -> 181.8. Taramadan px ile okunan rotalar bu değişiklikten etkilenmez.",
+  "deger": {
+   "px0": 1040.2,
+   "py0": 181.8
+  }
+ },
+ {
+  "tur": "eleman",
+  "ad": "Hat_Net2_B_alt",
+  "oncelik": 0.10059687388259876,
+  "konum": [
+   15.72,
+   92.1
+  ],
+  "mesaj": "'Hat_Net2_B_alt' (hat) taramaya göre (-0.008, +0.101) mm kaymış -> (+0.008, -0.101) mm taşı",
+  "deger": [
+   0.008,
+   -0.101
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Ped_A",
+  "oncelik": 0.047807228136279176,
+  "konum": [
+   19.2,
+   40.57
+  ],
+  "mesaj": "'Ped_A' (tus_ped) taramaya göre (+0.002, +0.048) mm kaymış -> (-0.002, -0.048) mm taşı",
+  "deger": [
+   -0.002,
+   -0.048
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Hat_Net4_Ortak",
+  "oncelik": 0.045199808761042425,
+  "konum": [
+   25.06,
+   81.17
+  ],
+  "mesaj": "'Hat_Net4_Ortak' (hat) taramaya göre (-0.005, +0.045) mm kaymış -> (+0.005, -0.045) mm taşı",
+  "deger": [
+   0.005,
+   -0.045
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Ped_B",
+  "oncelik": 0.040731822228416266,
+  "konum": [
+   13.4,
+   56.08
+  ],
+  "mesaj": "'Ped_B' (tus_ped) taramaya göre (+0.007, +0.041) mm kaymış -> (-0.007, -0.041) mm taşı",
+  "deger": [
+   -0.007,
+   -0.041
+  ]
+ }
+]

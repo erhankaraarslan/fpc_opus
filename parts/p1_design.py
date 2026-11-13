@@ -21,13 +21,14 @@ sys.path.insert(0, os.path.abspath(".devin/skills/fpc-vektor/scripts"))
 import cfg  # noqa: E402,F401
 import fpcvec as fv  # noqa: E402
 import p1_routes as pr  # noqa: E402
+import onar  # noqa: E402
 from polyvec import mask_to_polys  # noqa: E402
 from routes_view import refine_all  # noqa: E402
 
 W, H, R = 36.5, 87.1, 1.0
 XC = W / 2
 TAIL_W, TAIL_END = 12.0, 170.9
-SLOT_W, SLOT_TOP = 2.1, 69.9
+SLOT_W, SLOT_TOP = 2.1, 70.7  # yay tepesi: yarık merkezinde (x 651 / 1315 px) kenar çizgisi y≈3509 px (eski 69.9 hatalıydı)
 TRACE_W, TAIL_TRACE_W = 0.5, 0.6
 LED_PAD_W, LED_PAD_H, LED_GAP = 1.65, 1.6, 0.85
 LED_BODY = (0.5, 1.0)
@@ -151,6 +152,7 @@ def build():
     for s in sel:  # B2/B3 alt yamasi: yatay h3290 alttan gecer (dikeyler kopru); orneklem kararsiz
         if s["name"] == "L1_alt" and s["pts"][0][1] > 3250:
             s["top"] = False
+    D.kopru_kurali = onar.kopru_uc_kurali(sel, traces_px)  # T-bağlantısı yama içinde: alt baskı
     json.dump(sel, open("work/p1/bridges.json", "w"))
     Um = unary_union(D.diel_polys)
     for j, s in enumerate(sel, 1):
@@ -172,6 +174,7 @@ def build():
     D.stiff_rects.append((XC - TAIL_W / 2, st, TAIL_W, TAIL_END - st))
     s0, s1 = mm(0, STICKER_PX[0])[1], mm(0, STICKER_PX[1])[1]
     D.stickers.append((XC - TAIL_W / 2, s0, TAIL_W, s1 - s0, 0.8))
+    D.onarimlar = onar.uc_kenetle(D)  # kısa kalan uçları pede/hatta uzat (ağ-güvenli)
     return D
 
 

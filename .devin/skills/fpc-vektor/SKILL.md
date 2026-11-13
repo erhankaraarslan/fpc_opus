@@ -94,15 +94,21 @@ $FPC prep <ad>      # work/<ad>/<ad>_deskew.png
 ```
 - **Kapı 2:** deskew sonrası uzun hatlar dikey/yatay: `python .../traces.py` veya `measure.py` ile
   bir uzun dikey hattın x'i baş ve sonda ≤ 2 px fark etmeli. Değilse açıyı ±0.05° ayarla, tekrarla.
+  Uzun parçada `$FPC bukulme <ad>`: kalan eğim + doğrusal olmayan bükülme genliği; genlik ≥ 3 px ise önerilen
+  `bukulme` bloğunu json'a yaz, `prep` tekrar (references/01 §1.3).
+- **Arka yüz taraması varsa:** `parts/<ad>.json "arka"` + `$FPC kayit <ad>` → `<ad>_arka.png` (ön görüntüyle
+  piksel hizalı, aynalanmış). `kayit.json` ölçek farkı > %0.3 veya yerel artık > 2 px ise kullanıcıya bildir.
 
 ### Adım 3 — Maskeler → references/02
-`$FPC segment <ad>`  → tuş tipi: `silver/tealm/teal_closed/sil_teal/silver_ref.npy`;
-LED tipi: `m_top/m_under/m_teal/tex.npy`. `seg3.png` / `seg_led.png` görselini kırpıp kontrol et.
+`$FPC segment <ad>`  → önce gölge modeli (`m_golge.npy`, `golge_haritasi.png`: δ ve kalkık bölgeler), sonra
+tuş tipi: `silver/tealm/teal_closed/sil_teal/silver_ref.npy`; LED tipi: `m_top/m_under/m_teal/m_dark/m_band/tex.npy`.
+`seg3.png` / `seg_led.png` / `golge_haritasi.png` görsellerini kırpıp kontrol et; kalkık (δ büyük) bölgeleri analiz
+kaydına yaz (o bölgelerdeki okumalar düşük güvenli).
 
 ### Adım 4 — Ölçek kalibrasyonu ve ana ölçüler → references/01, 03, 04
-1. Kuyrukta konnektör hatlarının merkezlerini ölç: `measure.py <ad> h y0 y1 x0 x1` (T kanalı
-   kenarları). Merkezlere doğru oturt → adım (px). 1.00 mm kabul et → `olcek_px_mm` (tarayıcı
-   nominaliyle %0.3 içinde olmalı; değilse nedenini araştır).
+1. Kuyrukta konnektör adımı: `$FPC olcek <ad> x0 y0 x1 y1` (ROI yalnız kontaklar; çıktıda hat sayısı ≥ 5 ve
+   artık RMS ≤ 1 px olmalı) ya da `measure.py <ad> h y0 y1 x0 x1` ile merkezler + doğru fiti. 1.00 mm kabul et →
+   `olcek_px_mm` (tarayıcı nominaliyle %0.3 içinde olmalı; değilse nedenini araştır).
 2. Kesim konturu: baş sol/sağ/üst/alt, kuyruk kenarları, yarıklar, kuyruk ucu, köşe yarıçapları
    (`measure.py` L kanalı; gölge kuralı: üst kenarlarda gölge *üstte*, gerçek kenar gölgenin altı).
 3. Eksen: konnektör merkezi = kart ekseni varsay; baş kenarlarıyla karşılaştır, farkı rapora yaz.
@@ -112,9 +118,17 @@ LED tipi: `m_top/m_under/m_teal/tex.npy`. `seg3.png` / `seg_led.png` görselini 
   Örnek: `templates/tus_design_ornegi.py` → `parts/<ad>_design.py`.
 - **LED devresi (iki gümüş baskı + köprü yamaları + LED):** references/04'ü baştan sona uygula.
   Örnekler: `templates/led_design_ornegi.py`, `templates/led_rotalar_ornegi.py`.
-  Rota döngüsü: kaba rota yaz → `routes_view.py` ile bindir → hatalı segmenti düzelt → tekrar.
+  **Otomatik başlangıç (Faz 3):** onaylı parçalar varsa `$FPC ogren dene` (bu tarayıcıda öğrenen maske el
+  maskesinden iyi mi?) → iyiyse `$FPC ogren egit all` + `$FPC ogren uygula <ad>`; ardından `$FPC topoloji <ad>` →
+  `work/<ad>/rota_onerisi.py` kaba rotaların başlangıcı (references/04 §6a). Öneri ağ mantığını bilmez; `check` şart.
+  Rota döngüsü: kaba rota yaz → `routes_view.py` ile bindir → hatalı segmenti düzelt → `$FPC check <ad>` → tekrar.
+  Tasarım modülünde köprü seçiminden sonra `onar.kopru_uc_kurali`, `build()` sonunda `D.onarimlar = onar.uc_kenetle(D)`.
+- `check` (taramasız, hızlı) her tasarım değişikliğinden sonra: pinsiz ağ / kısa devre / açık uç / yakın boşluk /
+  köprü ucu yalıtkanda bulgularını konumlarıyla verir. Ağ tablosu = çizimden çıkan pin eşlemesi; RAPOR
+  `pin_eslemesi` ile karşılaştır.
 
-Tasarım modülü sözleşmesi: `build() -> fpcvec.Design` ve `RAPOR` sözlüğü (references/06 §RAPOR).
+Tasarım modülü sözleşmesi: `build() -> fpcvec.Design` ve `RAPOR` sözlüğü (references/06 §RAPOR); ağ kontrolü için
+adlandırma kuralları (`Kontak_<no>`, `<led>_ped_ust/alt`, `Ped_<ad>`, `Kopru_<no>_<iz>`) references/06 §6.3.
 
 ### Adım 6 — Üret, doğrula, raporla → references/05, 06
 ```
@@ -122,11 +136,21 @@ $FPC build <ad>     # 4 çizim dosyası + otomatik dosya/katman kontrolü
 $FPC verify <ad>    # metrikler + work/<ad>/overlay.png + kontrol_*.png
 $FPC report <ad>    # output/<AD>_rapor.md / .html / .pdf
 ```
-- **Kapı 3 (kabul):** `KABUL: GECTI` ve `overlay.png` kırpımlarında her bölge görsel olarak tutarlı.
-  Eşikler (verify.py ESIK): kenar sapması medyan ≤ 0.06 mm, %90 ≤ 0.15 mm; tuş tipinde dielektrik
-  IoU ≥ 0.95; LED tipinde karşılıksız tarama gümüşü ≤ 0.15. Kalırsa references/05 §Kaldıysa.
-- Turuncu (karşılıksız gümüş) kümeleri tek tek incele: gölge/kaplama/leke mi, çizilmemiş hat mı?
-  Çizilmemiş hatsa ekle; yorumluysa `flag=True`.
+- **Kapı 3 (kabul):** `KABUL: GECTI` ve `overlay.png` + `kontrol_sapma_*` kırpımlarında her bölge tutarlı.
+  Kapılar (verify.py ESIK, references/05 §5.3): alt-piksel kenar |sapma| medyan ≤ 0.06 mm, %90 ≤ 0.15 mm,
+  kapsama ≥ 0.80; tuş tipinde dielektrik IoU ≥ 0.95 + kenar; LED tipinde karşılıksız gümüş ≤ 0.15;
+  **bilinmeyen ağ/tutarlılık HATA'sı = 0**. Kalırsa references/05 §5.6.
+- Turuncu (karşılıksız gümüş) kümeleri tek tek incele (gri = gölgeyle açıklanan): kaplama/leke mi, çizilmemiş hat
+  mı? Çizilmemiş hatsa ekle; yorumluysa `flag=True`.
+- `work/<ad>/oneriler.json` (verify otomatik üretir; `$FPC oneri <ad>`): yoğunluk kenarından hizalama, dielektrik
+  kayması, hat genişliği ve eleman taşıma önerileri. Tasarım niyetiyle uyumlu olanları uygula, `check` + `verify`.
+  `maske_yanliligi` uyarısı = doğrulama maskesinin eşiği yanlı → önce maskeyi düzelt (references/02 §2.2).
+- LED tipinde rota merkezleri için `$FPC refine_dene <ad>`; ağ imzası AYNI ve metrikler iyiyse
+  `"refine_yontemi": "profil"` (kullanıcıya bildir: çizim alt-piksel düzeyde değişir).
+- HATA bilerek kabul edilecekse (ör. taramada gerçekten pinsiz görünen ped) kullanıcıya sor; onaylarsa
+  `parts/<ad>.json "kabul_edilen_bulgular"` + analiz kaydında karar noktası.
+- Kapı geçince (veya kullanıcı mevcut durumu onaylayınca) `$FPC altin <ad>`. Skill betiklerini değiştirdiysen
+  `$FPC selftest` ve `$FPC regress all` (gerileme yok olmalı).
 
 - **Kapı 4 (rapor):** `parts/<ad>_analiz.json` dolu (süreç, bulgular, karar noktaları,
   yönlendirme); `fpc.py report` çıktısında "açıklamalı" görsel sayısı, karar kanıtı ve topoloji/ölçüm

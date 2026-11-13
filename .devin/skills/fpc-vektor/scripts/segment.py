@@ -9,6 +9,7 @@ Kullanım: python segment.py <ad>
   silver_ref.npy    gümüş doğrulama referansı
   seg3.png          görsel
 """
+import os
 import sys
 
 import cv2
@@ -43,8 +44,23 @@ def run(ad):
     st = tc & (T < 22) & (~teal)
     st = cv2.morphologyEx(st.astype(np.uint8), cv2.MORPH_OPEN, np.ones((7, 7), np.uint8)).astype(bool)
     st = morphology.remove_small_objects(st, 1500)
-    a = tc & (T < 20) & (~teal)
-    bb = (~tc) & (L < bg - 22) & (L > bg - 48) & (sat < 45)
+    # şerit içi gümüş: yerel orta eşik (turkuaz düzeyi ile gümüş düzeyinin ortası). Sabit T<20 hattı
+    # her yandan ~0.045 mm dar veriyordu (P2: T yarı-yükseklik genişliği 0.514 mm, T<20 maskesi 0.424 mm).
+    Tf = T.astype(np.float32)
+    mid = 0.5 * (cv2.dilate(Tf, ell(31)) + cv2.erode(Tf, ell(31)))
+    a = tc & (T < np.maximum(mid, 20)) & (T < 45)
+    # şerit dışı gümüş (tarak pedleri, bloklar): yerel orta eşik. Sabit bg-22 eşiği ped penceresinde parmakları
+    # kaçırıyordu (parmak L≈190–197, parmak arası L≈212, film L≈250). Koyu gölge çekirdeği gölge maskesiyle
+    # (golge.py) ve L < bg-80 sınırıyla dışarıda.
+    Ls = cv2.GaussianBlur(L.astype(np.float32), (0, 0), 1.0)
+    Lm = cv2.medianBlur(np.clip(L, 0, 255).astype(np.uint8), 7).astype(np.float32)  # ince koyu kenar çizgileri seviyeyi bozmasın
+    hi, lo = cv2.dilate(Lm, ell(31)), cv2.erode(Lm, ell(31))
+    bb = (~tc) & (Ls < 0.5 * (hi + lo)) & (hi - lo > 12) & (L < bg - 10) & (L > bg - 80) & (sat < 45) & (T < 15)
+    gp = cfg.work(ad, "m_golge.npy")
+    if os.path.exists(gp):
+        g = np.load(gp)
+        if g.shape == bb.shape:
+            bb &= ~g
     ref = cv2.morphologyEx((a | bb).astype(np.uint8), cv2.MORPH_OPEN, np.ones((5, 5), np.uint8)).astype(bool)
     ref = morphology.remove_small_objects(morphology.remove_small_holes(ref, 150), 800)
     for k, v in dict(silver=silver, tealm=teal, teal_closed=tc, sil_teal=st, silver_ref=ref).items():

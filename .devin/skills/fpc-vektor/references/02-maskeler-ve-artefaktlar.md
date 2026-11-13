@@ -13,8 +13,13 @@
 | LED kaplama damlası / yapışkan leke | 200–240 | ~0 | dokusuz, yumuşak geçişli büyük leke |
 
 ## 2.2 Maske tarifleri (betiklerde sabit; değiştirmeden önce bir bölgede ölç)
+- **İlke: doğrulama referans maskeleri yarı-yükseklik (yerel orta) eşiğiyle yapılır.** Sabit eşik kenarı
+  sistematik kaydırır (P2: şerit içi `T<20` hattı 0.424 mm gösterdi, gerçek 0.514 mm). `verify` bunu
+  `maske_yanliligi` uyarısıyla otomatik yakalar (maske ofseti − yoğunluk kenarı ofseti > 0.02 mm).
 - Tuş tipi (`segment.py`): gümüş = `L < bg-22 & sat < 45`; dielektrik = `T > 30`; referans gümüş =
-  (şerit içi `T<20`) ∪ (şerit dışı `bg-48 < L < bg-22 & sat<45`).
+  (şerit içi `T < max(yerel orta, 20) & T < 45`; yerel orta = (dilate+erode)/2, 31 px) ∪
+  (şerit dışı `Ls < yerel orta & yerel kontrast > 12 & bg-60 < L < bg-10 & sat<45 & T<15`, gölge maskesi hariç).
+  Eski şerit dışı eşik (`bg-48 < L < bg-22`) tarak parmaklarını kaçırıyordu (parmak 195, parmak arası 212).
 - LED tipi (`segment_led.py`): `m_top = 185<L<208 & T<15 & sat<45 & tex>3.2`; `m_under = teal & R<82`;
   `m_teal = T>35`. tex = |L − Gauss(L,σ=2)| ortalaması (9×9).
 - Leke altındaki bölge (ör. konnektör toplama alanı) için yerel uyarlamalı eşik:
@@ -30,6 +35,13 @@
   (4) yatay iki "hat" arasında 20–28 px offset varsa üstteki gölgedir.
 - Ölçümde: yatay hatlar için **alt kenar** güvenilir; üst kenar gölgeyle karışabilir. Tarak pedlerinde
   barların üstündeki koyu bantlar gölgedir (P2'de ilk başta bar sanılmıştı).
+- **Gölge modeli (`golge.py`, `fpc.py segment` içinde otomatik)**: yatay gümüş üst kenarlarının üstündeki
+  koyu bandın kalınlığından karo (500 px) bazında δ kestirilir → `m_golge.npy` (gölge pikselleri),
+  `golge.json`, `golge_haritasi.png`. K.pdf ölçümü: genel δ 14–17 px (0.30–0.36 mm), karolarda 8–42 px;
+  P3 sağ üstte 0.3–0.5 mm (kalkık, bulanık bölge — analizle uyumlu). Kullanım: doğrulamada karşılıksız gümüş
+  ve kenar örneklerinden çıkarılır, tuş tipi referans maskesinden dışlanır, profil refine'da gölgeli kenar
+  atlanır. Sentetik test: 16 px gölge → 17 px kestirim, maske yakalama 0.87. Doku eşiği tek başına yetmez:
+  kenar geçişleri de yüksek "doku" verir; S (gümüş) yalnız yumuşatılmış gradyanı küçük piksellerden kurulur.
 
 ## 2.4 Diğer artefaktlar
 - Kalem/işaret çemberleri (elle çizilmiş daire): yok say, rapora not.

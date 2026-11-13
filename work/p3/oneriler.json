@@ -1,0 +1,694 @@
+[
+ {
+  "tur": "genislik",
+  "oncelik": 0.028721184877499306,
+  "mesaj": "0.5 mm hatlar (44 hat) taramada her yandan -0.029 mm farklı: ölçülen genişlik ≈ 0.557 mm -> 0.55 mm (0.05'e yuvarlı)",
+  "deger": 0.557
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_C1_ped_alt",
+  "oncelik": 0.21468924965175085,
+  "konum": [
+   19.17,
+   46.63
+  ],
+  "mesaj": "'LED_C1_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.015, +0.215) mm kaymış -> (+0.015, -0.215) mm taşı",
+  "deger": [
+   0.015,
+   -0.215
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "B3_ust",
+  "oncelik": 0.19396920686456587,
+  "konum": [
+   25.59,
+   57.81
+  ],
+  "mesaj": "'B3_ust' (hat) taramaya göre (-0.006, +0.194) mm kaymış -> (+0.006, -0.194) mm taşı",
+  "deger": [
+   0.006,
+   -0.194
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_L5_ped_alt",
+  "oncelik": 0.1628029595603097,
+  "konum": [
+   5.07,
+   88.24
+  ],
+  "mesaj": "'LED_L5_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.111, +0.163) mm kaymış -> (-0.111, -0.163) mm taşı",
+  "deger": [
+   -0.111,
+   -0.163
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "R4_alt",
+  "oncelik": 0.1262813433785961,
+  "konum": [
+   31.7,
+   73.96
+  ],
+  "mesaj": "'R4_alt' (hat) taramaya göre (+0.006, +0.126) mm kaymış -> (-0.006, -0.126) mm taşı",
+  "deger": [
+   -0.006,
+   -0.126
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_55_Q_R8",
+  "oncelik": 0.11533446412239115,
+  "konum": [
+   33.21,
+   104.82
+  ],
+  "mesaj": "'Kopru_55_Q_R8' (kopru) taramaya göre (-0.115, +0.012) mm kaymış -> (+0.115, -0.012) mm taşı",
+  "deger": [
+   0.115,
+   -0.012
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_R4_ped_alt",
+  "oncelik": 0.10099030155769731,
+  "konum": [
+   31.64,
+   68.99
+  ],
+  "mesaj": "'LED_R4_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.001, +0.101) mm kaymış -> (-0.001, -0.101) mm taşı",
+  "deger": [
+   -0.001,
+   -0.101
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_C1_ped_alt",
+  "oncelik": 0.10096053968457722,
+  "konum": [
+   19.17,
+   46.63
+  ],
+  "mesaj": "'LED_C1_ped_alt' (led_ped) her yandan +0.101 mm geniş",
+  "deger": -0.202
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_B2_ped_alt",
+  "oncelik": 0.091764820764209,
+  "konum": [
+   19.26,
+   62.07
+  ],
+  "mesaj": "'LED_B2_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.047, +0.092) mm kaymış -> (-0.047, -0.092) mm taşı",
+  "deger": [
+   -0.047,
+   -0.092
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_B3_ped_alt",
+  "oncelik": 0.09100811963280717,
+  "konum": [
+   25.64,
+   62.1
+  ],
+  "mesaj": "'LED_B3_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.019, +0.091) mm kaymış -> (-0.019, -0.091) mm taşı",
+  "deger": [
+   -0.019,
+   -0.091
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "L4_ust",
+  "oncelik": 0.09040930869030729,
+  "konum": [
+   4.45,
+   64.58
+  ],
+  "mesaj": "'L4_ust' (hat) taramaya göre (-0.086, -0.090) mm kaymış -> (+0.086, +0.090) mm taşı",
+  "deger": [
+   0.086,
+   0.09
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Poz7",
+  "oncelik": 0.08265705503090268,
+  "konum": [
+   20.35,
+   97.38
+  ],
+  "mesaj": "'Poz7' (hat) taramaya göre (+0.009, -0.083) mm kaymış -> (-0.009, +0.083) mm taşı",
+  "deger": [
+   -0.009,
+   0.083
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_R2_ped_alt",
+  "oncelik": 0.08152094165056258,
+  "konum": [
+   31.62,
+   43.55
+  ],
+  "mesaj": "'LED_R2_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.009, +0.082) mm kaymış -> (+0.009, -0.082) mm taşı",
+  "deger": [
+   0.009,
+   -0.082
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_R5_ped_alt",
+  "oncelik": 0.07848965632212998,
+  "konum": [
+   31.78,
+   88.16
+  ],
+  "mesaj": "'LED_R5_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.078, +0.066) mm kaymış -> (-0.078, -0.066) mm taşı",
+  "deger": [
+   -0.078,
+   -0.066
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_34_R2_alt",
+  "oncelik": 0.07712227323852401,
+  "konum": [
+   33.05,
+   82.99
+  ],
+  "mesaj": "'Kopru_34_R2_alt' (kopru) her yandan -0.077 mm dar",
+  "deger": 0.154
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_R3_ped_alt",
+  "oncelik": 0.07519589626011787,
+  "konum": [
+   31.61,
+   56.21
+  ],
+  "mesaj": "'LED_R3_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.017, +0.075) mm kaymış -> (+0.017, -0.075) mm taşı",
+  "deger": [
+   0.017,
+   -0.075
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "L4_ust",
+  "oncelik": 0.0730630556285754,
+  "konum": [
+   4.45,
+   64.58
+  ],
+  "mesaj": "'L4_ust' (hat) her yandan -0.073 mm dar; genişlik 0.5 -> 0.646 mm",
+  "deger": 0.146
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_B1_ped_alt",
+  "oncelik": 0.07304517131055775,
+  "konum": [
+   12.77,
+   62.02
+  ],
+  "mesaj": "'LED_B1_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.018, +0.073) mm kaymış -> (+0.018, -0.073) mm taşı",
+  "deger": [
+   0.018,
+   -0.073
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_L3_ped_alt",
+  "oncelik": 0.07068517467781645,
+  "konum": [
+   4.97,
+   56.2
+  ],
+  "mesaj": "'LED_L3_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.031, +0.071) mm kaymış -> (+0.031, -0.071) mm taşı",
+  "deger": [
+   0.031,
+   -0.071
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_L2_ped_alt",
+  "oncelik": 0.06558630318802376,
+  "konum": [
+   4.98,
+   43.56
+  ],
+  "mesaj": "'LED_L2_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.013, +0.066) mm kaymış -> (-0.013, -0.066) mm taşı",
+  "deger": [
+   -0.013,
+   -0.066
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "L6_alt",
+  "oncelik": 0.06517153188244369,
+  "konum": [
+   10.95,
+   103.45
+  ],
+  "mesaj": "'L6_alt' (hat) her yandan -0.065 mm dar; genişlik 0.5 -> 0.630 mm",
+  "deger": 0.13
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_37_R2_alt",
+  "oncelik": 0.06018276860185274,
+  "konum": [
+   22.36,
+   109.4
+  ],
+  "mesaj": "'Kopru_37_R2_alt' (kopru) her yandan -0.060 mm dar",
+  "deger": 0.12
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_R7_ped_ust",
+  "oncelik": 0.058118036225712946,
+  "konum": [
+   31.66,
+   111.1
+  ],
+  "mesaj": "'LED_R7_ped_ust' (led_ped, şablon/tahmin) taramaya göre (-0.019, +0.058) mm kaymış -> (+0.019, -0.058) mm taşı",
+  "deger": [
+   0.019,
+   -0.058
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_L1_ped_alt",
+  "oncelik": 0.05488053127553145,
+  "konum": [
+   4.96,
+   30.98
+  ],
+  "mesaj": "'LED_L1_ped_alt' (led_ped, şablon/tahmin) taramaya göre (+0.003, +0.055) mm kaymış -> (-0.003, -0.055) mm taşı",
+  "deger": [
+   -0.003,
+   -0.055
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_04_X_hat",
+  "oncelik": 0.05471426125540933,
+  "konum": [
+   19.34,
+   91.11
+  ],
+  "mesaj": "'Kopru_04_X_hat' (kopru) her yandan -0.055 mm dar",
+  "deger": 0.109
+ },
+ {
+  "tur": "eleman",
+  "ad": "R5_ust",
+  "oncelik": 0.052483557378922074,
+  "konum": [
+   32.28,
+   84.05
+  ],
+  "mesaj": "'R5_ust' (hat) taramaya göre (+0.010, -0.052) mm kaymış -> (-0.010, +0.052) mm taşı",
+  "deger": [
+   -0.01,
+   0.052
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Y_hat",
+  "oncelik": 0.052326101361065656,
+  "konum": [
+   14.16,
+   77.01
+  ],
+  "mesaj": "'Y_hat' (hat) her yandan -0.052 mm dar; genişlik 0.5 -> 0.605 mm",
+  "deger": 0.105
+ },
+ {
+  "tur": "eleman",
+  "ad": "Poz7",
+  "oncelik": 0.05205501671259889,
+  "konum": [
+   20.35,
+   97.38
+  ],
+  "mesaj": "'Poz7' (hat) her yandan -0.052 mm dar; genişlik 0.5 -> 0.604 mm",
+  "deger": 0.104
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_15_Poz7",
+  "oncelik": 0.05197700073300597,
+  "konum": [
+   20.35,
+   91.11
+  ],
+  "mesaj": "'Kopru_15_Poz7' (kopru) her yandan -0.052 mm dar",
+  "deger": 0.104
+ },
+ {
+  "tur": "eleman",
+  "ad": "B1_ust",
+  "oncelik": 0.051938047573839276,
+  "konum": [
+   12.79,
+   57.89
+  ],
+  "mesaj": "'B1_ust' (hat) her yandan -0.052 mm dar; genişlik 0.5 -> 0.604 mm",
+  "deger": 0.104
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_31_R1_alt",
+  "oncelik": 0.051043762718095013,
+  "konum": [
+   21.35,
+   109.4
+  ],
+  "mesaj": "'Kopru_31_R1_alt' (kopru) her yandan -0.051 mm dar",
+  "deger": 0.102
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_R6_ped_alt",
+  "oncelik": 0.050590312876566686,
+  "konum": [
+   31.68,
+   100.81
+  ],
+  "mesaj": "'LED_R6_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.005, +0.051) mm kaymış -> (+0.005, -0.051) mm taşı",
+  "deger": [
+   0.005,
+   -0.051
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_30_R1_alt",
+  "oncelik": 0.05028115190316714,
+  "konum": [
+   21.35,
+   104.12
+  ],
+  "mesaj": "'Kopru_30_R1_alt' (kopru) her yandan -0.050 mm dar",
+  "deger": 0.101
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_36_R2_alt",
+  "oncelik": 0.049488106301814,
+  "konum": [
+   22.36,
+   104.12
+  ],
+  "mesaj": "'Kopru_36_R2_alt' (kopru) her yandan -0.049 mm dar",
+  "deger": 0.099
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_52_B2_alt",
+  "oncelik": 0.04839796792602591,
+  "konum": [
+   18.36,
+   115.67
+  ],
+  "mesaj": "'Kopru_52_B2_alt' (kopru) taramaya göre (-0.048, +0.000) mm kaymış -> (+0.048, -0.000) mm taşı",
+  "deger": [
+   0.048,
+   -0.0
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "B3_ust",
+  "oncelik": 0.04799042138151591,
+  "konum": [
+   25.59,
+   57.81
+  ],
+  "mesaj": "'B3_ust' (hat) her yandan -0.048 mm dar; genişlik 0.5 -> 0.596 mm",
+  "deger": 0.096
+ },
+ {
+  "tur": "eleman",
+  "ad": "B2_alt",
+  "oncelik": 0.04738258545705793,
+  "konum": [
+   18.47,
+   88.19
+  ],
+  "mesaj": "'B2_alt' (hat) her yandan -0.047 mm dar; genişlik 0.5 -> 0.595 mm",
+  "deger": 0.095
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_47_B2_alt",
+  "oncelik": 0.047358975376103715,
+  "konum": [
+   18.36,
+   78.05
+  ],
+  "mesaj": "'Kopru_47_B2_alt' (kopru) her yandan -0.047 mm dar",
+  "deger": 0.095
+ },
+ {
+  "tur": "eleman",
+  "ad": "L1_ust",
+  "oncelik": 0.04645343127112908,
+  "konum": [
+   4.92,
+   26.79
+  ],
+  "mesaj": "'L1_ust' (hat) her yandan -0.046 mm dar; genişlik 0.5 -> 0.593 mm",
+  "deger": 0.093
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_33_C1_alt",
+  "oncelik": 0.04597853180097846,
+  "konum": [
+   21.59,
+   48.63
+  ],
+  "mesaj": "'Kopru_33_C1_alt' (kopru) taramaya göre (+0.000, -0.046) mm kaymış -> (-0.000, +0.046) mm taşı",
+  "deger": [
+   -0.0,
+   0.046
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_L6_ped_alt",
+  "oncelik": 0.045752774250617634,
+  "konum": [
+   5.0,
+   100.91
+  ],
+  "mesaj": "'LED_L6_ped_alt' (led_ped, şablon/tahmin) taramaya göre (-0.023, +0.046) mm kaymış -> (+0.023, -0.046) mm taşı",
+  "deger": [
+   0.023,
+   -0.046
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_53_L6_alt",
+  "oncelik": 0.04525520714620154,
+  "konum": [
+   7.76,
+   103.6
+  ],
+  "mesaj": "'Kopru_53_L6_alt' (kopru) her yandan -0.045 mm dar",
+  "deger": 0.091
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_41_Z_C1",
+  "oncelik": 0.045047296048828143,
+  "konum": [
+   17.32,
+   78.05
+  ],
+  "mesaj": "'Kopru_41_Z_C1' (kopru) her yandan -0.045 mm dar",
+  "deger": 0.09
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_48_B2_alt",
+  "oncelik": 0.045024781642125,
+  "konum": [
+   18.36,
+   91.11
+  ],
+  "mesaj": "'Kopru_48_B2_alt' (kopru) her yandan -0.045 mm dar",
+  "deger": 0.09
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_38_R2_alt",
+  "oncelik": 0.044457630864563245,
+  "konum": [
+   22.36,
+   115.67
+  ],
+  "mesaj": "'Kopru_38_R2_alt' (kopru) her yandan -0.044 mm dar",
+  "deger": 0.089
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_03_X_hat",
+  "oncelik": 0.0439189728915304,
+  "konum": [
+   19.34,
+   78.05
+  ],
+  "mesaj": "'Kopru_03_X_hat' (kopru) her yandan -0.044 mm dar",
+  "deger": 0.088
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_43_Z_C1",
+  "oncelik": 0.04385196851187125,
+  "konum": [
+   17.32,
+   98.47
+  ],
+  "mesaj": "'Kopru_43_Z_C1' (kopru) her yandan -0.044 mm dar",
+  "deger": 0.088
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_08_X_hat",
+  "oncelik": 0.04363004056339711,
+  "konum": [
+   19.34,
+   115.67
+  ],
+  "mesaj": "'Kopru_08_X_hat' (kopru) her yandan -0.044 mm dar",
+  "deger": 0.087
+ },
+ {
+  "tur": "eleman",
+  "ad": "LED_R6_ped_ust",
+  "oncelik": 0.04276964689497779,
+  "konum": [
+   31.68,
+   98.36
+  ],
+  "mesaj": "'LED_R6_ped_ust' (led_ped, şablon/tahmin) taramaya göre (-0.011, +0.043) mm kaymış -> (+0.011, -0.043) mm taşı",
+  "deger": [
+   0.011,
+   -0.043
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_13_Y_hat",
+  "oncelik": 0.04198511576672564,
+  "konum": [
+   27.92,
+   78.11
+  ],
+  "mesaj": "'Kopru_13_Y_hat' (kopru) taramaya göre (+0.000, -0.042) mm kaymış -> (-0.000, +0.042) mm taşı",
+  "deger": [
+   -0.0,
+   0.042
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "L5R5_alt",
+  "oncelik": 0.04194978294745983,
+  "konum": [
+   18.45,
+   91.14
+  ],
+  "mesaj": "'L5R5_alt' (hat) taramaya göre (+0.042, +0.042) mm kaymış -> (-0.042, -0.042) mm taşı",
+  "deger": [
+   -0.042,
+   -0.042
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Z_C1",
+  "oncelik": 0.04171327043694416,
+  "konum": [
+   17.04,
+   67.93
+  ],
+  "mesaj": "'Z_C1' (hat) her yandan -0.042 mm dar; genişlik 0.5 -> 0.583 mm",
+  "deger": 0.083
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_50_B2_alt",
+  "oncelik": 0.04160287392584607,
+  "konum": [
+   18.36,
+   104.12
+  ],
+  "mesaj": "'Kopru_50_B2_alt' (kopru) her yandan -0.042 mm dar",
+  "deger": 0.083
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_59_L7R7_alt",
+  "oncelik": 0.041454426136502256,
+  "konum": [
+   7.81,
+   115.75
+  ],
+  "mesaj": "'Kopru_59_L7R7_alt' (kopru) taramaya göre (+0.000, +0.041) mm kaymış -> (-0.000, -0.041) mm taşı",
+  "deger": [
+   -0.0,
+   -0.041
+  ]
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_52_B2_alt",
+  "oncelik": 0.04104487054601858,
+  "konum": [
+   18.36,
+   115.67
+  ],
+  "mesaj": "'Kopru_52_B2_alt' (kopru) her yandan -0.041 mm dar",
+  "deger": 0.082
+ },
+ {
+  "tur": "eleman",
+  "ad": "Kopru_17_Poz7",
+  "oncelik": 0.040633830961069047,
+  "konum": [
+   20.35,
+   109.4
+  ],
+  "mesaj": "'Kopru_17_Poz7' (kopru) her yandan -0.041 mm dar",
+  "deger": 0.081
+ }
+]

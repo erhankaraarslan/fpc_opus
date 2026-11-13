@@ -28,7 +28,7 @@
 <polyline id="Y_hat_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.01,74.663 10.01,83.105 31.6911,83.105"/>
 <polyline id="Y_hat_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="34.151,83.105 36.65,83.105"/>
 <polyline id="R4_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.696,74.769 36.696,83.143"/>
-<polyline id="Poz7_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,84.5557 25.348,94.6196"/>
+<polyline id="Poz7_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,83.143 25.348,94.6196"/>
 <polyline id="Poz7_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,97.6042 25.348,107.0746"/>
 <polyline id="Poz7_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,111.1616 25.348,112.8575"/>
 <polyline id="Poz7_p4" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,115.9422 25.348,119.1783"/>
@@ -60,7 +60,7 @@
 <polyline id="R2_alt_p4" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,111.1616 27.36,112.8575"/>
 <polyline id="R2_alt_p5" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,115.9422 27.36,119.1783"/>
 <polyline id="R2_alt_p6" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,122.1537 27.36,125.84 27.3,126.264"/>
-<polyline id="R6_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.66,106.59 36.66,108.434 28.6146,108.434"/>
+<polyline id="R6_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.66,106.59 36.66,108.434 27.343,108.434"/>
 <polyline id="Z_C1_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="24.137,48.396 24.137,45.962 21.275,45.962 21.275,67.116 22.7,71.78 22.7,74.112 22.318,74.96 22.318,81.5499"/>
 <polyline id="Z_C1_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,84.5557 22.318,94.6196"/>
 <polyline id="Z_C1_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,97.6042 22.318,102.0184"/>
@@ -79,15 +79,15 @@
 <polyline id="B2_alt_p7" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,122.1537 23.357,125.84 23.3,126.264"/>
 <polyline id="L6_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.118,106.696 10.118,108.602 11.5207,108.602"/>
 <polyline id="L6_alt_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="13.997,108.602 22.318,108.602"/>
-<polyline id="Q_R8_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.671,128.066 37.031,127.43 39.66,118.95 39.66,110.279 39.1012,109.8784"/>
-<polyline id="Q_R8_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="37.3342,109.732 21.513,109.732 21.364,109.664 21.364,119.1783"/>
+<polyline id="Q_R8_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.671,128.066 37.031,127.43 39.66,118.95 39.66,110.495 39.1012,109.9362"/>
+<polyline id="Q_R8_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="37.3342,109.732 21.513,109.732 21.364,109.88 21.364,119.1783"/>
 <polyline id="Q_R8_p3" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="21.364,122.1537 21.364,125.84 21.3,126.264"/>
 <polyline id="L5R5_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.065,94.018 10.065,96.308 36.777,96.308 36.777,93.955"/>
 <polyline id="B1_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="17.76,67.815 17.76,68.816 15.174,68.816"/>
 <polyline id="B3_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="30.65,67.879 30.65,69.024"/>
 <polyline id="L7R7_alt_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.022,119.437 10.022,120.752 11.5671,120.752"/>
 <polyline id="L7R7_alt_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="14.0481,120.752 36.65,120.752 36.65,119.352"/>
-<polyline id="Poz10_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="28.39,122.1537 28.39,125.84 28.3,126.264"/>
+<polyline id="Poz10" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="28.39,120.752 28.39,125.84 28.3,126.264"/>
 <polyline id="R8_alt" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="36.671,132.093 36.671,133.938 34.487,133.938 34.487,120.752"/>
 <polyline id="L8_ust_p1" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.039,128.129 10.039,123.836 11.5671,123.836"/>
 <polyline id="L8_ust_p2" fill="none" stroke="#7F7F7F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="14.0481,123.836 18.269,123.836 19.287,124.864 19.3,126.264"/>
@@ -299,7 +299,6 @@
 <polyline id="Kopru_09_X_L3" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="12.728,48.9788 12.728,53.1348"/>
 <polyline id="Kopru_10_X_R3R4" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="31.0694,69.06 34.7844,69.06"/>
 <polyline id="Kopru_13_Y_hat" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="31.0694,83.105 34.7738,83.105"/>
-<polyline id="Kopru_14_Poz7" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,83.143 25.348,85.1785"/>
 <polyline id="Kopru_15_Poz7" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,93.9968 25.348,98.227"/>
 <polyline id="Kopru_16_Poz7" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,106.4518 25.348,111.7844"/>
 <polyline id="Kopru_17_Poz7" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="25.348,112.2351 25.348,116.565"/>
@@ -316,7 +315,6 @@
 <polyline id="Kopru_36_R2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,106.4518 27.36,111.7844"/>
 <polyline id="Kopru_37_R2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,112.2351 27.36,116.5649"/>
 <polyline id="Kopru_38_R2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="27.36,118.5548 27.36,122.7765"/>
-<polyline id="Kopru_39_R6_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="29.2364,108.434 27.343,108.434"/>
 <polyline id="Kopru_41_Z_C1" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,80.9271 22.318,85.1785"/>
 <polyline id="Kopru_42_Z_C1" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,93.9969 22.318,98.227"/>
 <polyline id="Kopru_43_Z_C1" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="22.318,101.3956 22.318,105.5516"/>
@@ -328,10 +326,9 @@
 <polyline id="Kopru_51_B2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,112.2351 23.357,116.5649"/>
 <polyline id="Kopru_52_B2_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="23.357,118.5548 23.357,122.7765"/>
 <polyline id="Kopru_53_L6_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.8977,108.602 14.619,108.602"/>
-<polyline id="Kopru_55_Q_R8" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="39.5929,110.2309 38.897,109.732 36.7107,109.732"/>
+<polyline id="Kopru_55_Q_R8" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="39.519,110.354 38.897,109.732 36.7107,109.732"/>
 <polyline id="Kopru_57_Q_R8" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="21.364,118.5548 21.364,122.7765"/>
 <polyline id="Kopru_59_L7R7_alt" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.9443,120.752 14.6699,120.752"/>
-<polyline id="Kopru_61_Poz10" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="28.39,120.752 28.39,122.7765"/>
 <polyline id="Kopru_62_L8_ust" fill="none" stroke="#3F3F3F" stroke-width="0.5" stroke-linejoin="miter" stroke-miterlimit="5" stroke-linecap="butt" points="10.9443,123.836 14.6699,123.836"/>
 </g>
 <g id="LED" inkscape:groupmode="layer" inkscape:label="LED (montaj)">
@@ -366,7 +363,7 @@
 <polyline id="Kontrol_Na" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="8.189,56.94 8.189,122.74 18.873,122.74 20.387,124.252 20.3,126.264"/>
 <polyline id="Kontrol_Z_C1" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="24.137,48.396 24.137,45.962 21.275,45.962 21.275,67.116 22.7,71.78 22.7,74.112 22.318,74.96 22.318,110.152"/>
 <polyline id="Kontrol_B2_alt" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="24.269,67.858 23.887,68.6 23.887,75.384 23.357,76.02 23.357,125.84 23.3,126.264"/>
-<polyline id="Kontrol_Q_R8" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="36.671,128.066 37.031,127.43 39.66,118.95 39.66,110.279 38.897,109.732 21.513,109.732 21.364,109.664 21.364,125.84 21.3,126.264"/>
+<polyline id="Kontrol_Q_R8" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="36.671,128.066 37.031,127.43 39.66,118.95 39.66,110.495 38.897,109.732 21.513,109.732 21.364,109.88 21.364,125.84 21.3,126.264"/>
 <polyline id="Kontrol_L5R5_alt" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="10.065,94.018 10.065,96.308 36.777,96.308 36.777,93.955"/>
 <polyline id="Kontrol_R8_alt" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="36.671,132.093 36.671,133.938 34.487,133.938 34.487,120.752"/>
 <polyline id="Kontrol_L8_ust" fill="none" stroke="#FF00FF" stroke-width="0.12" stroke-dasharray="0.5,0.3" points="10.039,128.129 10.039,123.836 18.269,123.836 19.287,124.864 19.3,126.264"/>

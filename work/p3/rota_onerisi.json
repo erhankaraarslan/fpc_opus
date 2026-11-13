@@ -1,0 +1,13 @@
+{
+ "maske": "m_ogren_gumus_hepsi",
+ "aday": 607,
+ "secilen": 202,
+ "rota": 199,
+ "dugum": 395,
+ "kiyas": {
+  "geri_cagirma": 0.7258346535755232,
+  "kesinlik": 0.7446475266259235,
+  "mevcut_uzunluk_px": 57421.791115218264,
+  "oneri_uzunluk_px": 57348.12958328808
+ }
+}

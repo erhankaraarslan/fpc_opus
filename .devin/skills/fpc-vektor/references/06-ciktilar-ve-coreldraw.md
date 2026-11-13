@@ -35,6 +35,13 @@ bölünür (`_trace_pieces`), aksi halde alt baskıda kısa devre görünür.
   `diel_lines (pts, w)`, `diel_rects`, `diel_rings (x,y,w,h,lw)`, `diel_polys`, `bridges`,
   `bridge_cut (iz_adı, geom)`, `leds (ad, cx, cy, w, h)`, `marks (ad, pts, w)`,
   `stickers (x,y,w,h,r)`, `check (ad, pts)`, `stiff_rects`.
+- Ağ kontrolü (references/05 §5.4) adlandırmadan çalışır; **bu kurallara uy**:
+  konnektör kontağı `Kontak_<no>` (dummy ise `Kontak_<no>_dummy`), LED `D.leds` adı `X` ise pedleri
+  `X_ped_ust` / `X_ped_alt` grupları, tuş pedi grubu `Ped_<ad>` (iki tarak birbirine değmez), köprü adı
+  `Kopru_<no>_<iz_adı>`. Başka tip pin/cihaz için `D.pins = [(ad, geom_mm, dummy)]`,
+  `D.devices = [(ad, [(uç_adı, geom_mm), ...])]`.
+- Hat ucu pede/hatta **bindirilmeli** (≥ hat genişliğinin yarısı); "kenara kadar" bırakılan uç refine sonrası
+  birkaç 0.01 mm kısa kalıp çizimde kopukluk olur (`check` → pinsiz_ag + yakin_bosluk).
 - Adlandırma: anlamlı ve Türkçe (`Hat_Net1_A_ust`, `Ped_A`, `Kontak_07_dummy`, `LED_L1_ped_ust`).
 
 ## 6.4 RAPOR sözlüğü (tasarım modülünde, ZORUNLU)
@@ -68,14 +75,16 @@ yalnızca bu dosyadan beslenir. Alanlar:
   ama "Çalışma görüntüleri" kategorisine düşer — karar/ölçüm/topoloji görsellerinin hepsini açıkla.
 
 ## 6.6 Analiz görseli adlandırma (otomatik kategori için)
-`kontrol_*` / `ov_*` / `overlay*` → Doğrulama · `seg*`, `m_*`, `*mask*`, `edge*`, `comp*`, `polyvec*`
-→ Maskeler · `r_*`, `pdf_*` → Çıktı kontrolü · `*_deskew`, `*_full`, `genel`, `parca_*` → Kaynak ·
-`routes*` → Topoloji · diğerleri → Çalışma görüntüleri. Anlamlı adlar kullan (`v_padA.png`,
+`kontrol_*` / `ov_*` / `overlay*` → Doğrulama (`kontrol_sapma_*`, `ov_sapma` = sapma ısı haritası) ·
+`seg*`, `m_*`, `*mask*`, `edge*`, `comp*`, `polyvec*` → Maskeler · `r_*`, `pdf_*` → Çıktı kontrolü ·
+`*_deskew`, `*_full`, `genel`, `parca_*` → Kaynak · `routes*`, `ag_*` → Topoloji · diğerleri → Çalışma görüntüleri. Anlamlı adlar kullan (`v_padA.png`,
 `z_kopru_sag_ust.png`), geçici dosyaları `_t.png` adıyla üret (rapora alınmaz).
 
 ## 6.7 Rapor çıktıları
 - `<AD>_rapor.html`: yan menü, durum kartları, süreç zaman çizelgesi, numaralı karar kartları (kanıt
-  küçük resimleriyle), ölçü/metrik tabloları, işaretlenebilir kontrol listesi (tarayıcıda saklanır),
+  küçük resimleriyle), ölçü/metrik tabloları (kabul kapıları, ofset/kayma, en büyük sapmalı elemanlar),
+  "Ağ ve tutarlılık" bölümü (bulgu tablosu + çizimden çıkarılan ağ tablosu + ağ haritası),
+  işaretlenebilir kontrol listesi (tarayıcıda saklanır),
   kategori + arama filtreli galeri, tekerlekle yakınlaştırılabilen görüntüleyici (← → Esc).
   Görseller `<AD>_rapor_gorseller/` klasöründen göreli yüklenir: HTML'i klasörüyle birlikte taşı.
 - `<AD>_rapor.md`: aynı içerik (küçük resimlerle). `<AD>_rapor.pdf`: açıklamalı görseller + karar kanıtları.

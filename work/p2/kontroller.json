@@ -1,0 +1,190 @@
+{
+ "ag": {
+  "aglar": [
+   {
+    "pinler": [
+     1,
+     2
+    ],
+    "dummy": [],
+    "uclar": [
+     "Ped_A.ust"
+    ],
+    "hatlar": [
+     "Blok_Net1",
+     "Hat_Net1_A_ust",
+     "Ped_A"
+    ],
+    "no": 1
+   },
+   {
+    "pinler": [
+     3,
+     4
+    ],
+    "dummy": [],
+    "uclar": [
+     "Ped_B.alt"
+    ],
+    "hatlar": [
+     "Blok_Net2",
+     "Hat_Net2_B_alt",
+     "Ped_B"
+    ],
+    "no": 2
+   },
+   {
+    "pinler": [
+     5,
+     6
+    ],
+    "dummy": [],
+    "uclar": [
+     "Ped_C.alt"
+    ],
+    "hatlar": [
+     "Blok_Net3",
+     "Hat_Net3_C_alt",
+     "Ped_C"
+    ],
+    "no": 3
+   },
+   {
+    "pinler": [
+     9,
+     10,
+     11
+    ],
+    "dummy": [],
+    "uclar": [
+     "Ped_A.alt",
+     "Ped_B.ust",
+     "Ped_C.ust"
+    ],
+    "hatlar": [
+     "Blok_Net4",
+     "Hat_Net4_Bus_BC",
+     "Hat_Net4_Ortak",
+     "Ped_A",
+     "Ped_B",
+     "Ped_C"
+    ],
+    "no": 4
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     7
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 5
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     8
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 6
+   }
+  ],
+  "ozet": {
+   "ag": 6,
+   "pin": 9,
+   "dummy": 2,
+   "cihaz": 3,
+   "bilesen": 6,
+   "kopru": 0
+  },
+  "imza": [
+   "P1,2|Ped_A.ust",
+   "P3,4|Ped_B.alt",
+   "P5,6|Ped_C.alt",
+   "P9,10,11|Ped_A.alt;Ped_B.ust;Ped_C.ust",
+   "P|",
+   "P|"
+  ]
+ },
+ "bulgular": [
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Hat_Net1_A_ust",
+   "mesaj": "'Hat_Net1_A_ust' 0/45/90 dışı açılar: 120.0°, 51.4°",
+   "konum": [
+    17.0,
+    38.05
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Hat_Net3_C_alt",
+   "mesaj": "'Hat_Net3_C_alt' 0/45/90 dışı açılar: 129.8°",
+   "konum": [
+    22.8,
+    57.95
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "bitisik_pinler",
+   "id": "bitisik_pinler:1,2",
+   "mesaj": "Pinler 1, 2 aynı ağda",
+   "konum": [
+    17.0,
+    40.05
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "bitisik_pinler",
+   "id": "bitisik_pinler:3,4",
+   "mesaj": "Pinler 3, 4 aynı ağda",
+   "konum": [
+    13.4,
+    57.98
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "bitisik_pinler",
+   "id": "bitisik_pinler:5,6",
+   "mesaj": "Pinler 5, 6 aynı ağda",
+   "konum": [
+    25.0,
+    57.98
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "bitisik_pinler",
+   "id": "bitisik_pinler:9,10,11",
+   "mesaj": "Pinler 9, 10, 11 aynı ağda",
+   "konum": [
+    19.2,
+    42.52
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  }
+ ],
+ "sayim": {
+  "HATA": 0,
+  "UYARI": 0,
+  "BILGI": 6,
+  "bilinen": 0
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "tarih": "2026-11-13 19:25",
+ "gecti": true,
+ "metrik": {
+  "gumus.kenar.medyan_mm": 0.021199915558099747,
+  "gumus.kenar.p90_mm": 0.06691223382949829,
+  "gumus.kenar.kapsama": 0.9634661281439324,
+  "gumus.kenar.ofset_mm": -0.008673550176894106,
+  "gumus.iou": 0.811799192781059,
+  "gumus.karsiliksiz_oran": 0.07568070557608458,
+  "dielektrik.iou": 0.967614373435993,
+  "dielektrik.kenar.medyan_mm": 0.03179987519979477,
+  "dielektrik.kenar.p90_mm": 0.1179245337843895,
+  "dielektrik.kenar.kapsama": 0.9231848474219572
+ },
+ "ag_imza": [
+  "P1,2|Ped_A.ust",
+  "P3,4|Ped_B.alt",
+  "P5,6|Ped_C.alt",
+  "P9,10,11|Ped_A.alt;Ped_B.ust;Ped_C.ust",
+  "P|",
+  "P|"
+ ],
+ "bulgular": {}
+}

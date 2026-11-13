@@ -1,0 +1,499 @@
+{
+ "ag": {
+  "aglar": [
+   {
+    "pinler": [
+     1,
+     8
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_B1.alt",
+     "LED_L1.ust",
+     "LED_L2.alt",
+     "LED_L4.alt",
+     "LED_L8.alt",
+     "LED_R1.ust",
+     "LED_R2.ust",
+     "LED_R4.alt"
+    ],
+    "hatlar": [
+     "B1_alt",
+     "L1_ust",
+     "L2_alt",
+     "L8_alt",
+     "LED_B1_ped_alt",
+     "LED_L1_ped_ust",
+     "LED_L2_ped_alt",
+     "LED_L4_ped_alt",
+     "LED_L8_ped_alt",
+     "LED_R1_ped_ust",
+     "LED_R2_ped_ust",
+     "LED_R4_ped_alt",
+     "Poz7",
+     "R1_ortak",
+     "R1_sol_alt",
+     "R1_ust",
+     "R4_alt",
+     "V465",
+     "Y_hat"
+    ],
+    "no": 1
+   },
+   {
+    "pinler": [
+     2
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_L8.ust"
+    ],
+    "hatlar": [
+     "L8_ust",
+     "LED_L8_ped_ust"
+    ],
+    "no": 2
+   },
+   {
+    "pinler": [
+     3
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_L3.ust",
+     "LED_L4.ust",
+     "LED_L5.ust",
+     "LED_L6.ust",
+     "LED_L7.ust"
+    ],
+    "hatlar": [
+     "L3_ust",
+     "L4_ust",
+     "L5_ust",
+     "L6_ust",
+     "L7_ust",
+     "LED_L3_ped_ust",
+     "LED_L4_ped_ust",
+     "LED_L5_ped_ust",
+     "LED_L6_ped_ust",
+     "LED_L7_ped_ust",
+     "Na"
+    ],
+    "no": 3
+   },
+   {
+    "pinler": [
+     4,
+     10
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_B1.ust",
+     "LED_B2.ust",
+     "LED_B3.ust",
+     "LED_C1.ust",
+     "LED_L6.alt",
+     "LED_R2.alt",
+     "LED_R6.alt",
+     "LED_R8.ust"
+    ],
+    "hatlar": [
+     "B1_ust",
+     "B2_ust",
+     "B3_ust",
+     "L6_alt",
+     "LED_B1_ped_ust",
+     "LED_B2_ped_ust",
+     "LED_B3_ped_ust",
+     "LED_C1_ped_ust",
+     "LED_L6_ped_alt",
+     "LED_R2_ped_alt",
+     "LED_R6_ped_alt",
+     "LED_R8_ped_ust",
+     "Q_R8",
+     "R2_alt",
+     "R6_alt",
+     "Z_C1",
+     "Z_hat"
+    ],
+    "no": 4
+   },
+   {
+    "pinler": [
+     5
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_R3.ust",
+     "LED_R5.ust",
+     "LED_R6.ust",
+     "LED_R7.ust"
+    ],
+    "hatlar": [
+     "LED_R3_ped_ust",
+     "LED_R5_ped_ust",
+     "LED_R6_ped_ust",
+     "LED_R7_ped_ust",
+     "Nb",
+     "R3_ust",
+     "R5_ust",
+     "R6_ust",
+     "R7_ust"
+    ],
+    "no": 5
+   },
+   {
+    "pinler": [
+     6
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_B2.alt"
+    ],
+    "hatlar": [
+     "B2_alt",
+     "LED_B2_ped_alt"
+    ],
+    "no": 6
+   },
+   {
+    "pinler": [
+     7
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_B3.alt",
+     "LED_L1.alt",
+     "LED_L2.ust",
+     "LED_L3.alt",
+     "LED_R3.alt",
+     "LED_R4.ust"
+    ],
+    "hatlar": [
+     "B3_alt",
+     "L1_alt",
+     "L2_ust",
+     "LED_B3_ped_alt",
+     "LED_L1_ped_alt",
+     "LED_L2_ped_ust",
+     "LED_L3_ped_alt",
+     "LED_R3_ped_alt",
+     "LED_R4_ped_ust",
+     "R3_alt",
+     "R4_ust",
+     "X_L3",
+     "X_R3R4",
+     "X_hat"
+    ],
+    "no": 7
+   },
+   {
+    "pinler": [
+     9
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_C1.alt",
+     "LED_R1.alt"
+    ],
+    "hatlar": [
+     "C1_alt",
+     "LED_C1_ped_alt",
+     "LED_R1_ped_alt",
+     "R1_alt"
+    ],
+    "no": 8
+   },
+   {
+    "pinler": [
+     11
+    ],
+    "dummy": [],
+    "uclar": [
+     "LED_L7.alt",
+     "LED_R7.alt",
+     "LED_R8.alt"
+    ],
+    "hatlar": [
+     "L7R7_alt",
+     "LED_L7_ped_alt",
+     "LED_R7_ped_alt",
+     "LED_R8_ped_alt",
+     "Poz10",
+     "R8_alt"
+    ],
+    "no": 9
+   },
+   {
+    "pinler": [],
+    "dummy": [],
+    "uclar": [
+     "LED_L5.alt",
+     "LED_R5.alt"
+    ],
+    "hatlar": [
+     "L5R5_alt",
+     "LED_L5_ped_alt",
+     "LED_R5_ped_alt"
+    ],
+    "no": 10
+   }
+  ],
+  "ozet": {
+   "ag": 10,
+   "pin": 11,
+   "dummy": 0,
+   "cihaz": 20,
+   "bilesen": 49,
+   "kopru": 39
+  },
+  "imza": [
+   "P1,8|LED_B1.alt;LED_L1.ust;LED_L2.alt;LED_L4.alt;LED_L8.alt;LED_R1.ust;LED_R2.ust;LED_R4.alt",
+   "P11|LED_L7.alt;LED_R7.alt;LED_R8.alt",
+   "P2|LED_L8.ust",
+   "P3|LED_L3.ust;LED_L4.ust;LED_L5.ust;LED_L6.ust;LED_L7.ust",
+   "P4,10|LED_B1.ust;LED_B2.ust;LED_B3.ust;LED_C1.ust;LED_L6.alt;LED_R2.alt;LED_R6.alt;LED_R8.ust",
+   "P5|LED_R3.ust;LED_R5.ust;LED_R6.ust;LED_R7.ust",
+   "P6|LED_B2.alt",
+   "P7|LED_B3.alt;LED_L1.alt;LED_L2.ust;LED_L3.alt;LED_R3.alt;LED_R4.ust",
+   "P9|LED_C1.alt;LED_R1.alt",
+   "P|LED_L5.alt;LED_R5.alt"
+  ]
+ },
+ "bulgular": [
+  {
+   "seviye": "HATA",
+   "kod": "pinsiz_ag",
+   "id": "pinsiz_ag:LED_L5.alt,LED_R5.alt",
+   "mesaj": "Hiçbir pine ulaşmayan ağ: LED_L5.alt, LED_R5.alt (kopukluk veya eksik hat)",
+   "konum": [
+    5.07,
+    88.24
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "ayrik_pinler",
+   "id": "ayrik_pinler:1,8",
+   "mesaj": "Pinler 1, 8 aynı ağda (bitişik değil: şüpheli)",
+   "konum": [
+    12.77,
+    62.02
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "ayrik_pinler",
+   "id": "ayrik_pinler:4,10",
+   "mesaj": "Pinler 4, 10 aynı ağda (bitişik değil: şüpheli)",
+   "konum": [
+    12.77,
+    59.57
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "serbest_uc",
+   "id": "serbest_uc:Z_hat:bas",
+   "mesaj": "'Z_hat' hattının başı hiçbir gümüşe değmiyor (açık uç)",
+   "konum": [
+    11.85,
+    56.91
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "yakin_bosluk",
+   "id": "yakin_bosluk:Nb/R2_alt",
+   "mesaj": "Nb ile R2_alt arası 0.033 mm (değmesi gerekiyorsa uç kısa; değilse aralık dar)",
+   "konum": [
+    33.77,
+    82.77
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "yakin_bosluk",
+   "id": "yakin_bosluk:R1_ortak/X_hat",
+   "mesaj": "R1_ortak ile X_hat arası 0.138 mm (değmesi gerekiyorsa uç kısa; değilse aralık dar)",
+   "konum": [
+    2.49,
+    38.28
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "UYARI",
+   "kod": "yalitim_payi",
+   "id": "yalitim_payi:Kopru_34_R2_alt:33.5,83.0",
+   "mesaj": "'Kopru_34_R2_alt' altındaki kesişmede yalıtkan payı < 0.15 mm",
+   "konum": [
+    33.5,
+    83.03
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:B2_alt",
+   "mesaj": "'B2_alt' 0/45/90 dışı açılar: 117.2°, 129.8°, 97.7°",
+   "konum": [
+    19.27,
+    62.86
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:L8_ust",
+   "mesaj": "'L8_ust' 0/45/90 dışı açılar: 89.5°",
+   "konum": [
+    5.04,
+    123.13
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Na",
+   "mesaj": "'Na' 0/45/90 dışı açılar: 92.5°",
+   "konum": [
+    3.19,
+    51.94
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Nb",
+   "mesaj": "'Nb' 0/45/90 dışı açılar: 120.4°, 95.4°",
+   "konum": [
+    33.5,
+    51.6
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Poz10",
+   "mesaj": "'Poz10' 0/45/90 dışı açılar: 102.0°",
+   "konum": [
+    23.39,
+    115.75
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Poz7",
+   "mesaj": "'Poz7' 0/45/90 dışı açılar: 96.5°",
+   "konum": [
+    20.35,
+    78.14
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Q_R8",
+   "mesaj": "'Q_R8' 0/45/90 dışı açılar: 119.5°, 107.2°, 98.6°",
+   "konum": [
+    31.67,
+    123.07
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:R1_alt",
+   "mesaj": "'R1_alt' 0/45/90 dışı açılar: 117.3°, 96.2°",
+   "konum": [
+    31.59,
+    31.59
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:R1_sol_alt",
+   "mesaj": "'R1_sol_alt' 0/45/90 dışı açılar: 89.4°",
+   "konum": [
+    2.14,
+    129.74
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:R2_alt",
+   "mesaj": "'R2_alt' 0/45/90 dışı açılar: 59.2°, 98.1°",
+   "konum": [
+    31.73,
+    44.35
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:X_hat",
+   "mesaj": "'X_hat' 0/45/90 dışı açılar: 94.7°",
+   "konum": [
+    2.56,
+    38.53
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Z_C1",
+   "mesaj": "'Z_C1' 0/45/90 dışı açılar: 73.0°, 114.3°",
+   "konum": [
+    19.14,
+    43.4
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  }
+ ],
+ "sayim": {
+  "HATA": 1,
+  "UYARI": 6,
+  "BILGI": 12,
+  "bilinen": 0
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "tarih": "2026-11-13 19:25",
+ "gecti": false,
+ "metrik": {
+  "gumus.kenar.medyan_mm": 0.06409430503845215,
+  "gumus.kenar.p90_mm": 0.17073826491832733,
+  "gumus.kenar.kapsama": 0.8026762156049755,
+  "gumus.kenar.ofset_mm": -0.02492585413051165,
+  "gumus.iou": 0.5628362185674735,
+  "gumus.karsiliksiz_oran": 0.20695092724568567
+ },
+ "ag_imza": [
+  "P1,8|LED_B1.alt;LED_L1.ust;LED_L2.alt;LED_L4.alt;LED_L8.alt;LED_R1.ust;LED_R2.ust;LED_R4.alt",
+  "P10|LED_R2.alt",
+  "P11|LED_L7.alt;LED_R7.alt;LED_R8.alt",
+  "P2|LED_L8.ust",
+  "P3|LED_L3.ust;LED_L4.ust;LED_L5.ust;LED_L6.ust;LED_L7.ust",
+  "P4|LED_B1.ust;LED_B2.ust;LED_B3.ust;LED_C1.ust;LED_L6.alt;LED_R8.ust",
+  "P5|LED_R3.ust;LED_R5.ust;LED_R6.ust;LED_R7.ust",
+  "P6|LED_B2.alt",
+  "P7|LED_B3.alt;LED_L1.alt;LED_L2.ust;LED_L3.alt;LED_R3.alt;LED_R4.ust",
+  "P9|LED_C1.alt;LED_R1.alt",
+  "P|LED_L5.alt;LED_R5.alt",
+  "P|LED_R6.alt"
+ ],
+ "bulgular": {
+  "pinsiz_ag:LED_L5.alt,LED_R5.alt": "HATA",
+  "pinsiz_ag:LED_R6.alt": "HATA",
+  "ayrik_pinler:1,8": "UYARI",
+  "eleman_eslesmedi:B3_alt": "UYARI",
+  "eleman_eslesmedi:Kopru_09_X_L3": "UYARI",
+  "eleman_eslesmedi:Kopru_10_X_R3R4": "UYARI",
+  "eleman_eslesmedi:Kopru_59_L7R7_alt": "UYARI",
+  "eleman_eslesmedi:X_R3R4": "UYARI",
+  "eleman_eslesmedi:Z_hat": "UYARI",
+  "eleman_sapma:B1_ust": "UYARI",
+  "eleman_sapma:Kopru_33_C1_alt": "UYARI",
+  "eleman_sapma:Kopru_45_Z_hat": "UYARI",
+  "eleman_sapma:L3_ust": "UYARI",
+  "eleman_sapma:L4_ust": "UYARI",
+  "eleman_sapma:L5R5_alt": "UYARI",
+  "eleman_sapma:L6_ust": "UYARI",
+  "eleman_sapma:R3_ust": "UYARI",
+  "eleman_sapma:R5_ust": "UYARI",
+  "serbest_uc:Z_hat:bas": "UYARI",
+  "yakin_bosluk:Nb/R2_alt": "UYARI",
+  "yakin_bosluk:R1_ortak/X_hat": "UYARI",
+  "yalitim_payi:Kopru_34_R2_alt:33.5,83.0": "UYARI"
+ }
+}

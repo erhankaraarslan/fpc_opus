@@ -7,22 +7,796 @@
  "esik": {
   "kenar_medyan_mm": 0.06,
   "kenar_p90_mm": 0.15,
+  "kenar_kapsama_min": 0.8,
   "dielektrik_iou_min": 0.95,
-  "karsiliksiz_max": 0.15
+  "karsiliksiz_max": 0.15,
+  "ofset_uyari_mm": 0.03,
+  "maske_yanlilik_uyari_mm": 0.02,
+  "eleman_medyan_uyari_mm": 0.1,
+  "eleman_kapsama_uyari": 0.5,
+  "eleman_min_ornek": 20
+ },
+ "golge_modeli": true,
+ "golge": {
+  "delta_mm": 0.317998728005088,
+  "kalkik_karo": 0
  },
  "dielektrik": {
   "iou": 0.967614373435993,
-  "kenar_medyan_mm": 0.04239983040067839,
-  "kenar_p90_mm": 0.1271994912020352,
-  "kapsama": 0.9253480017961383
+  "kenar": {
+   "ornek": 8553,
+   "kapsama": 0.9231848474219572,
+   "golge_orani": 0.0,
+   "medyan_mm": 0.03179987519979477,
+   "p90_mm": 0.1179245337843895,
+   "isaretli_medyan_mm": -0.013249948620796204,
+   "ofset_mm": -0.014780749342709232,
+   "kayma_mm": [
+    -0.011678685411702198,
+    -0.0631173411629925
+   ]
+  },
+  "yogunluk": {
+   "ornek": 8553,
+   "kapsama": 0.961767800771659,
+   "golge_orani": 0.0,
+   "medyan_mm": 0.0323551706969738,
+   "p90_mm": 0.08070749044418335,
+   "isaretli_medyan_mm": -0.0024910822976380587,
+   "sigma_mm": 0.032575324177742004,
+   "ofset_mm": -0.0035726220780556216,
+   "kayma_mm": [
+    0.00028339314776550166,
+    -0.04570541125644603
+   ]
+  },
+  "ters": {
+   "kapsama_3px": 0.7065143632662294,
+   "bant_ici": 0.9510291789187967,
+   "p90_mm": 0.10599958151578903
+  },
+  "piksel": {
+   "medyan_mm": 0.04239983040067839,
+   "p90_mm": 0.1271994912020352,
+   "kapsama": 0.9253480017961383
+  }
  },
  "gumus": {
-  "iou": 0.7308010888573895,
-  "kenar_medyan_mm": 0.04239983040067839,
-  "kenar_p90_mm": 0.08479966080135679,
-  "kapsama": 0.9586304704237535,
-  "karsiliksiz_oran": 0.08995898162814554
+  "iou": 0.811799192781059,
+  "kenar": {
+   "ornek": 32682,
+   "kapsama": 0.9634661281439324,
+   "golge_orani": 0.008383819839667095,
+   "medyan_mm": 0.021199915558099747,
+   "p90_mm": 0.06691223382949829,
+   "isaretli_medyan_mm": -0.00728747108951211,
+   "ofset_mm": -0.008673550176894106,
+   "kayma_mm": [
+    0.012516865661335322,
+    0.020104900262431696
+   ]
+  },
+  "yogunluk": {
+   "ornek": 32682,
+   "kapsama": 0.9928400954653938,
+   "golge_orani": 0.008383819839667095,
+   "medyan_mm": 0.019772285595536232,
+   "p90_mm": 0.06444117426872253,
+   "isaretli_medyan_mm": -0.007697748951613903,
+   "sigma_mm": 0.03162304311990738,
+   "ofset_mm": -0.0069648939134566365,
+   "kayma_mm": [
+    0.013606813838918076,
+    0.012437617904614114
+   ]
+  },
+  "ters": {
+   "kapsama_3px": 0.7239267146103795,
+   "bant_ici": 0.8110737523738364,
+   "p90_mm": 0.08479966223239899
+  },
+  "karsiliksiz_oran": 0.07568070557608458,
+  "karsiliksiz_golge_haric": 0.07405900080636872,
+  "piksel": {
+   "medyan_mm": 0.021199915200339196,
+   "p90_mm": 0.0635997456010176,
+   "kapsama": 0.9732853220144637
+  }
  },
+ "elemanlar_en_kotu": [
+  {
+   "ad": "Blok_Net1",
+   "tur": "dikdortgen",
+   "ornek": 52,
+   "kapsama": 0.0,
+   "konum": [
+    13.85,
+    71.73
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.08225034177303314,
+    "ofset_mm": 0.0014872252456650365,
+    "kayma_mm": [
+     0.08755015533294933,
+     0.009868731930200596
+    ],
+    "sigma_mm": 0.02682211622595787,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Blok_Net3",
+   "tur": "dikdortgen",
+   "ornek": 52,
+   "kapsama": 0.0,
+   "konum": [
+    17.85,
+    71.73
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.08171545714139938,
+    "ofset_mm": -0.0020567240107534157,
+    "kayma_mm": [
+     0.0860867638067118,
+     0.013295810025151919
+    ],
+    "sigma_mm": 0.027969583868980408,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Blok_Net4",
+   "tur": "dikdortgen",
+   "ornek": 71,
+   "kapsama": 0.2112676056338028,
+   "medyan_mm": 0.1284947246313095,
+   "p90_mm": 0.169943168759346,
+   "ofset_mm": 0.09593391627374451,
+   "kayma_mm": [
+    0.05174079435670782,
+    0.0
+   ],
+   "rms_mm": 0.07015232314274027,
+   "konum": [
+    22.35,
+    71.72
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.05858294665813446,
+    "ofset_mm": 0.00793442916521579,
+    "kayma_mm": [
+     0.06979452753011978,
+     0.02562138222688276
+    ],
+    "sigma_mm": 0.03096063807606697,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Blok_Net2",
+   "tur": "dikdortgen",
+   "ornek": 52,
+   "kapsama": 0.019230769230769232,
+   "medyan_mm": 0.12590357661247253,
+   "p90_mm": 0.12590357661247253,
+   "konum": [
+    15.85,
+    71.73
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.06373263895511627,
+    "ofset_mm": -0.020692633263836944,
+    "kayma_mm": [
+     0.08458114704246351,
+     -0.004768897954450004
+    ],
+    "sigma_mm": 0.018618864938616753,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Ped_B",
+   "tur": "tus_ped",
+   "ornek": 857,
+   "kapsama": 0.5029171528588098,
+   "medyan_mm": 0.0513169951736927,
+   "p90_mm": 0.20736168324947357,
+   "ofset_mm": 0.06902346786101163,
+   "kayma_mm": [
+    -0.0034530241519526777,
+    -0.05128528095132063
+   ],
+   "rms_mm": 0.07612387225493697,
+   "konum": [
+    13.4,
+    55.78
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.025969402864575386,
+    "ofset_mm": -0.00010681063376595178,
+    "kayma_mm": [
+     -0.007868398244628825,
+     0.05194938885701245
+    ],
+    "sigma_mm": 0.015879973769187927,
+    "kapsama": 0.780630105017503
+   }
+  },
+  {
+   "ad": "Kontak_08_dummy",
+   "tur": "kontak",
+   "ornek": 163,
+   "kapsama": 1.0,
+   "medyan_mm": 0.045712318271398544,
+   "p90_mm": 0.06757473200559616,
+   "ofset_mm": -0.038977011090772354,
+   "kayma_mm": [
+    0.013929868210937424,
+    0.0056595616332309395
+   ],
+   "rms_mm": 0.015186881808415252,
+   "konum": [
+    20.35,
+    165.42
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.0319901667535305,
+    "ofset_mm": -0.007885581170876699,
+    "kayma_mm": [
+     0.03239940372124459,
+     0.023463189583266892
+    ],
+    "sigma_mm": 0.04604366794228554,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Kontak_07_dummy",
+   "tur": "kontak",
+   "ornek": 163,
+   "kapsama": 1.0,
+   "medyan_mm": 0.0369800440967083,
+   "p90_mm": 0.06426224857568741,
+   "ofset_mm": -0.03580263004939679,
+   "kayma_mm": [
+    0.02081833557957667,
+    0.005169669199169123
+   ],
+   "rms_mm": 0.013207339166480932,
+   "konum": [
+    19.35,
+    165.42
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.03974005579948425,
+    "ofset_mm": -0.0065268582669386465,
+    "kayma_mm": [
+     0.03868490737469714,
+     0.020412672293273437
+    ],
+    "sigma_mm": 0.04665420949459076,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Ped_C",
+   "tur": "tus_ped",
+   "ornek": 773,
+   "kapsama": 0.6119016817593791,
+   "medyan_mm": 0.03246164321899414,
+   "p90_mm": 0.108749620616436,
+   "ofset_mm": 0.004684086224822941,
+   "kayma_mm": [
+    0.027619345975341734,
+    0.018468842343492973
+   ],
+   "rms_mm": 0.04416356690836977,
+   "konum": [
+    25.0,
+    55.78
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.03135263919830322,
+    "ofset_mm": -0.006560637656139278,
+    "kayma_mm": [
+     0.021002753857528825,
+     -0.007101794809321732
+    ],
+    "sigma_mm": 0.015329643152654171,
+    "kapsama": 0.8357050452781372
+   }
+  },
+  {
+   "ad": "Ped_A",
+   "tur": "tus_ped",
+   "ornek": 845,
+   "kapsama": 0.6745562130177515,
+   "medyan_mm": 0.02914988435804844,
+   "p90_mm": 0.09522612392902374,
+   "ofset_mm": 0.0321903522377173,
+   "kayma_mm": [
+    -0.01594377422210177,
+    -0.05137749250078402
+   ],
+   "rms_mm": 0.04731337615797695,
+   "konum": [
+    19.2,
+    40.27
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.023445898666977882,
+    "ofset_mm": -0.005278422303256323,
+    "kayma_mm": [
+     -0.010974978663199993,
+     -0.004798637183586349
+    ],
+    "sigma_mm": 0.014469101093709469,
+    "kapsama": 0.8686390532544379
+   }
+  },
+  {
+   "ad": "Kontak_03",
+   "tur": "kontak",
+   "ornek": 2881,
+   "kapsama": 1.0,
+   "medyan_mm": 0.028485676273703575,
+   "p90_mm": 0.07751218974590302,
+   "ofset_mm": -0.012137077391040592,
+   "kayma_mm": [
+    0.027267340127878875,
+    0.0
+   ],
+   "rms_mm": 0.03024541303918496,
+   "konum": [
+    15.35,
+    121.5
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.021970484405755997,
+    "ofset_mm": -0.009508570100798381,
+    "kayma_mm": [
+     0.02742551408033861,
+     0.0
+    ],
+    "sigma_mm": 0.027219941839575768,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Hat_Net4_Bus_BC",
+   "tur": "hat",
+   "ornek": 316,
+   "kapsama": 0.759493670886076,
+   "medyan_mm": 0.02664710022509098,
+   "p90_mm": 0.20658284425735474,
+   "ofset_mm": -0.00631112661589035,
+   "kayma_mm": [
+    0.0,
+    0.0063695932247912704
+   ],
+   "rms_mm": 0.031494319460765086,
+   "konum": [
+    22.25,
+    53.5
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.025842484086751938,
+    "ofset_mm": -0.009475131890346478,
+    "kayma_mm": [
+     0.0,
+     0.0036659447407880025
+    ],
+    "sigma_mm": 0.016719913110136986,
+    "kapsama": 0.8544303797468354
+   }
+  },
+  {
+   "ad": "Kontak_02",
+   "tur": "kontak",
+   "ornek": 2881,
+   "kapsama": 1.0,
+   "medyan_mm": 0.024512402713298798,
+   "p90_mm": 0.06691223382949829,
+   "ofset_mm": -0.004354953546751519,
+   "kayma_mm": [
+    0.010687401004995876,
+    0.0
+   ],
+   "rms_mm": 0.036954199528006694,
+   "konum": [
+    14.35,
+    121.5
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.022629689425230026,
+    "ofset_mm": -0.0024231137903318674,
+    "kayma_mm": [
+     0.011986884966320983,
+     0.0
+    ],
+    "sigma_mm": 0.02911406382918358,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Kontak_10",
+   "tur": "kontak",
+   "ornek": 2880,
+   "kapsama": 1.0,
+   "medyan_mm": 0.024512402713298798,
+   "p90_mm": 0.06026805564761162,
+   "ofset_mm": -0.015024354075663205,
+   "kayma_mm": [
+    0.0008948983709576531,
+    0.0
+   ],
+   "rms_mm": 0.030335971348579193,
+   "konum": [
+    22.35,
+    121.5
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.020925337448716164,
+    "ofset_mm": -0.009862005537994352,
+    "kayma_mm": [
+     0.006586010115426193,
+     0.0
+    ],
+    "sigma_mm": 0.0312681570649147,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Kontak_04",
+   "tur": "kontak",
+   "ornek": 2881,
+   "kapsama": 1.0,
+   "medyan_mm": 0.024454675614833832,
+   "p90_mm": 0.07419970631599426,
+   "ofset_mm": -0.016494192578094546,
+   "kayma_mm": [
+    0.01663539218436478,
+    0.0
+   ],
+   "rms_mm": 0.030993017692074964,
+   "konum": [
+    16.35,
+    121.5
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.019363408908247948,
+    "ofset_mm": -0.013161164577439634,
+    "kayma_mm": [
+     0.018035701984701537,
+     0.0
+    ],
+    "sigma_mm": 0.026913993060588837,
+    "kapsama": 1.0
+   }
+  },
+  {
+   "ad": "Hat_Net3_C_alt",
+   "tur": "hat",
+   "ornek": 447,
+   "kapsama": 0.9798657718120806,
+   "medyan_mm": 0.021999364718794823,
+   "p90_mm": 0.07096624374389648,
+   "ofset_mm": 0.000934024567683091,
+   "kayma_mm": [
+    0.06538362832954067,
+    -0.08212319775292011
+   ],
+   "rms_mm": 0.012194916009063656,
+   "konum": [
+    21.18,
+    65.01
+   ],
+   "yogunluk": {
+    "medyan_mm": 0.022233260795474052,
+    "ofset_mm": -0.000956737776309372,
+    "kayma_mm": [
+     0.062123251083247004,
+     -0.07774504214785655
+    ],
+    "sigma_mm": 0.0336415134370327,
+    "kapsama": 0.9865771812080537
+   }
+  }
+ ],
+ "ag": {
+  "aglar": [
+   {
+    "pinler": [
+     1,
+     2
+    ],
+    "dummy": [],
+    "uclar": [
+     "Ped_A.ust"
+    ],
+    "hatlar": [
+     "Blok_Net1",
+     "Hat_Net1_A_ust",
+     "Ped_A"
+    ],
+    "no": 1
+   },
+   {
+    "pinler": [
+     3,
+     4
+    ],
+    "dummy": [],
+    "uclar": [
+     "Ped_B.alt"
+    ],
+    "hatlar": [
+     "Blok_Net2",
+     "Hat_Net2_B_alt",
+     "Ped_B"
+    ],
+    "no": 2
+   },
+   {
+    "pinler": [
+     5,
+     6
+    ],
+    "dummy": [],
+    "uclar": [
+     "Ped_C.alt"
+    ],
+    "hatlar": [
+     "Blok_Net3",
+     "Hat_Net3_C_alt",
+     "Ped_C"
+    ],
+    "no": 3
+   },
+   {
+    "pinler": [
+     9,
+     10,
+     11
+    ],
+    "dummy": [],
+    "uclar": [
+     "Ped_A.alt",
+     "Ped_B.ust",
+     "Ped_C.ust"
+    ],
+    "hatlar": [
+     "Blok_Net4",
+     "Hat_Net4_Bus_BC",
+     "Hat_Net4_Ortak",
+     "Ped_A",
+     "Ped_B",
+     "Ped_C"
+    ],
+    "no": 4
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     7
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 5
+   },
+   {
+    "pinler": [],
+    "dummy": [
+     8
+    ],
+    "uclar": [],
+    "hatlar": [],
+    "no": 6
+   }
+  ],
+  "ozet": {
+   "ag": 6,
+   "pin": 9,
+   "dummy": 2,
+   "cihaz": 3,
+   "bilesen": 6,
+   "kopru": 0
+  },
+  "imza": [
+   "P1,2|Ped_A.ust",
+   "P3,4|Ped_B.alt",
+   "P5,6|Ped_C.alt",
+   "P9,10,11|Ped_A.alt;Ped_B.ust;Ped_C.ust",
+   "P|",
+   "P|"
+  ]
+ },
+ "bulgular": [
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Hat_Net1_A_ust",
+   "mesaj": "'Hat_Net1_A_ust' 0/45/90 dışı açılar: 120.0°, 51.4°",
+   "konum": [
+    17.0,
+    38.05
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "aci_45_disi",
+   "id": "aci_45_disi:Hat_Net3_C_alt",
+   "mesaj": "'Hat_Net3_C_alt' 0/45/90 dışı açılar: 129.8°",
+   "konum": [
+    22.8,
+    57.95
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "bitisik_pinler",
+   "id": "bitisik_pinler:1,2",
+   "mesaj": "Pinler 1, 2 aynı ağda",
+   "konum": [
+    17.0,
+    40.05
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "bitisik_pinler",
+   "id": "bitisik_pinler:3,4",
+   "mesaj": "Pinler 3, 4 aynı ağda",
+   "konum": [
+    13.4,
+    57.98
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "bitisik_pinler",
+   "id": "bitisik_pinler:5,6",
+   "mesaj": "Pinler 5, 6 aynı ağda",
+   "konum": [
+    25.0,
+    57.98
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "bitisik_pinler",
+   "id": "bitisik_pinler:9,10,11",
+   "mesaj": "Pinler 9, 10, 11 aynı ağda",
+   "konum": [
+    19.2,
+    42.52
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:Blok_Net1",
+   "mesaj": "'Blok_Net1' kenar örneklerinin yalnız %0'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    13.85,
+    71.73
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:Blok_Net2",
+   "mesaj": "'Blok_Net2' kenar örneklerinin yalnız %2'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    15.85,
+    71.73
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:Blok_Net3",
+   "mesaj": "'Blok_Net3' kenar örneklerinin yalnız %0'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    17.85,
+    71.73
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  },
+  {
+   "seviye": "BILGI",
+   "kod": "eleman_eslesmedi",
+   "id": "eleman_eslesmedi:Blok_Net4",
+   "mesaj": "'Blok_Net4' kenar örneklerinin yalnız %21'i taramada karşılık buldu (eleman yanlış yerde ya da referans maske bu bölgede eksik; ısı haritasında mor)",
+   "konum": [
+    22.35,
+    71.72
+   ],
+   "bilinen": false,
+   "gerekce": ""
+  }
+ ],
+ "bulgu_sayim": {
+  "HATA": 0,
+  "UYARI": 0,
+  "BILGI": 10,
+  "bilinen": 0
+ },
+ "kapilar": [
+  {
+   "ad": "Gümüş kenar sapması medyan",
+   "deger": 0.021199915558099747,
+   "birim": "mm",
+   "op": "≤",
+   "esik": 0.06,
+   "gecti": true
+  },
+  {
+   "ad": "Gümüş kenar sapması %90",
+   "deger": 0.06691223382949829,
+   "birim": "mm",
+   "op": "≤",
+   "esik": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "Gümüş kenar kapsaması",
+   "deger": 0.9634661281439324,
+   "birim": "",
+   "op": "≥",
+   "esik": 0.8,
+   "gecti": true
+  },
+  {
+   "ad": "Dielektrik IoU",
+   "deger": 0.967614373435993,
+   "birim": "",
+   "op": "≥",
+   "esik": 0.95,
+   "gecti": true
+  },
+  {
+   "ad": "Dielektrik kenar sapması medyan",
+   "deger": 0.03179987519979477,
+   "birim": "mm",
+   "op": "≤",
+   "esik": 0.06,
+   "gecti": true
+  },
+  {
+   "ad": "Dielektrik kenar sapması %90",
+   "deger": 0.1179245337843895,
+   "birim": "mm",
+   "op": "≤",
+   "esik": 0.15,
+   "gecti": true
+  },
+  {
+   "ad": "Ağ / tutarlılık HATA (bilinmeyen)",
+   "deger": 0,
+   "birim": "adet",
+   "op": "≤",
+   "esik": 0,
+   "gecti": true
+  }
+ ],
  "gecti": true,
  "gorseller": {
   "bas_bolgesi": "work\\p2\\kontrol_bas_bolgesi.png",
