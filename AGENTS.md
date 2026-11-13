@@ -36,7 +36,7 @@ Tüm iş akışı, araçlar ve kurallar `.devin/skills/fpc-vektor/` altında:
   pah düzeltmesi. Kalan HATA: P1 4 (B1/R3/R4, B2, B3, C1 üst pedleri — leke bölgesi), P3 2 (L5/R5 alt, R6 alt — birleşik
   çift yama). Bunlar arka tarama/multimetre bekliyor.
 - Faz 3: `ogren.py` (onaylı çizimlerden etiket, RTrees; tip bazlı modeller work/_ogren/), bırak-birini-dışarı gümüş IoU
-  öğrenen/el: P1 0.78/0.76, P2 0.89/0.87, P3 0.81/0.70, P4 0.60/0.80 (P4'te el maskesi daha iyi — öğrenen maske
+  öğrenen/el (aynı tip eğitim, work/_ogren/dene.json): P1 0.79/0.76, P2 0.89/0.87, P3 0.76/0.70, P4 0.61/0.80 (P4'te el maskesi daha iyi — öğrenen maske
   her parçada `ogren dene` ile doğrulanmadan kullanılmaz). `topoloji.py` otomatik rota önerisi (aday + MILP + graf):
   P1 geri çağırma/kesinlik 0.69/0.80, P3 0.73/0.74 (öğrenen maskeyle; el maskesiyle P3 0.27/0.43).
 - Altın (regresyon) durumları `parts/<ad>_altin.json` = Faz 3 sonundaki mevcut durum (bilinen hatalar dahil).
